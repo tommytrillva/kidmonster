@@ -593,7 +593,7 @@
           const dx = 40 + rng() * 60;
           const dy = 30 + rng() * 50;
           const dur = 4 + rng() * 2;
-          const rep = Math.max(1, Math.floor((DUR - 0.3) / dur) - 1);
+          const rep = Math.ceil((DUR - 0.3) / dur) - 1;
           tl.fromTo(d, { x: 0, y: 0 },
             { x: dx, y: -dy, duration: dur, ease: "sine.inOut", yoyo: true, repeat: rep }, 0.3);
         });
@@ -724,9 +724,9 @@
         });
 
         // columns breathe to the end of the scene (8 half-cycles x 1.25s = 10s -> ends at 36)
-        colSel.forEach((sel, i) => {
+        colSel.forEach((sel) => {
           tl.fromTo(sel + " .col-body", { scale: 1, transformOrigin: "50% 100%" },
-            { scale: 1.015, duration: 1.25, ease: "sine.inOut", yoyo: true, repeat: 7 }, 26 + i * 0);
+            { scale: 1.015, duration: 1.25, ease: "sine.inOut", yoyo: true, repeat: 7 }, 26);
         });
 
         window.__timelines["s06"] = tl;
