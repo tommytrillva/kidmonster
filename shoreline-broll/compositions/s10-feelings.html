@@ -1,0 +1,763 @@
+<template id="s10-template">
+  <div data-composition-id="s10" data-width="1920" data-height="1080">
+
+    <!-- ===================== BG DECORATIVES ===================== -->
+    <div class="glow-warm-wrap" data-layout-ignore>
+      <div class="glow-warm"></div>
+    </div>
+    <div class="glow-green-wrap" data-layout-ignore>
+      <div class="glow-green"></div>
+    </div>
+    <div class="particles" data-layout-ignore></div>
+    <div class="horizon" data-layout-ignore></div>
+
+    <!-- ===================== STAGE (perspective parent) ===================== -->
+    <div class="stage">
+      <div class="tilt">
+
+        <!-- glass moodboard frame -->
+        <div class="board">
+          <div class="board-sheen"></div>
+          <div class="board-glow"></div>
+        </div>
+
+        <!-- corner ticks -->
+        <div class="tick tick-tl"></div>
+        <div class="tick tick-tr"></div>
+        <div class="tick tick-bl"></div>
+        <div class="tick tick-br"></div>
+
+        <!-- scrapbook tag (glyph bars, no text) -->
+        <div class="board-tag">
+          <div class="gbar gbar-a"></div>
+          <div class="gbar gbar-b"></div>
+        </div>
+
+        <!-- ===================== ARTIFACT CARDS ===================== -->
+        <div class="cards">
+
+          <!-- 1. VHS scanline-texture swatch — SLIDES in -->
+          <div class="card-in c-vhs">
+            <div class="card-float">
+              <div class="card-visual vhs-visual">
+                <div class="vhs-lines"></div>
+                <div class="vhs-band"></div>
+                <div class="vhs-chroma-l"></div>
+                <div class="vhs-chroma-r"></div>
+                <div class="vhs-shimmer"></div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+          <!-- 2. Film strip — UNROLLS (scaleX from left) -->
+          <div class="card-in c-film">
+            <div class="card-float">
+              <div class="card-visual film-visual">
+                <div class="strip">
+                  <div class="sprockets sprockets-top"></div>
+                  <div class="cells">
+                    <div class="cell cell-sunset"></div>
+                    <div class="cell cell-ocean"></div>
+                    <div class="cell cell-dusk"></div>
+                  </div>
+                  <div class="sprockets sprockets-bottom"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+          <!-- 3. Sunset-sky card — blur BLOOM -->
+          <div class="card-in c-sunset">
+            <div class="card-float">
+              <div class="card-visual sunset-visual">
+                <div class="sun-glow"></div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+          <!-- 4. Beach-night card — FADES from dark -->
+          <div class="card-in c-night">
+            <div class="card-float">
+              <div class="card-visual night-visual">
+                <div class="moon-glow"></div>
+                <div class="night-horizon"></div>
+                <div class="night-veil"></div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+          <!-- 5. Headlight-streak card — STREAKS in -->
+          <div class="card-in c-head" data-layout-allow-overflow>
+            <div class="card-float">
+              <div class="card-visual head-visual">
+                <div class="road-glow"></div>
+                <div class="beam beam-a"></div>
+                <div class="beam beam-b"></div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+          <!-- 6. Silhouette card — DRIFTS up -->
+          <div class="card-in c-sil">
+            <div class="card-float">
+              <div class="card-visual sil-visual">
+                <div class="fig fig-1"><div class="fig-head"></div><div class="fig-body"></div></div>
+                <div class="fig fig-2"><div class="fig-head"></div><div class="fig-body"></div></div>
+                <div class="fig fig-3"><div class="fig-head"></div><div class="fig-body"></div></div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+          <!-- 7. Warm-grain swatch — SETTLES with rotation -->
+          <div class="card-in c-grain">
+            <div class="card-float">
+              <div class="card-visual grain-visual">
+                <div class="grain-speck"></div>
+              </div>
+            </div>
+            <div class="ring"></div>
+          </div>
+
+        </div>
+
+        <!-- ===================== THREADS (cards -> palette) ===================== -->
+        <svg class="threads" width="1920" height="1080" viewBox="0 0 1920 1080" data-layout-ignore>
+          <path class="thread thread-gold"  d="M 756 700 C 1020 600, 1280 300, 1566 272" />
+          <path class="thread thread-orange" d="M 1380 300 C 1450 320, 1500 380, 1566 406" />
+          <path class="thread thread-rose"  d="M 1068 700 C 1240 660, 1400 560, 1566 540" />
+          <path class="thread thread-teal"  d="M 444 738 C 800 980, 1250 760, 1566 674" />
+          <path class="thread thread-green" d="M 444 348 C 760 560, 1180 900, 1566 808" />
+        </svg>
+
+        <!-- ===================== EMOTIONAL PALETTE COLUMN ===================== -->
+        <div class="palette">
+          <div class="palette-sheen"></div>
+          <div class="palette-glow"></div>
+          <div class="pbar pbar-a"></div>
+          <div class="pbar pbar-b"></div>
+          <div class="pill pill-1"><div class="pill-fill fill-gold"></div></div>
+          <div class="pill pill-2"><div class="pill-fill fill-orange"></div></div>
+          <div class="pill pill-3"><div class="pill-fill fill-rose"></div></div>
+          <div class="pill pill-4"><div class="pill-fill fill-teal"></div></div>
+          <div class="pill pill-5"><div class="pill-fill fill-green"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================== FG: cursor pass ===================== -->
+    <div class="cursor" data-layout-ignore></div>
+
+    <style>
+      [data-composition-id="s10"] {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        background: #050a06;
+        overflow: hidden;
+      }
+
+      /* ---------- BG ---------- */
+      [data-composition-id="s10"] .glow-warm-wrap {
+        position: absolute; inset: 0;
+      }
+      [data-composition-id="s10"] .glow-warm {
+        position: absolute; right: -340px; top: -360px;
+        width: 1400px; height: 1200px; border-radius: 50%;
+        background: radial-gradient(circle at 55% 45%,
+          rgba(255, 138, 61, 0.22) 0%,
+          rgba(255, 198, 92, 0.10) 38%,
+          rgba(255, 138, 61, 0) 72%);
+      }
+      [data-composition-id="s10"] .glow-green-wrap {
+        position: absolute; inset: 0;
+      }
+      [data-composition-id="s10"] .glow-green {
+        position: absolute; left: -380px; bottom: -420px;
+        width: 1200px; height: 1100px; border-radius: 50%;
+        background: radial-gradient(circle at 45% 55%,
+          rgba(143, 224, 0, 0.10) 0%,
+          rgba(62, 142, 14, 0.05) 45%,
+          rgba(143, 224, 0, 0) 72%);
+      }
+      [data-composition-id="s10"] .particles {
+        position: absolute; inset: 0;
+      }
+      [data-composition-id="s10"] .pdot {
+        position: absolute; border-radius: 50%;
+      }
+      [data-composition-id="s10"] .horizon {
+        position: absolute; left: 120px; top: 1002px;
+        width: 1680px; height: 2px;
+        background: #3e8e0e;
+        border-radius: 999px;
+        opacity: 0.15;
+      }
+
+      /* ---------- STAGE / TILT ---------- */
+      [data-composition-id="s10"] .stage {
+        position: absolute; inset: 0;
+        perspective: 1400px;
+      }
+      [data-composition-id="s10"] .tilt {
+        position: absolute; inset: 0;
+      }
+
+      /* ---------- BOARD ---------- */
+      [data-composition-id="s10"] .board {
+        position: absolute; left: 120px; top: 130px;
+        width: 1300px; height: 820px;
+        border-radius: 24px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.14),
+                    0 0 80px rgba(255, 138, 61, 0.10);
+      }
+      [data-composition-id="s10"] .board-sheen {
+        position: absolute; left: 28px; right: 28px; top: 0;
+        height: 2px; border-radius: 999px;
+        background: rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s10"] .board-glow {
+        position: absolute; inset: -22px;
+        border-radius: 36px;
+        background: radial-gradient(circle at 50% 50%,
+          rgba(255, 198, 92, 0.07) 0%,
+          rgba(255, 138, 61, 0.04) 55%,
+          rgba(255, 138, 61, 0) 75%);
+        opacity: 0.25;
+      }
+
+      [data-composition-id="s10"] .tick {
+        position: absolute; width: 26px; height: 26px;
+        opacity: 0.55;
+      }
+      [data-composition-id="s10"] .tick-tl { left: 102px; top: 112px;
+        border-left: 3px solid #8fe000; border-top: 3px solid #8fe000; border-top-left-radius: 6px; }
+      [data-composition-id="s10"] .tick-tr { left: 1412px; top: 112px;
+        border-right: 3px solid #8fe000; border-top: 3px solid #8fe000; border-top-right-radius: 6px; }
+      [data-composition-id="s10"] .tick-bl { left: 102px; top: 942px;
+        border-left: 3px solid #8fe000; border-bottom: 3px solid #8fe000; border-bottom-left-radius: 6px; }
+      [data-composition-id="s10"] .tick-br { left: 1412px; top: 942px;
+        border-right: 3px solid #8fe000; border-bottom: 3px solid #8fe000; border-bottom-right-radius: 6px; }
+
+      [data-composition-id="s10"] .board-tag {
+        position: absolute; left: 162px; top: 88px;
+        display: flex; gap: 10px; align-items: center;
+      }
+      [data-composition-id="s10"] .gbar {
+        height: 9px; border-radius: 999px; opacity: 0.65;
+      }
+      [data-composition-id="s10"] .gbar-a { width: 96px; background: #ffc65c; }
+      [data-composition-id="s10"] .gbar-b { width: 52px; background: #eaf5e2; opacity: 0.4; }
+
+      /* ---------- CARDS (scene coords) ---------- */
+      [data-composition-id="s10"] .cards { position: absolute; inset: 0; }
+      [data-composition-id="s10"] .card-in { position: absolute; }
+      [data-composition-id="s10"] .c-vhs    { left: 160px;  top: 170px; width: 284px; height: 356px; }
+      [data-composition-id="s10"] .c-film   { left: 472px;  top: 170px; width: 596px; height: 356px; }
+      [data-composition-id="s10"] .c-sunset { left: 1096px; top: 170px; width: 284px; height: 356px; }
+      [data-composition-id="s10"] .c-night  { left: 160px;  top: 554px; width: 284px; height: 356px; }
+      [data-composition-id="s10"] .c-head   { left: 472px;  top: 554px; width: 284px; height: 356px; }
+      [data-composition-id="s10"] .c-sil    { left: 784px;  top: 554px; width: 284px; height: 356px; }
+      [data-composition-id="s10"] .c-grain  { left: 1096px; top: 554px; width: 284px; height: 356px; }
+
+      [data-composition-id="s10"] .card-float { position: absolute; inset: 0; }
+      [data-composition-id="s10"] .card-visual {
+        position: absolute; inset: 0;
+        border-radius: 12px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        overflow: hidden;
+        box-shadow: 0 14px 36px rgba(5, 10, 6, 0.6),
+                    0 0 28px rgba(255, 138, 61, 0.08);
+      }
+      [data-composition-id="s10"] .ring {
+        position: absolute; inset: -7px;
+        border-radius: 17px;
+        border: 2px solid rgba(255, 198, 92, 0.85);
+        box-shadow: 0 0 30px rgba(255, 198, 92, 0.45),
+                    inset 0 0 20px rgba(255, 198, 92, 0.18);
+        opacity: 0;
+      }
+
+      /* VHS swatch */
+      [data-composition-id="s10"] .vhs-visual { background: #0a140b; transform: rotate(-1deg); }
+      [data-composition-id="s10"] .vhs-lines {
+        position: absolute; inset: 0;
+        background: repeating-linear-gradient(180deg,
+          rgba(143, 224, 0, 0.16) 0px, rgba(143, 224, 0, 0.16) 2px,
+          rgba(5, 10, 6, 0) 2px, rgba(5, 10, 6, 0) 7px);
+      }
+      [data-composition-id="s10"] .vhs-band {
+        position: absolute; left: 0; right: 0; top: 38%; height: 34px;
+        background: linear-gradient(180deg,
+          rgba(234, 245, 226, 0) 0%,
+          rgba(234, 245, 226, 0.10) 50%,
+          rgba(234, 245, 226, 0) 100%);
+      }
+      [data-composition-id="s10"] .vhs-chroma-l {
+        position: absolute; left: 0; top: 0; bottom: 0; width: 7px;
+        background: rgba(53, 208, 186, 0.30);
+      }
+      [data-composition-id="s10"] .vhs-chroma-r {
+        position: absolute; right: 0; top: 0; bottom: 0; width: 7px;
+        background: rgba(255, 100, 115, 0.30);
+      }
+      [data-composition-id="s10"] .vhs-shimmer {
+        position: absolute; inset: 0;
+        background: radial-gradient(circle at 50% 35%,
+          rgba(198, 255, 77, 0.18) 0%, rgba(198, 255, 77, 0) 65%);
+        opacity: 0.3;
+      }
+
+      /* Film strip */
+      [data-composition-id="s10"] .film-visual { background: #0a140b; transform: rotate(0.8deg); }
+      [data-composition-id="s10"] .strip {
+        position: absolute; left: 36px; right: 36px; top: 50%;
+        height: 176px; margin-top: -88px;
+        background: rgba(5, 10, 6, 0.9);
+        border-radius: 8px;
+        border: 2px solid rgba(62, 142, 14, 0.5);
+        display: flex; flex-direction: column; justify-content: space-between;
+        padding: 8px 12px; box-sizing: border-box;
+      }
+      [data-composition-id="s10"] .sprockets {
+        display: flex; justify-content: space-between; height: 12px;
+      }
+      [data-composition-id="s10"] .hole {
+        width: 16px; height: 12px; border-radius: 3px;
+        background: #050a06;
+        border: 2px solid rgba(62, 142, 14, 0.45);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s10"] .cells {
+        display: flex; gap: 14px; justify-content: center; height: 108px;
+        padding: 6px 0;
+      }
+      [data-composition-id="s10"] .cell {
+        width: 158px; height: 96px; border-radius: 6px;
+        border: 2px solid rgba(143, 224, 0, 0.22);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s10"] .cell-sunset {
+        background: linear-gradient(180deg, #5a2233 0%, #b8503a 45%, #ff8a3d 75%, #ffc65c 100%);
+      }
+      [data-composition-id="s10"] .cell-ocean {
+        background: linear-gradient(180deg, #04121a 0%, #0d3340 60%, rgba(53, 208, 186, 0.45) 100%);
+      }
+      [data-composition-id="s10"] .cell-dusk {
+        background:
+          radial-gradient(circle at 30% 70%, rgba(255, 100, 115, 0.55) 0%, rgba(255, 100, 115, 0) 60%),
+          radial-gradient(circle at 75% 30%, rgba(53, 208, 186, 0.45) 0%, rgba(53, 208, 186, 0) 60%),
+          #0a0612;
+      }
+
+      /* Sunset-sky card */
+      [data-composition-id="s10"] .sunset-visual {
+        transform: rotate(1.1deg);
+        background: linear-gradient(180deg,
+          #1a0f14 0%, #5a2233 30%, #b8503a 58%, #ff8a3d 80%, #ffc65c 100%);
+      }
+      [data-composition-id="s10"] .sun-glow {
+        position: absolute; left: 50%; top: 62%;
+        width: 220px; height: 220px; margin: -110px 0 0 -110px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 50%,
+          rgba(255, 198, 92, 0.85) 0%, rgba(255, 198, 92, 0.25) 40%, rgba(255, 198, 92, 0) 70%);
+        opacity: 0.9;
+      }
+
+      /* Beach-night card */
+      [data-composition-id="s10"] .night-visual {
+        transform: rotate(-0.9deg);
+        background: linear-gradient(180deg, #04121a 0%, #0d3340 62%, rgba(53, 208, 186, 0.30) 100%);
+      }
+      [data-composition-id="s10"] .moon-glow {
+        position: absolute; left: 66%; top: 22%;
+        width: 110px; height: 110px; margin: -55px 0 0 -55px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 50%,
+          rgba(234, 245, 226, 0.55) 0%, rgba(234, 245, 226, 0.12) 45%, rgba(234, 245, 226, 0) 70%);
+      }
+      [data-composition-id="s10"] .night-horizon {
+        position: absolute; left: 0; right: 0; top: 64%; height: 2px;
+        background: rgba(234, 245, 226, 0.25);
+      }
+      [data-composition-id="s10"] .night-veil {
+        position: absolute; inset: 0;
+        background: rgba(5, 10, 6, 0.92);
+      }
+
+      /* Headlight-streak card */
+      [data-composition-id="s10"] .head-visual { background: #0a140b; transform: rotate(0.7deg); }
+      [data-composition-id="s10"] .road-glow {
+        position: absolute; left: 0; right: 0; bottom: 0; height: 50%;
+        background: radial-gradient(ellipse at 50% 100%,
+          rgba(255, 138, 61, 0.30) 0%, rgba(255, 138, 61, 0) 70%);
+      }
+      [data-composition-id="s10"] .beam {
+        position: absolute; height: 26px; border-radius: 999px;
+        background: radial-gradient(ellipse at 35% 50%,
+          rgba(255, 198, 92, 0.95) 0%, rgba(255, 138, 61, 0.35) 55%, rgba(255, 138, 61, 0) 80%);
+        filter: blur(5px);
+      }
+      [data-composition-id="s10"] .beam-a {
+        left: 24px; top: 44%; width: 210px;
+        transform: rotate(-5deg); opacity: 0.95;
+      }
+      [data-composition-id="s10"] .beam-b {
+        left: 44px; top: 58%; width: 196px;
+        transform: rotate(-3deg); opacity: 0.85;
+      }
+
+      /* Silhouette card */
+      [data-composition-id="s10"] .sil-visual {
+        transform: rotate(-1.2deg);
+        background: linear-gradient(180deg, #1a0f14 0%, #5a2233 52%, #b8503a 84%, #ff8a3d 100%);
+      }
+      [data-composition-id="s10"] .fig { position: absolute; bottom: 0; }
+      [data-composition-id="s10"] .fig-head {
+        width: 34px; height: 34px; border-radius: 50%;
+        background: rgba(5, 10, 6, 0.92); margin: 0 auto 4px auto;
+      }
+      [data-composition-id="s10"] .fig-body {
+        border-radius: 22px 22px 8px 8px;
+        background: rgba(5, 10, 6, 0.92);
+      }
+      [data-composition-id="s10"] .fig-1 { left: 48px; }
+      [data-composition-id="s10"] .fig-1 .fig-body { width: 58px; height: 96px; }
+      [data-composition-id="s10"] .fig-2 { left: 122px; }
+      [data-composition-id="s10"] .fig-2 .fig-body { width: 64px; height: 118px; }
+      [data-composition-id="s10"] .fig-3 { left: 200px; }
+      [data-composition-id="s10"] .fig-3 .fig-body { width: 52px; height: 84px; }
+
+      /* Warm-grain swatch */
+      [data-composition-id="s10"] .grain-visual {
+        transform: rotate(0.9deg);
+        background:
+          radial-gradient(circle at 35% 30%, rgba(255, 198, 92, 0.45) 0%, rgba(255, 198, 92, 0) 65%),
+          radial-gradient(circle at 70% 75%, rgba(255, 138, 61, 0.30) 0%, rgba(255, 138, 61, 0) 60%),
+          #1a0f14;
+      }
+      [data-composition-id="s10"] .grain-speck { position: absolute; inset: 0; }
+      [data-composition-id="s10"] .speck { position: absolute; border-radius: 50%; }
+
+      /* ---------- THREADS ---------- */
+      [data-composition-id="s10"] .threads {
+        position: absolute; left: 0; top: 0;
+        pointer-events: none;
+      }
+      [data-composition-id="s10"] .thread {
+        fill: none; stroke-width: 2.5px; stroke-linecap: round;
+        opacity: 0.55;
+      }
+      [data-composition-id="s10"] .thread-gold   { stroke: #ffc65c; }
+      [data-composition-id="s10"] .thread-orange { stroke: #ff8a3d; }
+      [data-composition-id="s10"] .thread-rose   { stroke: #ff6473; }
+      [data-composition-id="s10"] .thread-teal   { stroke: #35d0ba; }
+      [data-composition-id="s10"] .thread-green  { stroke: #8fe000; opacity: 0.45; }
+
+      /* ---------- PALETTE COLUMN ---------- */
+      [data-composition-id="s10"] .palette {
+        position: absolute; left: 1530px; top: 200px;
+        width: 300px; height: 680px;
+        border-radius: 24px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.16);
+      }
+      [data-composition-id="s10"] .palette-sheen {
+        position: absolute; left: 24px; right: 24px; top: 0;
+        height: 2px; border-radius: 999px;
+        background: rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s10"] .palette-glow {
+        position: absolute; inset: -18px;
+        border-radius: 36px;
+        background: radial-gradient(circle at 50% 50%,
+          rgba(255, 198, 92, 0.10) 0%, rgba(255, 138, 61, 0.05) 55%, rgba(255, 138, 61, 0) 78%);
+        opacity: 0.2;
+      }
+      [data-composition-id="s10"] .pbar {
+        position: absolute; height: 8px; border-radius: 999px; opacity: 0.55;
+      }
+      [data-composition-id="s10"] .pbar-a { left: 40px; top: 36px; width: 118px; background: #eaf5e2; opacity: 0.4; }
+      [data-composition-id="s10"] .pbar-b { left: 168px; top: 36px; width: 56px; background: #ffc65c; }
+      [data-composition-id="s10"] .pill {
+        position: absolute; left: 40px; width: 220px; height: 64px;
+        border-radius: 999px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        background: rgba(234, 245, 226, 0.04);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s10"] .pill-1 { top: 88px; }
+      [data-composition-id="s10"] .pill-2 { top: 222px; }
+      [data-composition-id="s10"] .pill-3 { top: 356px; }
+      [data-composition-id="s10"] .pill-4 { top: 490px; }
+      [data-composition-id="s10"] .pill-5 { top: 624px; }
+      [data-composition-id="s10"] .pill-fill {
+        position: absolute; left: 7px; top: 7px;
+        width: 202px; height: 46px; border-radius: 999px;
+      }
+      [data-composition-id="s10"] .fill-gold   { background: #ffc65c; box-shadow: 0 0 22px rgba(255, 198, 92, 0.40); }
+      [data-composition-id="s10"] .fill-orange { background: #ff8a3d; box-shadow: 0 0 22px rgba(255, 138, 61, 0.40); }
+      [data-composition-id="s10"] .fill-rose   { background: #ff6473; box-shadow: 0 0 22px rgba(255, 100, 115, 0.40); }
+      [data-composition-id="s10"] .fill-teal   { background: #35d0ba; box-shadow: 0 0 22px rgba(53, 208, 186, 0.40); }
+      [data-composition-id="s10"] .fill-green  { background: #3e8e0e; box-shadow: 0 0 22px rgba(143, 224, 0, 0.35); }
+
+      /* ---------- CURSOR ---------- */
+      [data-composition-id="s10"] .cursor {
+        position: absolute; left: 520px; top: 940px;
+        width: 22px; height: 26px;
+        background: #eaf5e2;
+        clip-path: polygon(0 0, 100% 42%, 46% 56%, 64% 100%, 48% 100%, 32% 62%, 0 78%);
+        filter: drop-shadow(0 4px 10px rgba(5, 10, 6, 0.7));
+        opacity: 0;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const S = '[data-composition-id="s10"] ';
+        const DUR = 34;
+        const root = document.querySelector('[data-composition-id="s10"]');
+        const rng = (seed => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296))(42);
+        const reps = (start, cycle) => Math.max(0, Math.ceil((DUR - start) / cycle) - 1);
+
+        /* ---------- synchronous DOM generation (before any tween) ---------- */
+
+        // sea-spray particles
+        const pField = root.querySelector('.particles');
+        const pCols = [
+          'rgba(143, 224, 0, 0.45)',
+          'rgba(53, 208, 186, 0.45)',
+          'rgba(255, 198, 92, 0.40)'
+        ];
+        const dots = [];
+        for (let i = 0; i < 14; i++) {
+          const d = document.createElement('div');
+          d.className = 'pdot';
+          const sz = 2 + Math.round(rng() * 1.4);
+          d.style.width = sz + 'px';
+          d.style.height = sz + 'px';
+          d.style.left = Math.round(60 + rng() * 1800) + 'px';
+          d.style.top = Math.round(120 + rng() * 880) + 'px';
+          d.style.background = pCols[i % 3];
+          d.style.opacity = (0.12 + rng() * 0.13).toFixed(2);
+          pField.appendChild(d);
+          dots.push(d);
+        }
+
+        // film-strip sprocket holes (9 top + 9 bottom)
+        root.querySelectorAll('.sprockets').forEach(row => {
+          for (let i = 0; i < 9; i++) {
+            const h = document.createElement('div');
+            h.className = 'hole';
+            row.appendChild(h);
+          }
+        });
+
+        // warm-grain speckles
+        const speckBox = root.querySelector('.grain-speck');
+        const sCols = [
+          'rgba(255, 198, 92, 0.55)',
+          'rgba(255, 100, 115, 0.40)',
+          'rgba(234, 245, 226, 0.30)'
+        ];
+        for (let i = 0; i < 48; i++) {
+          const s = document.createElement('div');
+          s.className = 'speck';
+          const sz = 2 + Math.round(rng());
+          s.style.width = sz + 'px';
+          s.style.height = sz + 'px';
+          s.style.left = Math.round(8 + rng() * 264) + 'px';
+          s.style.top = Math.round(8 + rng() * 336) + 'px';
+          s.style.background = sCols[i % 3];
+          speckBox.appendChild(s);
+        }
+
+        // thread paths: prime dash state synchronously
+        const threadEls = Array.from(root.querySelectorAll('.thread'));
+        const threadLens = threadEls.map(p => {
+          let L = 1600;
+          try { L = Math.ceil(p.getTotalLength()) + 4; } catch (e) { /* fallback */ }
+          if (!L || L < 10) L = 1600;
+          p.style.strokeDasharray = String(L);
+          p.style.strokeDashoffset = String(L);
+          return L;
+        });
+
+        /* ---------- BG ambient (t >= 0.3) ---------- */
+
+        tl.fromTo(S + '.glow-warm-wrap', { opacity: 0 }, { opacity: 1, duration: 2.4, ease: 'sine.out' }, 0.3);
+        tl.fromTo(S + '.glow-warm', { scale: 1 },
+          { scale: 1.08, duration: 4, yoyo: true, repeat: reps(2, 4), ease: 'sine.inOut' }, 2);
+
+        tl.fromTo(S + '.glow-green-wrap', { opacity: 0 }, { opacity: 1, duration: 2.6, ease: 'sine.out' }, 0.5);
+        tl.fromTo(S + '.glow-green', { scale: 1 },
+          { scale: 1.06, duration: 6.4, yoyo: true, repeat: reps(2, 6.4), ease: 'sine.inOut' }, 2);
+
+        dots.forEach((d, i) => {
+          const start = 0.4 + rng() * 1.2;
+          const cyc = 4 + rng() * 2;
+          tl.fromTo(d, { x: 0, y: 0 }, {
+            x: 26 + rng() * 46,
+            y: -(36 + rng() * 56),
+            duration: cyc,
+            yoyo: true,
+            repeat: reps(start, cyc),
+            ease: 'sine.inOut'
+          }, start);
+        });
+
+        tl.fromTo(S + '.horizon', { opacity: 0, scaleX: 0.85 },
+          { opacity: 0.15, scaleX: 1, duration: 1.6, ease: 'power2.out' }, 0.6);
+        tl.to(S + '.horizon',
+          { opacity: 0.08, duration: 3.2, yoyo: true, repeat: reps(3, 3.2), ease: 'sine.inOut' }, 3);
+
+        /* ---------- board breathes in ---------- */
+
+        tl.fromTo(S + '.board', { opacity: 0, scale: 0.97 },
+          { opacity: 1, scale: 1, duration: 1.2, ease: 'sine.out' }, 0.5);
+        tl.to(S + '.board-glow',
+          { opacity: 0.5, duration: 3, yoyo: true, repeat: reps(2, 3), ease: 'sine.inOut' }, 2);
+
+        const ticks = root.querySelectorAll('.tick');
+        tl.fromTo(ticks, { opacity: 0 },
+          { opacity: 0.55, duration: 0.25, ease: 'power2.out', stagger: 0.08 }, 1.1);
+        tl.to(ticks,
+          { opacity: 0.3, duration: 2.6, yoyo: true, repeat: reps(4, 2.6), ease: 'sine.inOut' }, 4);
+
+        tl.fromTo(S + '.board-tag', { opacity: 0, y: -18 },
+          { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 1.15);
+        tl.to(S + '.board-tag .gbar',
+          { opacity: 0.35, duration: 3, yoyo: true, repeat: reps(5, 3), ease: 'sine.inOut' }, 5);
+
+        /* ---------- card entrances: 7 distinct verbs (t = 1.5 .. ~10.8) ---------- */
+
+        // 1. VHS swatch SLIDES (expo.out)
+        tl.fromTo(S + '.c-vhs', { opacity: 0, x: -180 },
+          { opacity: 1, x: 0, duration: 0.8, ease: 'expo.out' }, 1.5);
+
+        // 2. film strip UNROLLS scaleX from left (power3.out)
+        tl.fromTo(S + '.c-film', { opacity: 0, scaleX: 0, transformOrigin: 'left center' },
+          { opacity: 1, scaleX: 1, duration: 0.9, ease: 'power3.out' }, 2.9);
+
+        // 3. sunset card BLOOMS from blur (power2.out)
+        tl.fromTo(S + '.c-sunset', { opacity: 0, scale: 1.06, filter: 'blur(18px)' },
+          { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 1.1, ease: 'power2.out' }, 4.3);
+
+        // 4. night card FADES from dark (sine.out) + veil lifts then hard-kills
+        tl.fromTo(S + '.c-night', { opacity: 0 },
+          { opacity: 1, duration: 1.3, ease: 'sine.out' }, 5.7);
+        tl.fromTo(S + '.night-veil', { opacity: 1 },
+          { opacity: 0, duration: 2.2, ease: 'sine.inOut' }, 5.9);
+        tl.set(S + '.night-veil', { opacity: 0, visibility: 'hidden' }, 8.2);
+
+        // 5. headlight card STREAKS in fast (expo.out, x + skew in ONE tween)
+        tl.fromTo(S + '.c-head', { opacity: 0, x: 340, skewX: -8 },
+          { opacity: 1, x: 0, skewX: 0, duration: 0.45, ease: 'expo.out' }, 7.1);
+
+        // 6. silhouette card DRIFTS up (sine.out)
+        tl.fromTo(S + '.c-sil', { opacity: 0, y: 90 },
+          { opacity: 1, y: 0, duration: 1.2, ease: 'sine.out' }, 8.5);
+
+        // 7. grain swatch SETTLES with rotation (back.out)
+        tl.fromTo(S + '.c-grain', { opacity: 0, rotation: -6, scale: 1.08 },
+          { opacity: 1, rotation: 0, scale: 1, duration: 0.9, ease: 'back.out(1.4)' }, 9.9);
+
+        // soft glow ring on each landing (appear -> fade -> deterministic kill)
+        const lands = [
+          ['.c-vhs .ring', 2.3], ['.c-film .ring', 3.8], ['.c-sunset .ring', 5.4],
+          ['.c-night .ring', 7.0], ['.c-head .ring', 7.55], ['.c-sil .ring', 9.7],
+          ['.c-grain .ring', 10.8]
+        ];
+        lands.forEach(([sel, t]) => {
+          tl.fromTo(S + sel, { opacity: 0, scale: 0.85 },
+            { opacity: 0.9, scale: 1.1, duration: 0.45, ease: 'power3.out' }, t);
+          tl.to(S + sel, { opacity: 0, duration: 0.7, ease: 'sine.in' }, t + 0.5);
+          tl.set(S + sel, { opacity: 0, visibility: 'hidden' }, t + 1.25);
+        });
+
+        /* ---------- card inner-life ambients (opacity only, finite) ---------- */
+
+        tl.to(S + '.vhs-shimmer',
+          { opacity: 0.12, duration: 2.8, yoyo: true, repeat: reps(3, 2.8), ease: 'sine.inOut' }, 3);
+        tl.to(S + '.sun-glow',
+          { opacity: 0.55, duration: 3.4, yoyo: true, repeat: reps(6, 3.4), ease: 'sine.inOut' }, 6);
+        tl.to(S + '.beam-a',
+          { opacity: 0.5, duration: 2.2, yoyo: true, repeat: reps(8.2, 2.2), ease: 'sine.inOut' }, 8.2);
+        tl.to(S + '.beam-b',
+          { opacity: 0.45, duration: 2.6, yoyo: true, repeat: reps(8.6, 2.6), ease: 'sine.inOut' }, 8.6);
+
+        /* ---------- palette column arrives (t = 12) ---------- */
+
+        tl.fromTo(S + '.palette', { opacity: 0, x: 90 },
+          { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' }, 12);
+        tl.fromTo(S + '.pbar', { opacity: 0 },
+          { opacity: 0.55, duration: 0.4, ease: 'power2.out', stagger: 0.12 }, 12.6);
+
+        /* ---------- threads draw + swatch pills fill (t = 14 .. ~22) ---------- */
+
+        const tDraw = [14, 15.6, 17.2, 18.8, 20.4];
+        threadEls.forEach((p, i) => {
+          tl.fromTo(p, { strokeDashoffset: threadLens[i] },
+            { strokeDashoffset: 0, duration: 1.3, ease: 'power2.inOut' }, tDraw[i]);
+        });
+
+        const fills = ['.fill-gold', '.fill-orange', '.fill-rose', '.fill-teal', '.fill-green'];
+        const fillEases = ['expo.out', 'power3.out', 'expo.out', 'power2.out', 'power3.out'];
+        fills.forEach((sel, i) => {
+          tl.fromTo(S + sel, { scaleX: 0, transformOrigin: 'left center' },
+            { scaleX: 1, duration: 0.7, ease: fillEases[i] }, tDraw[i] + 0.9);
+        });
+
+        // palette pulses softly + threads shimmer once everything is connected
+        tl.to(S + '.palette-glow',
+          { opacity: 0.55, duration: 1.6, yoyo: true, repeat: reps(22.5, 1.6), ease: 'sine.inOut' }, 22.5);
+        tl.to(threadEls,
+          { opacity: 0.32, duration: 2.4, yoyo: true, repeat: reps(22, 2.4), ease: 'sine.inOut' }, 22);
+
+        /* ---------- cursor pass over the board (t = 16.6 .. 21.5) ---------- */
+
+        tl.fromTo(S + '.cursor', { opacity: 0 }, { opacity: 0.9, duration: 0.4, ease: 'sine.out' }, 16.6);
+        tl.fromTo(S + '.cursor', { x: 0, y: 0 },
+          { x: 800, y: -510, duration: 4.4, ease: 'power2.inOut' }, 16.8);
+        tl.to(S + '.cursor', { opacity: 0, duration: 0.5, ease: 'power1.in' }, 21);
+        tl.set(S + '.cursor', { opacity: 0, visibility: 'hidden' }, 21.5);
+
+        /* ---------- final 8s: parallax sweep + micro-floats (t = 25 .. 34) ---------- */
+
+        tl.fromTo(S + '.tilt', { rotationY: -2 },
+          { rotationY: 2, duration: 8, ease: 'sine.inOut' }, 25);
+
+        const floats = [
+          ['.c-vhs', 5, 3], ['.c-film', -4, 2.25], ['.c-sunset', 6, 1.8],
+          ['.c-night', -5, 3], ['.c-head', 4, 2.25], ['.c-sil', -6, 1.8],
+          ['.c-grain', 5, 3]
+        ];
+        floats.forEach(([sel, amp, cyc]) => {
+          tl.fromTo(S + sel + ' .card-float', { y: 0 }, {
+            y: amp,
+            duration: cyc,
+            yoyo: true,
+            repeat: Math.ceil(9 / cyc) - 1,
+            ease: 'sine.inOut'
+          }, 25);
+        });
+
+        window.__timelines["s10"] = tl;
+      })();
+    </script>
+  </div>
+</template>

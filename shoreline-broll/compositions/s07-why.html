@@ -1,0 +1,600 @@
+<template id="s07-template">
+  <div data-composition-id="s07" data-width="1920" data-height="1080">
+    <!-- ===== BG decoratives ===== -->
+    <div class="s07-grid" data-layout-ignore><div class="s07-grid-inner"></div></div>
+    <div class="s07-glow-green" data-layout-ignore></div>
+    <div class="s07-glow-rose" data-layout-ignore></div>
+    <!-- warm sunset bleed rising from the bottom edge (calm phase) -->
+    <div class="s07-bleed" data-layout-allow-overflow><div class="s07-bleed-inner"></div></div>
+
+    <!-- ===== Calm phase: one personal world-building node ===== -->
+    <div class="s07-scene-content">
+      <div class="s07-node-wrap" data-layout-allow-overflow>
+        <div class="s07-ripples" data-layout-ignore>
+          <div class="s07-ring s07-ring-a"></div>
+          <div class="s07-ring s07-ring-b"></div>
+          <div class="s07-ring s07-ring-c"></div>
+        </div>
+        <svg class="s07-cables" width="1000" height="640" viewBox="0 0 1000 640" data-layout-allow-overflow>
+          <path class="s07-cable s07-cable-1" d="M 420 250 C 340 210 260 200 170 170" />
+          <path class="s07-cable s07-cable-2" d="M 580 250 C 660 210 750 205 835 160" />
+          <path class="s07-cable s07-cable-3" d="M 425 395 C 350 440 265 455 180 490" />
+          <path class="s07-cable s07-cable-4" d="M 575 395 C 655 440 745 450 825 500" />
+          <circle class="s07-cap s07-cap-1" cx="170" cy="170" r="6" />
+          <circle class="s07-cap s07-cap-2" cx="835" cy="160" r="6" />
+          <circle class="s07-cap s07-cap-3" cx="180" cy="490" r="6" />
+          <circle class="s07-cap s07-cap-4" cx="825" cy="500" r="6" />
+        </svg>
+        <div class="s07-orbit s07-orbit-a" data-layout-ignore><span class="s07-sat"></span></div>
+        <div class="s07-orbit s07-orbit-b" data-layout-ignore><span class="s07-sat s07-sat-b"></span></div>
+        <div class="s07-halo" data-layout-ignore></div>
+        <div class="s07-node-bloom">
+          <div class="s07-node-core">
+            <span class="s07-sheen"></span>
+            <svg class="s07-icon" width="96" height="96" viewBox="0 0 96 96">
+              <g class="s07-rays">
+                <line x1="48" y1="10" x2="48" y2="19" />
+                <line x1="73" y1="18" x2="67" y2="25" />
+                <line x1="23" y1="18" x2="29" y2="25" />
+                <line x1="82" y1="40" x2="73" y2="40" />
+                <line x1="14" y1="40" x2="23" y2="40" />
+              </g>
+              <circle class="s07-sun" cx="48" cy="40" r="15" />
+              <path class="s07-wave s07-wave-a" d="M 10 66 Q 22 58 34 66 T 58 66 T 82 66" />
+              <path class="s07-wave s07-wave-b" d="M 16 79 Q 28 72 40 79 T 64 79 T 88 79" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Chaos phase: client revision board (drains mid-scene) ===== -->
+    <div class="s07-chaos-drain" data-layout-allow-overflow>
+      <div class="s07-chaos-scale">
+        <div class="s07-chaos-jitter">
+          <div class="s07-bubbles"></div>
+          <div class="s07-arrows"></div>
+          <div class="s07-dots"></div>
+          <div class="s07-slices" data-layout-ignore></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      [data-composition-id="s07"] {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        background: #050a06;
+        overflow: hidden;
+      }
+      /* ---- BG ---- */
+      [data-composition-id="s07"] .s07-grid {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+      }
+      [data-composition-id="s07"] .s07-grid-inner {
+        position: absolute;
+        inset: -40px;
+      }
+      [data-composition-id="s07"] .s07-grid-line {
+        position: absolute;
+        background: rgba(62, 142, 14, 0.55);
+      }
+      [data-composition-id="s07"] .s07-glow-green {
+        position: absolute;
+        left: 410px;
+        top: 30px;
+        width: 1100px;
+        height: 1100px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(143, 224, 0, 0.30) 0%, rgba(143, 224, 0, 0.10) 42%, rgba(143, 224, 0, 0) 70%);
+        opacity: 0;
+      }
+      [data-composition-id="s07"] .s07-glow-rose {
+        position: absolute;
+        left: 1180px;
+        top: -180px;
+        width: 760px;
+        height: 760px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(255, 100, 115, 0.34) 0%, rgba(255, 100, 115, 0.12) 45%, rgba(255, 100, 115, 0) 72%);
+        opacity: 0;
+      }
+      [data-composition-id="s07"] .s07-bleed {
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        width: 1920px;
+        height: 520px;
+      }
+      [data-composition-id="s07"] .s07-bleed-inner {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 130% 100% at 50% 100%, rgba(255, 138, 61, 0.30) 0%, rgba(255, 198, 92, 0.14) 38%, rgba(255, 100, 115, 0.06) 62%, rgba(255, 138, 61, 0) 80%);
+      }
+      /* ---- Chaos board ---- */
+      [data-composition-id="s07"] .s07-chaos-drain,
+      [data-composition-id="s07"] .s07-chaos-scale,
+      [data-composition-id="s07"] .s07-chaos-jitter,
+      [data-composition-id="s07"] .s07-bubbles,
+      [data-composition-id="s07"] .s07-arrows,
+      [data-composition-id="s07"] .s07-dots,
+      [data-composition-id="s07"] .s07-slices {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s07"] .s07-bub-wrap {
+        position: absolute;
+      }
+      [data-composition-id="s07"] .s07-bub {
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 22px rgba(143, 224, 0, 0.10);
+        padding: 12px 14px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 9px;
+      }
+      [data-composition-id="s07"] .s07-bub-rose {
+        border-color: rgba(255, 100, 115, 0.40);
+        box-shadow: 0 0 22px rgba(255, 100, 115, 0.12);
+      }
+      [data-composition-id="s07"] .s07-bar {
+        height: 7px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.38);
+      }
+      [data-composition-id="s07"] .s07-bar-acc { background: rgba(143, 224, 0, 0.45); }
+      [data-composition-id="s07"] .s07-bar-rose { background: rgba(255, 100, 115, 0.60); }
+      [data-composition-id="s07"] .s07-pin {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        width: 11px;
+        height: 11px;
+        border-radius: 999px;
+        background: rgba(62, 142, 14, 0.9);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+      }
+      [data-composition-id="s07"] .s07-arrow {
+        position: absolute;
+        height: 3px;
+        border-radius: 999px;
+      }
+      [data-composition-id="s07"] .s07-arrow-head {
+        position: absolute;
+        right: -2px;
+        top: -4px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid rgba(143, 224, 0, 0);
+        border-bottom: 5px solid rgba(143, 224, 0, 0);
+      }
+      [data-composition-id="s07"] .s07-alert {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 999px;
+        background: #ff6473;
+        box-shadow: 0 0 18px rgba(255, 100, 115, 0.65);
+      }
+      [data-composition-id="s07"] .s07-slice {
+        position: absolute;
+        left: 0;
+        width: 1920px;
+        height: 5px;
+        background: rgba(198, 255, 77, 0.45);
+        opacity: 0;
+      }
+      /* ---- Calm phase ---- */
+      [data-composition-id="s07"] .s07-scene-content {
+        position: absolute;
+        inset: 0;
+        padding: 90px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      [data-composition-id="s07"] .s07-node-wrap {
+        position: relative;
+        width: 180px;
+        height: 180px;
+      }
+      [data-composition-id="s07"] .s07-ripples {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s07"] .s07-ring {
+        position: absolute;
+        left: -90px;
+        top: -90px;
+        width: 360px;
+        height: 360px;
+        border-radius: 999px;
+        border: 2px solid rgba(143, 224, 0, 0.45);
+      }
+      [data-composition-id="s07"] .s07-ring-b { border-color: rgba(198, 255, 77, 0.40); }
+      [data-composition-id="s07"] .s07-ring-c { border-color: rgba(53, 208, 186, 0.35); }
+      [data-composition-id="s07"] .s07-cables {
+        position: absolute;
+        left: -410px;
+        top: -230px;
+      }
+      [data-composition-id="s07"] .s07-cable {
+        fill: rgba(143, 224, 0, 0);
+        stroke: #3e8e0e;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-dasharray: 320;
+      }
+      [data-composition-id="s07"] .s07-cap {
+        fill: #c6ff4d;
+      }
+      [data-composition-id="s07"] .s07-orbit {
+        position: absolute;
+        border-radius: 999px;
+        border: 2px solid rgba(143, 224, 0, 0.22);
+      }
+      [data-composition-id="s07"] .s07-orbit-a {
+        left: -70px;
+        top: -70px;
+        width: 320px;
+        height: 320px;
+      }
+      [data-composition-id="s07"] .s07-orbit-b {
+        left: -132px;
+        top: -132px;
+        width: 444px;
+        height: 444px;
+        border-color: rgba(53, 208, 186, 0.18);
+      }
+      [data-composition-id="s07"] .s07-sat {
+        position: absolute;
+        left: 50%;
+        top: -6px;
+        margin-left: -5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: #c6ff4d;
+        box-shadow: 0 0 14px rgba(198, 255, 77, 0.6);
+      }
+      [data-composition-id="s07"] .s07-sat-b {
+        background: #35d0ba;
+        box-shadow: 0 0 14px rgba(53, 208, 186, 0.55);
+      }
+      [data-composition-id="s07"] .s07-halo {
+        position: absolute;
+        left: -120px;
+        top: -120px;
+        width: 420px;
+        height: 420px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(143, 224, 0, 0.38) 0%, rgba(143, 224, 0, 0.12) 48%, rgba(143, 224, 0, 0) 72%);
+      }
+      [data-composition-id="s07"] .s07-node-bloom {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s07"] .s07-node-core {
+        position: absolute;
+        inset: 0;
+        border-radius: 18px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.18), 0 0 90px rgba(143, 224, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      [data-composition-id="s07"] .s07-sheen {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s07"] .s07-rays line {
+        stroke: #ffc65c;
+        stroke-width: 3;
+        stroke-linecap: round;
+      }
+      [data-composition-id="s07"] .s07-sun {
+        fill: rgba(255, 198, 92, 0.22);
+        stroke: #ffc65c;
+        stroke-width: 3;
+      }
+      [data-composition-id="s07"] .s07-wave {
+        fill: rgba(53, 208, 186, 0);
+        stroke: #35d0ba;
+        stroke-width: 3;
+        stroke-linecap: round;
+      }
+      [data-composition-id="s07"] .s07-wave-a { stroke-dasharray: 40 14; }
+      [data-composition-id="s07"] .s07-wave-b { stroke-dasharray: 26 12; stroke: rgba(53, 208, 186, 0.6); }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const S = '[data-composition-id="s07"] ';
+        const root = document.querySelector('[data-composition-id="s07"]');
+        const rng = (seed => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296))(42);
+        const SCENE_END = 25;
+        const reps = (start, cycle) => Math.max(0, Math.ceil((SCENE_END - start) / cycle) - 1);
+
+        /* =========================================================
+         * BUILD (synchronous, deterministic) — chaos board layout
+         * ========================================================= */
+
+        // --- grid lines ---
+        const gridInner = root.querySelector(".s07-grid-inner");
+        for (let i = 0; i < 7; i++) {
+          const v = document.createElement("div");
+          v.className = "s07-grid-line";
+          v.style.left = (130 + i * 280) + "px";
+          v.style.top = "0px";
+          v.style.width = "2px";
+          v.style.height = "1180px";
+          gridInner.appendChild(v);
+        }
+        for (let i = 0; i < 4; i++) {
+          const h = document.createElement("div");
+          h.className = "s07-grid-line";
+          h.style.left = "0px";
+          h.style.top = (170 + i * 250) + "px";
+          h.style.width = "2010px";
+          h.style.height = "2px";
+          gridInner.appendChild(h);
+        }
+
+        // --- 22 note bubbles on a jittered 6x4 cell grid ---
+        const cells = [];
+        for (let r = 0; r < 4; r++) for (let c = 0; c < 6; c++) cells.push([c, r]);
+        for (let i = cells.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          const t = cells[i]; cells[i] = cells[j]; cells[j] = t;
+        }
+        const bubblesHost = root.querySelector(".s07-bubbles");
+        const bubData = [];
+        for (let i = 0; i < 22; i++) {
+          const c = cells[i][0], r = cells[i][1];
+          const cx = 70 + c * 296 + 148 + (rng() * 120 - 60);
+          const cy = 60 + r * 240 + 120 + (rng() * 90 - 45);
+          const w = 110 + rng() * 110;
+          const h = 50 + rng() * 58;
+          const rot = rng() * 16 - 8;
+
+          const wrap = document.createElement("div");
+          wrap.className = "s07-bub-wrap";
+          wrap.style.left = (cx - w / 2) + "px";
+          wrap.style.top = (cy - h / 2) + "px";
+          wrap.style.width = w + "px";
+          wrap.style.height = h + "px";
+
+          const bub = document.createElement("div");
+          bub.className = "s07-bub" + (i % 4 === 0 ? " s07-bub-rose" : "");
+          const nBars = h > 78 ? 3 : 2;
+          for (let b = 0; b < nBars; b++) {
+            const bar = document.createElement("div");
+            bar.className = "s07-bar" +
+              (i % 4 === 0 && b === 0 ? " s07-bar-rose" : (b === nBars - 1 && i % 3 === 1 ? " s07-bar-acc" : ""));
+            bar.style.width = Math.round(45 + rng() * 48) + "%";
+            bub.appendChild(bar);
+          }
+          if (i % 3 === 0) {
+            const pin = document.createElement("span");
+            pin.className = "s07-pin";
+            bub.appendChild(pin);
+          }
+          wrap.appendChild(bub);
+          bubblesHost.appendChild(wrap);
+          bubData.push({ wrap, bub, cx, cy, w, h, rot });
+        }
+
+        // --- 8 arrow connectors between bubble centers ---
+        const arrowsHost = root.querySelector(".s07-arrows");
+        const arrows = [];
+        let guard = 0;
+        while (arrows.length < 8 && guard < 300) {
+          guard++;
+          const a = Math.floor(rng() * 22), b = Math.floor(rng() * 22);
+          if (a === b) continue;
+          const dx = bubData[b].cx - bubData[a].cx;
+          const dy = bubData[b].cy - bubData[a].cy;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 230 || d > 880) continue;
+          const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+          const el = document.createElement("div");
+          el.className = "s07-arrow";
+          el.style.left = bubData[a].cx + "px";
+          el.style.top = bubData[a].cy + "px";
+          el.style.width = d + "px";
+          el.style.transformOrigin = "0 50%";
+          const rose = arrows.length % 3 === 0;
+          el.style.background = rose ? "rgba(255, 100, 115, 0.55)" : "rgba(62, 142, 14, 0.85)";
+          const head = document.createElement("span");
+          head.className = "s07-arrow-head";
+          head.style.borderLeft = "10px solid " + (rose ? "rgba(255, 100, 115, 0.7)" : "rgba(143, 224, 0, 0.7)");
+          el.appendChild(head);
+          arrowsHost.appendChild(el);
+          arrows.push({ el, ang });
+        }
+
+        // --- 5 anxious alert dots pinned near bubbles ---
+        const dotsHost = root.querySelector(".s07-dots");
+        const alertDots = [];
+        for (let i = 0; i < 5; i++) {
+          const bd = bubData[i * 4 + 1];
+          const el = document.createElement("div");
+          el.className = "s07-alert";
+          el.style.left = (bd.cx + bd.w / 2 - 10 + (rng() * 14 - 7)) + "px";
+          el.style.top = (bd.cy - bd.h / 2 - 8 + (rng() * 10 - 5)) + "px";
+          dotsHost.appendChild(el);
+          alertDots.push(el);
+        }
+
+        // --- 3 glitch slice bars ---
+        const slicesHost = root.querySelector(".s07-slices");
+        const slices = [];
+        for (let i = 0; i < 3; i++) {
+          const el = document.createElement("div");
+          el.className = "s07-slice";
+          el.style.top = Math.round(90 + rng() * 880) + "px";
+          slicesHost.appendChild(el);
+          slices.push(el);
+        }
+
+        /* =========================================================
+         * TIMELINE — local 0..25s
+         * ========================================================= */
+
+        // ---- BG settles in (first tween at t=0.4) ----
+        tl.fromTo(S + ".s07-grid", { opacity: 0 }, { opacity: 0.18, duration: 1.2, ease: "sine.out" }, 0.4);
+        tl.fromTo(S + ".s07-grid-inner", { x: -16 }, { x: 16, duration: 9.0, ease: "sine.inOut" }, 0.4);
+        tl.fromTo(S + ".s07-glow-green", { opacity: 0 }, { opacity: 0.5, duration: 1.6, ease: "sine.out" }, 0.4);
+        tl.fromTo(S + ".s07-glow-green",
+          { scale: 1 },
+          { scale: 1.08, duration: 2.7, ease: "sine.inOut", yoyo: true, repeat: reps(0.4, 2.7) }, 0.4);
+        tl.fromTo(S + ".s07-glow-rose", { opacity: 0 }, { opacity: 0.55, duration: 1.4, ease: "sine.out" }, 0.7);
+        tl.fromTo(S + ".s07-glow-rose",
+          { scale: 1 },
+          { scale: 1.1, duration: 1.9, ease: "sine.inOut", yoyo: true, repeat: Math.ceil((9.4 - 0.7) / 1.9) - 1 }, 0.7);
+
+        // ---- Chaos: bubbles pile on with ACCELERATING stagger (0.4s -> 0.08s) ----
+        const eases = ["back.out(1.8)", "expo.out", "power3.out"];
+        let tBub = 0.55;
+        let gap = 0.4;
+        bubData.forEach((bd, i) => {
+          tl.fromTo(bd.wrap,
+            { opacity: 0, scale: 0.45, y: 46, rotation: bd.rot },
+            { opacity: 1, scale: 1, y: 0, rotation: bd.rot, duration: 0.28 + rng() * 0.25, ease: eases[i % 3] },
+            tBub);
+          tBub += gap;
+          gap = Math.max(0.08, gap * 0.92);
+        });
+
+        // slow claustrophobic creep on the whole board
+        tl.fromTo(S + ".s07-chaos-scale", { scale: 1 }, { scale: 1.035, duration: 7.4, ease: "sine.inOut" }, 0.6);
+
+        // ---- Arrows scribble across (angled scaleX draws) ----
+        arrows.forEach((a, i) => {
+          tl.fromTo(a.el,
+            { opacity: 0, scaleX: 0, rotation: a.ang },
+            { opacity: 0.75, scaleX: 1, rotation: a.ang, duration: 0.32, ease: "power1.in" },
+            3.3 + i * 0.4);
+        });
+        // anxious group flicker on the connectors
+        tl.to(S + ".s07-arrows", { opacity: 0.55, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 7 }, 7.0);
+
+        // ---- Alert dots: pop in, then anxiety-tempo pulse (0.4s cycle) ----
+        alertDots.forEach((el, i) => {
+          const tIn = 4.5 + i * 0.42;
+          tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.18, ease: "power3.out" }, tIn);
+          const tp = tIn + 0.2;
+          tl.to(el, { scale: 1.55, duration: 0.2, ease: "sine.inOut", yoyo: true, repeat: Math.ceil((9.4 - tp) / 0.2) - 1 }, tp);
+        });
+
+        // ---- t=8: full-board GLITCH (x-jitter steps + slice flickers) ----
+        tl.to(S + ".s07-chaos-jitter", {
+          keyframes: [
+            { x: -16, duration: 0.1 }, { x: 11, duration: 0.09 }, { x: -8, duration: 0.11 },
+            { x: 14, duration: 0.08 }, { x: -18, duration: 0.1 }, { x: 7, duration: 0.09 },
+            { x: -11, duration: 0.1 }, { x: 15, duration: 0.08 }, { x: 0, duration: 0.12 }
+          ],
+          ease: "none"
+        }, 8.0);
+        slices.forEach((el, i) => {
+          tl.to(el, {
+            keyframes: [
+              { opacity: 0.3, duration: 0.07 }, { opacity: 0, duration: 0.1 },
+              { opacity: 0.22, duration: 0.06 }, { opacity: 0, duration: 0.12 },
+              { opacity: 0.28, duration: 0.07 }, { opacity: 0, duration: 0.1 }
+            ],
+            ease: "none"
+          }, 8.05 + i * 0.18);
+        });
+
+        // ---- t=9.4: the chaos DRAINS downward (bottom-up bubble cascade + wrapper sink) ----
+        const drainOrder = bubData.slice().sort((a, b) => b.cy - a.cy);
+        drainOrder.forEach((bd, i) => {
+          tl.to(bd.bub, { y: 70, opacity: 0, duration: 0.5, ease: "power1.in" }, 9.4 + i * 0.032);
+        });
+        tl.to(S + ".s07-chaos-drain", { y: 60, opacity: 0, duration: 1.1, ease: "power2.in" }, 9.5);
+        tl.to(S + ".s07-grid", { opacity: 0, duration: 0.9, ease: "sine.in" }, 9.4);
+        tl.to(S + ".s07-glow-rose", { opacity: 0, duration: 0.9, ease: "sine.in" }, 9.4);
+        // hard-kill after the mid-scene fade-out (contract rule 16)
+        tl.set([S + ".s07-chaos-drain", S + ".s07-grid", S + ".s07-glow-rose"], { opacity: 0, visibility: "hidden" }, 10.7);
+
+        // ---- t=10.7..12: black beat — only the green glow breathes, then swells ----
+        tl.to(S + ".s07-glow-green", { opacity: 0.9, duration: 2.2, ease: "sine.inOut" }, 11.2);
+
+        // ---- t=12: the personal world-building node BLOOMS ----
+        tl.fromTo(S + ".s07-node-bloom",
+          { opacity: 0, scale: 0 },
+          { opacity: 1, scale: 1, duration: 1.2, ease: "elastic.out(1,0.6)" }, 12.0);
+        tl.fromTo(S + ".s07-halo", { opacity: 0 }, { opacity: 0.45, duration: 0.8, ease: "sine.out" }, 12.05);
+
+        // ripple rings
+        tl.fromTo(S + ".s07-ripples", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.out" }, 12.2);
+        [".s07-ring-a", ".s07-ring-b", ".s07-ring-c"].forEach((sel, i) => {
+          const t0 = 12.3 + i * 0.98;
+          tl.fromTo(S + sel,
+            { scale: 0.3, opacity: 0.55 },
+            { scale: 2.5, opacity: 0, duration: 2.6, ease: "power1.out", repeat: reps(t0, 2.95), repeatDelay: 0.35 },
+            t0);
+        });
+
+        // slow orbit rings (satellite dots make rotation read)
+        tl.fromTo(S + ".s07-orbit-a", { opacity: 0 }, { opacity: 0.85, duration: 1.1, ease: "power2.out" }, 12.5);
+        tl.fromTo(S + ".s07-orbit-b", { opacity: 0 }, { opacity: 0.7, duration: 1.3, ease: "power2.out" }, 12.7);
+        tl.fromTo(S + ".s07-orbit-a", { rotation: 0 }, { rotation: 140, duration: 12.5, ease: "none" }, 12.5);
+        tl.fromTo(S + ".s07-orbit-b", { rotation: 0 }, { rotation: -110, duration: 12.3, ease: "none" }, 12.7);
+
+        // warm sunset bleed RISES from the bottom edge
+        tl.fromTo(S + ".s07-bleed", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 4.5, ease: "sine.out" }, 12.8);
+        tl.to(S + ".s07-bleed-inner", { opacity: 0.75, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: reps(17.5, 2.4) }, 17.5);
+
+        // heartbeat pulses till scene end (core child — wrapper owns the bloom transform)
+        tl.to(S + ".s07-node-core", { scale: 1.05, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: reps(13.5, 0.5) }, 13.5);
+        tl.to(S + ".s07-halo", { opacity: 0.7, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: reps(13.5, 0.5) }, 13.5);
+
+        // icon ambience: rays rotate slowly, waves flow (dash drift)
+        tl.fromTo(S + ".s07-rays",
+          { rotation: 0, transformOrigin: "48px 40px" },
+          { rotation: 90, transformOrigin: "48px 40px", duration: 11.5, ease: "none" }, 13.5);
+        tl.fromTo(S + ".s07-wave-a", { strokeDashoffset: 0 }, { strokeDashoffset: -54, duration: 3.2, ease: "none", repeat: reps(13.5, 3.2) }, 13.5);
+        tl.fromTo(S + ".s07-wave-b", { strokeDashoffset: 0 }, { strokeDashoffset: 38, duration: 2.7, ease: "none", repeat: reps(13.7, 2.7) }, 13.7);
+
+        // ---- t=20: cable stubs GROW outward (future connections) ----
+        tl.fromTo(S + ".s07-cables", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "sine.out" }, 19.8);
+        for (let i = 1; i <= 4; i++) {
+          tl.fromTo(S + ".s07-cable-" + i,
+            { strokeDashoffset: 320 },
+            { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" },
+            20.0 + (i - 1) * 0.25);
+          tl.fromTo(S + ".s07-cap-" + i,
+            { attr: { r: 0 } },
+            { attr: { r: 6 }, duration: 0.4, ease: "back.out(2)" },
+            20.8 + (i - 1) * 0.25);
+        }
+        tl.to(S + ".s07-cables", { opacity: 0.7, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: 1 }, 22.2);
+
+        window.__timelines["s07"] = tl;
+      })();
+    </script>
+  </div>
+</template>
