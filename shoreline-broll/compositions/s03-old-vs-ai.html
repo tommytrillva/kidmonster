@@ -1,0 +1,1087 @@
+<template id="s03-template">
+  <div data-composition-id="s03" data-width="1920" data-height="1080">
+    <!-- ============ BG DECORATIVES ============ -->
+    <div class="bg-grid" data-layout-ignore></div>
+    <div class="bg-glow glow-a" data-layout-ignore></div>
+    <div class="bg-glow glow-b" data-layout-ignore></div>
+    <div class="bg-glow glow-warm" data-layout-ignore></div>
+
+    <!-- ============ FG: corner registration ticks ============ -->
+    <div class="tick tick-tl"></div>
+    <div class="tick tick-tr"></div>
+    <div class="tick tick-bl"></div>
+    <div class="tick tick-br"></div>
+
+    <!-- ============ MG: ghost icon plates (old production gear) ============ -->
+    <div class="plate-w p-camera">
+      <div class="plate-h">
+        <div class="plate">
+          <div class="sheen"></div>
+          <div class="ic-cam-body">
+            <div class="ic-cam-lens"><div class="ic-cam-iris"></div></div>
+          </div>
+          <div class="ic-cam-vf"></div>
+        </div>
+        <div class="plate-burst"></div>
+      </div>
+    </div>
+
+    <div class="plate-w p-drone">
+      <div class="plate-h">
+        <div class="plate">
+          <div class="sheen"></div>
+          <svg class="ic-drone" width="92" height="60" viewBox="0 0 92 60">
+            <line x1="14" y1="14" x2="38" y2="32" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="78" y1="14" x2="54" y2="32" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="14" y1="50" x2="38" y2="36" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="78" y1="50" x2="54" y2="36" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <rect x="36" y="26" width="20" height="14" rx="5" fill="rgba(234,245,226,0.16)" stroke="rgba(234,245,226,0.45)" stroke-width="2"></rect>
+            <circle cx="14" cy="12" r="9" fill="rgba(234,245,226,0.06)" stroke="rgba(234,245,226,0.40)" stroke-width="2"></circle>
+            <circle cx="78" cy="12" r="9" fill="rgba(234,245,226,0.06)" stroke="rgba(234,245,226,0.40)" stroke-width="2"></circle>
+            <circle cx="14" cy="50" r="9" fill="rgba(234,245,226,0.06)" stroke="rgba(234,245,226,0.40)" stroke-width="2"></circle>
+            <circle cx="78" cy="50" r="9" fill="rgba(234,245,226,0.06)" stroke="rgba(234,245,226,0.40)" stroke-width="2"></circle>
+          </svg>
+        </div>
+        <div class="plate-burst"></div>
+      </div>
+    </div>
+
+    <div class="plate-w p-clapper">
+      <div class="plate-h">
+        <div class="plate">
+          <div class="sheen"></div>
+          <div class="ic-clap-top"></div>
+          <div class="ic-clap-body"></div>
+        </div>
+        <div class="plate-burst"></div>
+      </div>
+    </div>
+
+    <div class="plate-w p-pin">
+      <div class="plate-h">
+        <div class="plate">
+          <div class="sheen"></div>
+          <div class="ic-pin"><div class="ic-pin-dot"></div></div>
+          <div class="ic-pin-shadow"></div>
+        </div>
+        <div class="plate-burst"></div>
+      </div>
+    </div>
+
+    <div class="plate-w p-permit">
+      <div class="plate-h">
+        <div class="plate">
+          <div class="sheen"></div>
+          <div class="ic-sheet">
+            <div class="gbar gb-1"></div>
+            <div class="gbar gb-2"></div>
+            <div class="gbar gb-3"></div>
+            <div class="ic-stamp"></div>
+          </div>
+        </div>
+        <div class="plate-burst"></div>
+      </div>
+    </div>
+
+    <div class="plate-w p-chair">
+      <div class="plate-h">
+        <div class="plate">
+          <div class="sheen"></div>
+          <svg class="ic-chair" width="72" height="76" viewBox="0 0 72 76">
+            <line x1="14" y1="34" x2="58" y2="72" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="58" y1="34" x2="14" y2="72" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="12" y1="32" x2="60" y2="32" stroke="rgba(234,245,226,0.50)" stroke-width="4" stroke-linecap="round"></line>
+            <line x1="16" y1="4" x2="16" y2="30" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="56" y1="4" x2="56" y2="30" stroke="rgba(234,245,226,0.40)" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="14" y1="8" x2="58" y2="8" stroke="rgba(234,245,226,0.50)" stroke-width="4" stroke-linecap="round"></line>
+          </svg>
+        </div>
+        <div class="plate-burst"></div>
+      </div>
+    </div>
+
+    <!-- ============ MG: cable layer (SVG, drawn on tl) ============ -->
+    <svg class="cables" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <path class="cb c1" d="M 650 600 C 590 565, 540 510, 480 455" pathLength="100"></path>
+      <path class="cb c2" d="M 650 600 C 720 570, 780 515, 845 470" pathLength="100"></path>
+      <path class="cb c3" d="M 650 600 C 715 640, 770 705, 835 745" pathLength="100"></path>
+      <path class="cb c4" d="M 650 600 C 585 645, 520 690, 450 730" pathLength="100"></path>
+      <path class="cb c5" d="M 845 470 C 905 495, 965 545, 1010 600" pathLength="100"></path>
+      <path class="cb c6" d="M 835 745 C 900 720, 960 660, 1010 600" pathLength="100"></path>
+      <path class="cb c7" d="M 1010 600 C 1100 600, 1200 575, 1300 555" pathLength="100"></path>
+      <path class="pu u1" d="M 650 600 C 590 565, 540 510, 480 455" pathLength="100"></path>
+      <path class="pu u2" d="M 650 600 C 720 570, 780 515, 845 470" pathLength="100"></path>
+      <path class="pu u3" d="M 650 600 C 715 640, 770 705, 835 745" pathLength="100"></path>
+      <path class="pu u4" d="M 650 600 C 585 645, 520 690, 450 730" pathLength="100"></path>
+      <path class="pu u5" d="M 845 470 C 905 495, 965 545, 1010 600" pathLength="100"></path>
+      <path class="pu u6" d="M 835 745 C 900 720, 960 660, 1010 600" pathLength="100"></path>
+      <path class="pu u7" d="M 1010 600 C 1100 600, 1200 575, 1300 555" pathLength="100"></path>
+    </svg>
+
+    <!-- ============ MG: AI node network ============ -->
+    <div class="node-w n-hub">
+      <div class="node-disc"></div>
+      <div class="node-glow"></div>
+      <div class="hub-ring"></div>
+      <div class="node-core"></div>
+    </div>
+    <div class="node-w n-a">
+      <div class="node-disc"></div>
+      <div class="node-glow"></div>
+      <div class="node-core"></div>
+    </div>
+    <div class="node-w n-b">
+      <div class="node-disc"></div>
+      <div class="node-glow"></div>
+      <div class="node-core"></div>
+    </div>
+    <div class="node-w n-c">
+      <div class="node-disc"></div>
+      <div class="node-glow"></div>
+      <div class="node-core"></div>
+    </div>
+    <div class="node-w n-d">
+      <div class="node-disc"></div>
+      <div class="node-glow"></div>
+      <div class="node-core"></div>
+    </div>
+    <div class="node-w n-e">
+      <div class="node-disc"></div>
+      <div class="node-glow"></div>
+      <div class="node-core"></div>
+    </div>
+
+    <!-- ============ MG: cinematic frame cards (AI output) ============ -->
+    <div class="card-w card-1" data-layout-allow-overflow>
+      <div class="kb kb-sunset">
+        <div class="sun-glow"></div>
+      </div>
+      <div class="card-flash"></div>
+    </div>
+    <div class="card-w card-2" data-layout-allow-overflow>
+      <div class="kb kb-ocean">
+        <div class="horizon-line"></div>
+      </div>
+      <div class="card-flash"></div>
+    </div>
+    <div class="card-w card-3" data-layout-allow-overflow>
+      <div class="kb kb-neon">
+        <div class="neon-pool pool-rose"></div>
+        <div class="neon-pool pool-teal"></div>
+      </div>
+      <div class="card-flash"></div>
+    </div>
+    <div class="card-w card-4" data-layout-allow-overflow>
+      <div class="kb kb-drive">
+        <div class="streak streak-1"></div>
+        <div class="streak streak-2"></div>
+        <div class="halation"></div>
+      </div>
+      <div class="card-flash"></div>
+    </div>
+
+    <!-- ============ FG: particle burst layer (built by JS) ============ -->
+    <div class="fx-particles" data-layout-ignore></div>
+
+    <style>
+      [data-composition-id="s03"] {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        background: #050a06;
+        overflow: hidden;
+      }
+
+      /* ---------- BG ---------- */
+      [data-composition-id="s03"] .bg-grid {
+        position: absolute;
+        inset: -140px;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            rgba(62, 142, 14, 0.10) 0px,
+            rgba(62, 142, 14, 0.10) 2px,
+            rgba(62, 142, 14, 0) 2px,
+            rgba(62, 142, 14, 0) 96px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            rgba(62, 142, 14, 0.10) 0px,
+            rgba(62, 142, 14, 0.10) 2px,
+            rgba(62, 142, 14, 0) 2px,
+            rgba(62, 142, 14, 0) 96px
+          );
+      }
+      [data-composition-id="s03"] .bg-glow {
+        position: absolute;
+        border-radius: 50%;
+      }
+      [data-composition-id="s03"] .glow-a {
+        left: 160px;
+        top: 240px;
+        width: 920px;
+        height: 760px;
+        opacity: 0.2;
+        background: radial-gradient(
+          circle,
+          rgba(143, 224, 0, 0.55) 0%,
+          rgba(143, 224, 0, 0.12) 45%,
+          rgba(143, 224, 0, 0) 70%
+        );
+      }
+      [data-composition-id="s03"] .glow-b {
+        left: 1130px;
+        top: -220px;
+        width: 780px;
+        height: 680px;
+        opacity: 0.16;
+        background: radial-gradient(
+          circle,
+          rgba(53, 208, 186, 0.5) 0%,
+          rgba(53, 208, 186, 0.1) 48%,
+          rgba(53, 208, 186, 0) 72%
+        );
+      }
+      [data-composition-id="s03"] .glow-warm {
+        left: 1240px;
+        top: 600px;
+        width: 860px;
+        height: 720px;
+        opacity: 0;
+        background: radial-gradient(
+          circle,
+          rgba(255, 138, 61, 0.5) 0%,
+          rgba(255, 198, 92, 0.14) 46%,
+          rgba(255, 138, 61, 0) 72%
+        );
+      }
+
+      /* ---------- FG ticks ---------- */
+      [data-composition-id="s03"] .tick {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        opacity: 0;
+      }
+      [data-composition-id="s03"] .tick-tl { left: 64px; top: 64px; border-left: 2px solid rgba(234, 245, 226, 0.5); border-top: 2px solid rgba(234, 245, 226, 0.5); }
+      [data-composition-id="s03"] .tick-tr { right: 64px; top: 64px; border-right: 2px solid rgba(234, 245, 226, 0.5); border-top: 2px solid rgba(234, 245, 226, 0.5); }
+      [data-composition-id="s03"] .tick-bl { left: 64px; bottom: 64px; border-left: 2px solid rgba(234, 245, 226, 0.5); border-bottom: 2px solid rgba(234, 245, 226, 0.5); }
+      [data-composition-id="s03"] .tick-br { right: 64px; bottom: 64px; border-right: 2px solid rgba(234, 245, 226, 0.5); border-bottom: 2px solid rgba(234, 245, 226, 0.5); }
+
+      /* ---------- ghost plates ---------- */
+      [data-composition-id="s03"] .plate-w {
+        position: absolute;
+        width: 168px;
+        height: 140px;
+      }
+      [data-composition-id="s03"] .p-camera  { left: 210px;  top: 250px; }
+      [data-composition-id="s03"] .p-drone   { left: 545px;  top: 140px; }
+      [data-composition-id="s03"] .p-clapper { left: 920px;  top: 110px; }
+      [data-composition-id="s03"] .p-pin     { left: 1290px; top: 175px; }
+      [data-composition-id="s03"] .p-permit  { left: 1545px; top: 360px; }
+      [data-composition-id="s03"] .p-chair   { left: 180px;  top: 560px; }
+      [data-composition-id="s03"] .plate-h {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s03"] .plate {
+        position: absolute;
+        inset: 0;
+        border-radius: 18px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(234, 245, 226, 0.18);
+        box-shadow: 0 0 36px rgba(143, 224, 0, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      [data-composition-id="s03"] .sheen {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 0px;
+        height: 2px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s03"] .plate-burst {
+        position: absolute;
+        left: 24px;
+        top: 10px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        opacity: 0;
+        background: radial-gradient(
+          circle,
+          rgba(198, 255, 77, 0.75) 0%,
+          rgba(143, 224, 0, 0.25) 48%,
+          rgba(143, 224, 0, 0) 72%
+        );
+      }
+
+      /* camera icon */
+      [data-composition-id="s03"] .ic-cam-body {
+        position: absolute;
+        left: 44px;
+        top: 50px;
+        width: 68px;
+        height: 44px;
+        border-radius: 8px;
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        background: rgba(234, 245, 226, 0.06);
+      }
+      [data-composition-id="s03"] .ic-cam-lens {
+        position: absolute;
+        right: -22px;
+        top: 8px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        background: rgba(234, 245, 226, 0.05);
+      }
+      [data-composition-id="s03"] .ic-cam-iris {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(234, 245, 226, 0.40);
+      }
+      [data-composition-id="s03"] .ic-cam-vf {
+        position: absolute;
+        left: 56px;
+        top: 36px;
+        width: 26px;
+        height: 12px;
+        border-radius: 4px 4px 0 0;
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        border-bottom-width: 0px;
+      }
+
+      /* clapper icon */
+      [data-composition-id="s03"] .ic-clap-top {
+        position: absolute;
+        left: 50px;
+        top: 36px;
+        width: 66px;
+        height: 16px;
+        border-radius: 4px;
+        transform: rotate(-9deg);
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        background: repeating-linear-gradient(
+          55deg,
+          rgba(234, 245, 226, 0.38) 0px,
+          rgba(234, 245, 226, 0.38) 7px,
+          rgba(234, 245, 226, 0.06) 7px,
+          rgba(234, 245, 226, 0.06) 14px
+        );
+      }
+      [data-composition-id="s03"] .ic-clap-body {
+        position: absolute;
+        left: 50px;
+        top: 58px;
+        width: 66px;
+        height: 42px;
+        border-radius: 4px 4px 8px 8px;
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        background: rgba(234, 245, 226, 0.06);
+      }
+
+      /* location pin icon */
+      [data-composition-id="s03"] .ic-pin {
+        position: absolute;
+        left: 64px;
+        top: 36px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        background: rgba(234, 245, 226, 0.06);
+      }
+      [data-composition-id="s03"] .ic-pin-dot {
+        position: absolute;
+        left: 13px;
+        top: 13px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(234, 245, 226, 0.40);
+      }
+      [data-composition-id="s03"] .ic-pin-shadow {
+        position: absolute;
+        left: 70px;
+        top: 96px;
+        width: 30px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.14);
+      }
+
+      /* permit sheet icon */
+      [data-composition-id="s03"] .ic-sheet {
+        position: absolute;
+        left: 54px;
+        top: 28px;
+        width: 60px;
+        height: 84px;
+        border-radius: 6px;
+        border: 2px solid rgba(234, 245, 226, 0.42);
+        background: rgba(234, 245, 226, 0.05);
+      }
+      [data-composition-id="s03"] .gbar {
+        position: absolute;
+        left: 9px;
+        height: 7px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.38);
+      }
+      [data-composition-id="s03"] .gb-1 { top: 12px; width: 40px; }
+      [data-composition-id="s03"] .gb-2 { top: 27px; width: 30px; }
+      [data-composition-id="s03"] .gb-3 { top: 42px; width: 36px; }
+      [data-composition-id="s03"] .ic-stamp {
+        position: absolute;
+        right: 7px;
+        bottom: 7px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 100, 115, 0.45);
+      }
+
+      /* svg icons */
+      [data-composition-id="s03"] .ic-drone { display: block; }
+      [data-composition-id="s03"] .ic-chair { display: block; }
+
+      /* ---------- cables ---------- */
+      [data-composition-id="s03"] .cables {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      [data-composition-id="s03"] .cb {
+        fill: none;
+        stroke: #3e8e0e;
+        stroke-width: 3;
+        stroke-linecap: round;
+        opacity: 0.9;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+      }
+      [data-composition-id="s03"] .pu {
+        fill: none;
+        stroke: #c6ff4d;
+        stroke-width: 4;
+        stroke-linecap: round;
+        opacity: 0.95;
+        stroke-dasharray: 12 188;
+        stroke-dashoffset: 12;
+      }
+
+      /* ---------- nodes ---------- */
+      [data-composition-id="s03"] .node-w {
+        position: absolute;
+        opacity: 0;
+      }
+      [data-composition-id="s03"] .n-hub { left: 602px; top: 552px; width: 96px; height: 96px; }
+      [data-composition-id="s03"] .n-a { left: 448px;  top: 423px; width: 64px; height: 64px; }
+      [data-composition-id="s03"] .n-b { left: 809px;  top: 434px; width: 72px; height: 72px; }
+      [data-composition-id="s03"] .n-c { left: 418px;  top: 698px; width: 64px; height: 64px; }
+      [data-composition-id="s03"] .n-d { left: 801px;  top: 711px; width: 68px; height: 68px; }
+      [data-composition-id="s03"] .n-e { left: 980px;  top: 570px; width: 60px; height: 60px; }
+      [data-composition-id="s03"] .node-disc {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow:
+          0 0 40px rgba(143, 224, 0, 0.18),
+          inset 0 2px 0 rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s03"] .node-glow {
+        position: absolute;
+        inset: -18px;
+        border-radius: 50%;
+        opacity: 0.3;
+        background: radial-gradient(
+          circle,
+          rgba(143, 224, 0, 0.40) 0%,
+          rgba(143, 224, 0, 0.10) 50%,
+          rgba(143, 224, 0, 0) 74%
+        );
+      }
+      [data-composition-id="s03"] .node-core {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 12px;
+        height: 12px;
+        margin-left: -6px;
+        margin-top: -6px;
+        border-radius: 50%;
+        background: #c6ff4d;
+        box-shadow: 0 0 14px rgba(198, 255, 77, 0.85);
+      }
+      [data-composition-id="s03"] .hub-ring {
+        position: absolute;
+        inset: -16px;
+        border-radius: 50%;
+        border: 2px dashed rgba(143, 224, 0, 0.40);
+      }
+
+      /* ---------- frame cards ---------- */
+      [data-composition-id="s03"] .card-w {
+        position: absolute;
+        width: 340px;
+        height: 192px;
+        border-radius: 12px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.16);
+        overflow: hidden;
+        opacity: 0;
+      }
+      [data-composition-id="s03"] .card-1 { left: 1320px; top: 235px; }
+      [data-composition-id="s03"] .card-2 { left: 1500px; top: 458px; }
+      [data-composition-id="s03"] .card-3 { left: 1310px; top: 642px; }
+      [data-composition-id="s03"] .card-4 { left: 1492px; top: 838px; }
+      [data-composition-id="s03"] .kb {
+        position: absolute;
+        left: -22px;
+        top: -14px;
+        width: 384px;
+        height: 220px;
+      }
+      [data-composition-id="s03"] .kb-sunset {
+        background: linear-gradient(
+          180deg,
+          #1a0f14 0%,
+          #5a2233 30%,
+          #b8503a 56%,
+          #ff8a3d 78%,
+          #ffc65c 100%
+        );
+      }
+      [data-composition-id="s03"] .sun-glow {
+        position: absolute;
+        left: 122px;
+        top: 96px;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 198, 92, 0.9) 0%,
+          rgba(255, 198, 92, 0.25) 46%,
+          rgba(255, 198, 92, 0) 70%
+        );
+      }
+      [data-composition-id="s03"] .kb-ocean {
+        background: linear-gradient(
+          180deg,
+          #04121a 0%,
+          #0d3340 62%,
+          rgba(53, 208, 186, 0.30) 100%
+        );
+      }
+      [data-composition-id="s03"] .horizon-line {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 136px;
+        height: 2px;
+        background: rgba(234, 245, 226, 0.25);
+      }
+      [data-composition-id="s03"] .kb-neon {
+        background: linear-gradient(180deg, #0a0612 0%, #2a1140 100%);
+      }
+      [data-composition-id="s03"] .neon-pool {
+        position: absolute;
+        border-radius: 50%;
+      }
+      [data-composition-id="s03"] .pool-rose {
+        left: 30px;
+        top: 80px;
+        width: 180px;
+        height: 130px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 100, 115, 0.55) 0%,
+          rgba(255, 100, 115, 0.14) 48%,
+          rgba(255, 100, 115, 0) 72%
+        );
+      }
+      [data-composition-id="s03"] .pool-teal {
+        left: 200px;
+        top: 40px;
+        width: 170px;
+        height: 150px;
+        background: radial-gradient(
+          circle,
+          rgba(53, 208, 186, 0.5) 0%,
+          rgba(53, 208, 186, 0.12) 48%,
+          rgba(53, 208, 186, 0) 72%
+        );
+      }
+      [data-composition-id="s03"] .kb-drive {
+        background: linear-gradient(180deg, #1a0f14 0%, #5a2233 55%, #b8503a 100%);
+      }
+      [data-composition-id="s03"] .streak {
+        position: absolute;
+        height: 10px;
+        border-radius: 999px;
+        background: radial-gradient(
+          ellipse,
+          rgba(255, 198, 92, 0.85) 0%,
+          rgba(255, 198, 92, 0.2) 55%,
+          rgba(255, 198, 92, 0) 75%
+        );
+      }
+      [data-composition-id="s03"] .streak-1 { left: 50px; top: 138px; width: 220px; }
+      [data-composition-id="s03"] .streak-2 { left: 120px; top: 162px; width: 200px; }
+      [data-composition-id="s03"] .halation {
+        position: absolute;
+        left: 200px;
+        top: -30px;
+        width: 220px;
+        height: 160px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 100, 115, 0.35) 0%,
+          rgba(255, 100, 115, 0.08) 50%,
+          rgba(255, 100, 115, 0) 74%
+        );
+      }
+      [data-composition-id="s03"] .card-flash {
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        opacity: 0;
+        background: radial-gradient(
+          circle,
+          rgba(198, 255, 77, 0.5) 0%,
+          rgba(198, 255, 77, 0.12) 55%,
+          rgba(198, 255, 77, 0) 80%
+        );
+      }
+
+      /* ---------- particles ---------- */
+      [data-composition-id="s03"] .fx-particles {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s03"] .pw {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+      }
+      [data-composition-id="s03"] .pd {
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        border-radius: 50%;
+        opacity: 0;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const S = '[data-composition-id="s03"] ';
+        const root = document.querySelector('[data-composition-id="s03"]');
+        const DUR = 25;
+
+        // deterministic PRNG (mulberry32, seed 42)
+        const mulberry32 = (seed) => () => {
+          seed |= 0;
+          seed = (seed + 0x6d2b79f5) | 0;
+          let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+        const rng = mulberry32(42);
+
+        // finite-repeat helper: cycles that roughly fill remaining scene time
+        const reps = (start, cycle) =>
+          Math.max(1, Math.round((DUR - start) / cycle) - 1);
+
+        // ---------- scene data ----------
+        const nodes = [
+          { sel: ".n-hub", cx: 650, cy: 600 },
+          { sel: ".n-a", cx: 480, cy: 455 },
+          { sel: ".n-b", cx: 845, cy: 470 },
+          { sel: ".n-c", cx: 450, cy: 730 },
+          { sel: ".n-d", cx: 835, cy: 745 },
+          { sel: ".n-e", cx: 1010, cy: 600 },
+        ];
+        // plate -> target node index, shatter beat every ~1.6s from t=5
+        const plates = [
+          { sel: ".p-camera", cx: 294, cy: 320, node: 0, shatter: 5.0 },
+          { sel: ".p-drone", cx: 629, cy: 210, node: 1, shatter: 6.6 },
+          { sel: ".p-clapper", cx: 1004, cy: 180, node: 2, shatter: 8.2 },
+          { sel: ".p-pin", cx: 1374, cy: 245, node: 5, shatter: 9.8 },
+          { sel: ".p-permit", cx: 1629, cy: 430, node: 4, shatter: 11.4 },
+          { sel: ".p-chair", cx: 264, cy: 630, node: 3, shatter: 13.0 },
+        ];
+
+        // ---------- build particle DOM synchronously (before tweens) ----------
+        const layer = root.querySelector(".fx-particles");
+        const pdata = [];
+        plates.forEach((pl) => {
+          const target = nodes[pl.node];
+          const count = 8 + Math.floor(rng() * 5); // 8-12 dots
+          for (let k = 0; k < count; k++) {
+            const w = document.createElement("div");
+            w.className = "pw";
+            w.style.left = pl.cx + "px";
+            w.style.top = pl.cy + "px";
+            const d = document.createElement("div");
+            d.className = "pd";
+            const sz = 5 + Math.floor(rng() * 4);
+            d.style.width = sz + "px";
+            d.style.height = sz + "px";
+            const c = rng();
+            if (c < 0.45) {
+              d.style.background = "#8fe000";
+              d.style.boxShadow = "0 0 10px rgba(143,224,0,0.8)";
+            } else if (c < 0.8) {
+              d.style.background = "#c6ff4d";
+              d.style.boxShadow = "0 0 10px rgba(198,255,77,0.8)";
+            } else {
+              d.style.background = "#35d0ba";
+              d.style.boxShadow = "0 0 10px rgba(53,208,186,0.8)";
+            }
+            w.appendChild(d);
+            layer.appendChild(w);
+            const ang = rng() * Math.PI * 2;
+            const rad = 30 + rng() * 55;
+            const bx = Math.cos(ang) * rad;
+            const by = Math.sin(ang) * rad;
+            pdata.push({
+              w,
+              d,
+              bx,
+              by,
+              dx: target.cx - pl.cx - bx + (rng() - 0.5) * 36,
+              dy: target.cy - pl.cy - by + (rng() - 0.5) * 36,
+              t: pl.shatter + rng() * 0.12,
+            });
+          }
+        });
+
+        // ================= BG ambient (all on tl, finite) =================
+        tl.fromTo(
+          S + ".bg-grid",
+          { x: 0, y: 0 },
+          { x: -64, y: -32, duration: DUR - 0.3, ease: "none" },
+          0.3
+        );
+        tl.fromTo(
+          S + ".glow-a",
+          { scale: 1, opacity: 0.16 },
+          {
+            scale: 1.12,
+            opacity: 0.24,
+            duration: 3.2,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: reps(0.3, 3.2),
+          },
+          0.3
+        );
+        tl.fromTo(
+          S + ".glow-b",
+          { scale: 1, opacity: 0.13 },
+          {
+            scale: 1.15,
+            opacity: 0.2,
+            duration: 4.1,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: reps(0.5, 4.1),
+          },
+          0.5
+        );
+        // warm bleed rises when the memory cards start arriving
+        tl.fromTo(
+          S + ".glow-warm",
+          { opacity: 0 },
+          { opacity: 0.2, duration: 2.5, ease: "sine.out" },
+          16.5
+        );
+        tl.fromTo(
+          S + ".glow-warm",
+          { scale: 1 },
+          {
+            scale: 1.1,
+            duration: 3.0,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: reps(19, 3.0),
+          },
+          19
+        );
+
+        // corner registration ticks: fade in, then slow breathe
+        tl.fromTo(
+          S + ".tick",
+          { opacity: 0 },
+          { opacity: 0.3, duration: 0.6, ease: "power1.out", stagger: 0.08 },
+          0.35
+        );
+        tl.to(
+          S + ".tick",
+          {
+            opacity: 0.14,
+            duration: 2.6,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: reps(1.4, 2.6),
+          },
+          1.4
+        );
+
+        // ================= ACT 1: ghost plates materialize =================
+        plates.forEach((pl, i) => {
+          const tIn = 0.8 + i * 0.5;
+          // entrance on outer wrapper (only transform tween on .plate-w)
+          tl.fromTo(
+            S + pl.sel,
+            { opacity: 0, y: 26, filter: "blur(14px)" },
+            {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 0.65,
+              ease: i % 2 === 0 ? "power2.out" : "sine.out",
+            },
+            tIn
+          );
+          // hover ambient on middle wrapper (only transform tween on .plate-h)
+          const hStart = tIn + 0.7;
+          const cyc = 1.2 + i * 0.07;
+          tl.fromTo(
+            S + pl.sel + " .plate-h",
+            { y: -4, rotation: i % 2 === 0 ? -1.2 : 1.2 },
+            {
+              y: 4,
+              rotation: i % 2 === 0 ? 1.2 : -1.2,
+              duration: cyc,
+              ease: "sine.inOut",
+              yoyo: true,
+              repeat: Math.max(1, Math.ceil((pl.shatter - hStart) / cyc) - 1),
+            },
+            hStart
+          );
+        });
+
+        // ================= ACT 2: plates burst into particles =================
+        plates.forEach((pl) => {
+          const tB = pl.shatter;
+          // shatter on inner plate (only transform tween on .plate)
+          tl.fromTo(
+            S + pl.sel + " .plate",
+            { scale: 1, opacity: 1 },
+            { scale: 1.18, opacity: 0, duration: 0.32, ease: "power2.in" },
+            tB
+          );
+          // burst flash: fromTo from hidden (seek-safe), then opacity-only decay
+          tl.fromTo(
+            S + pl.sel + " .plate-burst",
+            { opacity: 0, scale: 0.5 },
+            { opacity: 0.85, scale: 1.6, duration: 0.14, ease: "power3.out" },
+            tB
+          );
+          tl.to(
+            S + pl.sel + " .plate-burst",
+            { opacity: 0, duration: 0.3, ease: "power1.in" },
+            tB + 0.14
+          );
+          // hard-kill the whole plate after its mid-scene dissolve
+          tl.set(
+            S + pl.sel,
+            { opacity: 0, visibility: "hidden" },
+            tB + 0.5
+          );
+        });
+
+        // particles: burst out (dot child) + stream to node (wrapper)
+        pdata.forEach((p) => {
+          tl.fromTo(
+            p.w,
+            { x: 0, y: 0 },
+            { x: p.dx, y: p.dy, duration: 1.1, ease: "power2.in" },
+            p.t
+          );
+          tl.fromTo(
+            p.d,
+            { x: 0, y: 0, opacity: 0, scale: 0.4 },
+            {
+              x: p.bx,
+              y: p.by,
+              opacity: 1,
+              scale: 1,
+              duration: 0.28,
+              ease: "power3.out",
+            },
+            p.t
+          );
+          tl.to(p.d, { opacity: 0, duration: 0.3, ease: "power1.in" }, p.t + 0.85);
+          tl.set(p.w, { opacity: 0, visibility: "hidden" }, p.t + 1.25);
+        });
+
+        // ================= ACT 3: nodes ignite as particles arrive =================
+        // node order follows plate dissolve order: hub, a, b, e, d, c
+        const ignite = [
+          { sel: ".n-hub", t: 6.1 },
+          { sel: ".n-a", t: 7.7 },
+          { sel: ".n-b", t: 9.3 },
+          { sel: ".n-e", t: 10.9 },
+          { sel: ".n-d", t: 12.5 },
+          { sel: ".n-c", t: 14.1 },
+        ];
+        ignite.forEach((n, i) => {
+          tl.fromTo(
+            S + n.sel,
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.8)" },
+            n.t
+          );
+          // breathing glow on child until scene end (finite)
+          const gCyc = 1.1 + i * 0.08;
+          tl.fromTo(
+            S + n.sel + " .node-glow",
+            { opacity: 0.25 },
+            {
+              opacity: 0.8,
+              duration: gCyc,
+              ease: "sine.inOut",
+              yoyo: true,
+              repeat: reps(n.t + 0.5, gCyc),
+            },
+            n.t + 0.5
+          );
+        });
+        // hub orbit ring, slow finite rotation till end (only transform on ring)
+        tl.fromTo(
+          S + ".hub-ring",
+          { rotation: 0 },
+          { rotation: 130, duration: DUR - 6.7, ease: "none" },
+          6.7
+        );
+
+        // ================= ACT 4: cables draw =================
+        const cableDraws = [
+          { sel: ".c1", t: 13.0 },
+          { sel: ".c2", t: 13.45 },
+          { sel: ".c3", t: 13.9 },
+          { sel: ".c4", t: 14.35 },
+          { sel: ".c5", t: 14.8 },
+          { sel: ".c6", t: 15.2 },
+          { sel: ".c7", t: 15.6 },
+        ];
+        cableDraws.forEach((c) => {
+          tl.fromTo(
+            S + c.sel,
+            { attr: { "stroke-dashoffset": 100 } },
+            {
+              attr: { "stroke-dashoffset": 0 },
+              duration: 0.9,
+              ease: "power2.inOut",
+            },
+            c.t
+          );
+        });
+
+        // ================= ACT 5: pulses race the cables =================
+        // network pulses: staggered, finite repeats sized to remaining time
+        [".u1", ".u2", ".u3", ".u4", ".u5", ".u6"].forEach((sel, i) => {
+          const t0 = 17.0 + i * 0.22;
+          tl.fromTo(
+            S + sel,
+            { attr: { "stroke-dashoffset": 12 } },
+            {
+              attr: { "stroke-dashoffset": -100 },
+              duration: 1.0,
+              ease: "power1.inOut",
+              repeat: Math.max(1, Math.floor((DUR - t0 - 1.0) / 1.5)),
+              repeatDelay: 0.5,
+            },
+            t0
+          );
+        });
+        // output cable: 4 discrete pulses, one per frame card
+        tl.fromTo(
+          S + ".u7",
+          { attr: { "stroke-dashoffset": 12 } },
+          {
+            attr: { "stroke-dashoffset": -100 },
+            duration: 0.8,
+            ease: "power1.inOut",
+            repeat: 3,
+            repeatDelay: 0.7,
+          },
+          17.0
+        );
+
+        // ================= ACT 6: frame cards deal out =================
+        // deal moments = output pulse arrivals (17.0/18.5/20.0/21.5 + 0.8 travel)
+        const cards = [
+          { sel: ".card-1", t: 17.8, ry: -8, kx: 14 },
+          { sel: ".card-2", t: 19.3, ry: -6, kx: -14 },
+          { sel: ".card-3", t: 20.8, ry: -8, kx: 12 },
+          { sel: ".card-4", t: 22.3, ry: -5, kx: -12 },
+        ];
+        cards.forEach((cd) => {
+          // deal entrance on wrapper (single combined transform tween)
+          tl.fromTo(
+            S + cd.sel,
+            {
+              x: 240,
+              opacity: 0,
+              rotationY: -34,
+              scale: 0.92,
+              transformPerspective: 1100,
+            },
+            {
+              x: 0,
+              opacity: 1,
+              rotationY: cd.ry,
+              scale: 1,
+              duration: 0.75,
+              ease: "expo.out",
+            },
+            cd.t
+          );
+          // landing flash: appear via fromTo from hidden, decay opacity-only
+          tl.fromTo(
+            S + cd.sel + " .card-flash",
+            { opacity: 0 },
+            { opacity: 0.6, duration: 0.12, ease: "power3.out" },
+            cd.t + 0.4
+          );
+          tl.to(
+            S + cd.sel + " .card-flash",
+            { opacity: 0, duration: 0.4, ease: "power1.in" },
+            cd.t + 0.52
+          );
+          // Ken Burns on child layer, runs to scene end (single transform tween)
+          tl.fromTo(
+            S + cd.sel + " .kb",
+            { scale: 1.04, x: 0 },
+            { scale: 1.13, x: cd.kx, duration: DUR - (cd.t + 0.2), ease: "none" },
+            cd.t + 0.2
+          );
+        });
+
+        window.__timelines["s03"] = tl;
+      })();
+    </script>
+  </div>
+</template>
