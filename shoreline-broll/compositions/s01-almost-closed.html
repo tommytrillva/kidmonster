@@ -1,0 +1,759 @@
+<template id="s01-template">
+  <div data-composition-id="s01" data-width="1920" data-height="1080">
+    <!--
+      Scene 01 — "I almost closed it out" (16s local)
+      Dark desktop window, overwhelming dense waveform, cursor approaches close
+      control then pulls back, waveform morphs into a calm AI video timeline.
+      Element groups (11): grid, glow-a, glow-b, spray field, glass window,
+      waveform, file chip, baseline, close control, cursor, timeline tracks.
+    -->
+    <div class="cam">
+
+      <!-- BG decoratives -->
+      <div class="bg-grid" data-layout-ignore></div>
+      <div class="glow-a" data-layout-ignore></div>
+      <div class="glow-b" data-layout-ignore></div>
+      <div class="spray" data-layout-ignore></div>
+
+      <!-- MG: glass desktop window -->
+      <div class="win-wrap">
+        <div class="window">
+          <div class="titlebar">
+            <div class="tdot tdot-rose"></div>
+            <div class="tdot tdot-gold"></div>
+            <div class="tdot tdot-green"></div>
+            <div class="tbar tbar-a"></div>
+            <div class="tbar tbar-b"></div>
+            <div class="close-ring">
+              <div class="close-dot"></div>
+            </div>
+          </div>
+          <div class="win-body">
+            <div class="chip">
+              <div class="chip-icon">
+                <div class="note-head"></div>
+                <div class="note-stem"></div>
+                <div class="note-flag"></div>
+              </div>
+              <div class="chip-bars">
+                <div class="gbar gbar-a"></div>
+                <div class="gbar gbar-b"></div>
+              </div>
+            </div>
+            <div class="waveform" data-layout-allow-overflow></div>
+            <div class="baseline"></div>
+            <div class="tracks">
+              <div class="lane lane-1">
+                <div class="tclip grad-sunset" style="left:2%;width:30%;"></div>
+                <div class="tclip grad-ocean" style="left:36%;width:22%;"></div>
+              </div>
+              <div class="lane lane-2">
+                <div class="tclip grad-gold" style="left:10%;width:26%;"></div>
+                <div class="tclip grad-sunset" style="left:40%;width:18%;"></div>
+                <div class="tclip grad-ocean" style="left:62%;width:24%;"></div>
+              </div>
+              <div class="lane lane-3">
+                <div class="tclip grad-sunset" style="left:26%;width:34%;"></div>
+                <div class="tclip grad-gold" style="left:64%;width:20%;"></div>
+              </div>
+              <div class="underglow" data-layout-ignore></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FG: cursor -->
+      <div class="cursor-wrap">
+        <svg class="cursor" width="26" height="34" viewBox="0 0 26 34">
+          <polygon points="2,1 2,26 8.5,20.5 13,32 17.5,30 13,18.5 22,18"
+                   fill="#eaf5e2" stroke="rgba(5,10,6,0.55)" stroke-width="2"></polygon>
+        </svg>
+      </div>
+
+    </div>
+
+    <style>
+      [data-composition-id="s01"] {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        background: #050a06;
+        overflow: hidden;
+      }
+      [data-composition-id="s01"] .cam {
+        position: absolute;
+        inset: 0;
+        transform-origin: 50% 45%;
+      }
+
+      /* ---------- BG ---------- */
+      [data-composition-id="s01"] .bg-grid {
+        position: absolute;
+        left: -160px;
+        top: -120px;
+        width: 2240px;
+        height: 1340px;
+        opacity: 0.08;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            rgba(62, 142, 14, 0.9) 0px,
+            rgba(62, 142, 14, 0.9) 2px,
+            rgba(62, 142, 14, 0) 2px,
+            rgba(62, 142, 14, 0) 96px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            rgba(62, 142, 14, 0.9) 0px,
+            rgba(62, 142, 14, 0.9) 2px,
+            rgba(62, 142, 14, 0) 2px,
+            rgba(62, 142, 14, 0) 96px
+          );
+      }
+      [data-composition-id="s01"] .glow-a {
+        position: absolute;
+        left: -220px;
+        top: -260px;
+        width: 980px;
+        height: 980px;
+        border-radius: 999px;
+        background: radial-gradient(
+          circle,
+          rgba(143, 224, 0, 0.16) 0%,
+          rgba(143, 224, 0, 0.05) 42%,
+          rgba(143, 224, 0, 0) 70%
+        );
+      }
+      [data-composition-id="s01"] .glow-b {
+        position: absolute;
+        right: -200px;
+        bottom: -260px;
+        width: 820px;
+        height: 820px;
+        border-radius: 999px;
+        opacity: 0.55;
+        background: radial-gradient(
+          circle,
+          rgba(255, 138, 61, 0.14) 0%,
+          rgba(255, 138, 61, 0.05) 45%,
+          rgba(255, 138, 61, 0) 72%
+        );
+      }
+      [data-composition-id="s01"] .spray {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s01"] .spray-dot {
+        position: absolute;
+        border-radius: 999px;
+      }
+
+      /* ---------- MG: window ---------- */
+      [data-composition-id="s01"] .win-wrap {
+        position: absolute;
+        left: 320px;
+        top: 232px;
+        width: 1280px;
+        height: 560px;
+      }
+      [data-composition-id="s01"] .window {
+        position: absolute;
+        inset: 0;
+        border-radius: 24px;
+        background: rgba(10, 20, 11, 0.88);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.18);
+      }
+      [data-composition-id="s01"] .window::before {
+        content: "";
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        top: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s01"] .titlebar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 58px;
+        border-bottom: 2px solid rgba(143, 224, 0, 0.14);
+        background: rgba(150, 230, 120, 0.07);
+        border-radius: 22px 22px 0 0;
+      }
+      [data-composition-id="s01"] .tdot {
+        position: absolute;
+        top: 22px;
+        width: 14px;
+        height: 14px;
+        border-radius: 999px;
+        opacity: 0.85;
+      }
+      [data-composition-id="s01"] .tdot-rose  { left: 26px; background: #ff6473; }
+      [data-composition-id="s01"] .tdot-gold  { left: 50px; background: #ffc65c; }
+      [data-composition-id="s01"] .tdot-green { left: 74px; background: #8fe000; }
+      [data-composition-id="s01"] .tbar {
+        position: absolute;
+        top: 25px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.30);
+      }
+      [data-composition-id="s01"] .tbar-a { left: 118px; width: 92px; }
+      [data-composition-id="s01"] .tbar-b { left: 222px; width: 54px; opacity: 0.6; }
+      [data-composition-id="s01"] .close-ring {
+        position: absolute;
+        right: 20px;
+        top: 9px;
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        border: 2px solid rgba(234, 245, 226, 0.40);
+        background: rgba(234, 245, 226, 0.06);
+        box-shadow: 0 0 10px rgba(143, 224, 0, 0.10);
+      }
+      [data-composition-id="s01"] .close-dot {
+        position: absolute;
+        left: 14px;
+        top: 14px;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.55);
+      }
+      [data-composition-id="s01"] .win-body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 58px;
+        bottom: 0;
+      }
+
+      /* file chip */
+      [data-composition-id="s01"] .chip {
+        position: absolute;
+        left: 48px;
+        top: 24px;
+        width: 232px;
+        height: 62px;
+        border-radius: 12px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 24px rgba(143, 224, 0, 0.14);
+      }
+      [data-composition-id="s01"] .chip-icon {
+        position: absolute;
+        left: 14px;
+        top: 11px;
+        width: 36px;
+        height: 36px;
+      }
+      [data-composition-id="s01"] .note-head {
+        position: absolute;
+        left: 4px;
+        bottom: 3px;
+        width: 13px;
+        height: 11px;
+        border-radius: 999px;
+        background: #8fe000;
+      }
+      [data-composition-id="s01"] .note-stem {
+        position: absolute;
+        left: 14px;
+        top: 3px;
+        width: 3px;
+        height: 27px;
+        border-radius: 999px;
+        background: #8fe000;
+      }
+      [data-composition-id="s01"] .note-flag {
+        position: absolute;
+        left: 15px;
+        top: 3px;
+        width: 14px;
+        height: 9px;
+        border-radius: 0 999px 999px 0;
+        background: #c6ff4d;
+        opacity: 0.9;
+      }
+      [data-composition-id="s01"] .gbar {
+        position: absolute;
+        border-radius: 999px;
+      }
+      [data-composition-id="s01"] .gbar-a {
+        left: 64px;
+        top: 16px;
+        width: 118px;
+        height: 9px;
+        background: rgba(234, 245, 226, 0.55);
+      }
+      [data-composition-id="s01"] .gbar-b {
+        left: 64px;
+        top: 35px;
+        width: 74px;
+        height: 7px;
+        background: rgba(143, 224, 0, 0.45);
+      }
+
+      /* waveform */
+      [data-composition-id="s01"] .waveform {
+        position: absolute;
+        left: 48px;
+        right: 48px;
+        bottom: 78px;
+        height: 330px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        overflow: visible;
+      }
+      [data-composition-id="s01"] .wbar {
+        width: 8px;
+        transform-origin: 50% 100%;
+      }
+      [data-composition-id="s01"] .wbar-pulse {
+        width: 100%;
+        height: 100%;
+        transform-origin: 50% 100%;
+      }
+      [data-composition-id="s01"] .wbar-core {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        transform-origin: 50% 100%;
+        opacity: 0.88;
+        box-shadow: 0 0 12px rgba(143, 224, 0, 0.35);
+      }
+      [data-composition-id="s01"] .baseline {
+        position: absolute;
+        left: 48px;
+        right: 48px;
+        bottom: 72px;
+        height: 2px;
+        border-radius: 999px;
+        background: rgba(143, 224, 0, 0.55);
+        box-shadow: 0 0 14px rgba(143, 224, 0, 0.35);
+        transform-origin: 0% 50%;
+      }
+
+      /* calm AI video timeline (fades up over waveform at the morph beat) */
+      [data-composition-id="s01"] .tracks {
+        position: absolute;
+        left: 48px;
+        right: 48px;
+        bottom: 72px;
+        height: 318px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 18px;
+      }
+      [data-composition-id="s01"] .lane {
+        position: relative;
+        height: 64px;
+        border-radius: 12px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.22);
+        transform-origin: 0% 50%;
+      }
+      [data-composition-id="s01"] .tclip {
+        position: absolute;
+        top: 6px;
+        height: 48px;
+        border-radius: 8px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 18px rgba(143, 224, 0, 0.16);
+      }
+      [data-composition-id="s01"] .grad-sunset {
+        background: linear-gradient(
+          180deg,
+          #5a2233 0%,
+          #b8503a 55%,
+          #ff8a3d 84%,
+          #ffc65c 100%
+        );
+      }
+      [data-composition-id="s01"] .grad-ocean {
+        background: linear-gradient(
+          180deg,
+          #04121a 0%,
+          #0d3340 60%,
+          rgba(53, 208, 186, 0.55) 100%
+        );
+      }
+      [data-composition-id="s01"] .grad-gold {
+        background: radial-gradient(
+          circle at 50% 80%,
+          rgba(255, 198, 92, 0.85) 0%,
+          rgba(255, 138, 61, 0.45) 45%,
+          rgba(26, 15, 20, 0.95) 100%
+        );
+      }
+      [data-composition-id="s01"] .underglow {
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        bottom: -16px;
+        height: 26px;
+        border-radius: 999px;
+        opacity: 0.4;
+        background: radial-gradient(
+          ellipse at 50% 50%,
+          rgba(143, 224, 0, 0.30) 0%,
+          rgba(143, 224, 0, 0) 70%
+        );
+      }
+
+      /* ---------- FG: cursor ---------- */
+      [data-composition-id="s01"] .cursor-wrap {
+        position: absolute;
+        left: 1180px;
+        top: 790px;
+        width: 26px;
+        height: 34px;
+      }
+      [data-composition-id="s01"] .cursor {
+        display: block;
+        filter: drop-shadow(0 3px 6px rgba(5, 10, 6, 0.6));
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const S = '[data-composition-id="s01"] ';
+        const root = document.querySelector('[data-composition-id="s01"]');
+
+        const DUR = 16; // local scene duration in seconds
+        // finite-repeat helper per contract: repeat = ceil(remaining / cycle) - 1
+        const rep = (cycle, at) => Math.max(0, Math.ceil((DUR - at) / cycle) - 1);
+
+        // deterministic PRNG (mulberry32, seed 42)
+        const mulberry32 = (seed) => () => {
+          seed |= 0;
+          seed = (seed + 0x6d2b79f5) | 0;
+          let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+        const rng = mulberry32(42);
+
+        /* ---- build waveform bars synchronously (before any tween) ---- */
+        const wave = root.querySelector(".waveform");
+        const N = 88;
+        const amps = [];
+        for (let i = 0; i < N; i++) {
+          const env = Math.sin((Math.PI * i) / (N - 1)); // taller mid-window
+          const h = Math.round(46 + env * 230 + rng() * 160); // some > 330 => overshoot
+          const r = rng();
+          const color = r < 0.14 ? "#c6ff4d" : r < 0.24 ? "#35d0ba" : "#8fe000";
+          amps.push(rng());
+          const bar = document.createElement("div");
+          bar.className = "wbar";
+          bar.style.height = h + "px";
+          const pulse = document.createElement("div");
+          pulse.className = "wbar-pulse";
+          const core = document.createElement("div");
+          core.className = "wbar-core";
+          core.style.background = color;
+          pulse.appendChild(core);
+          bar.appendChild(pulse);
+          wave.appendChild(bar);
+        }
+
+        /* ---- build sea-spray dots synchronously ---- */
+        const spray = root.querySelector(".spray");
+        const dots = [];
+        for (let i = 0; i < 12; i++) {
+          const d = document.createElement("div");
+          d.className = "spray-dot";
+          const size = rng() < 0.5 ? 2 : 3;
+          d.style.width = size + "px";
+          d.style.height = size + "px";
+          d.style.left = Math.round(140 + rng() * 1640) + "px";
+          d.style.top = Math.round(120 + rng() * 840) + "px";
+          d.style.background = rng() < 0.4 ? "#35d0ba" : "#8fe000";
+          spray.appendChild(d);
+          dots.push(d);
+        }
+
+        /* ================= timeline (local 0 -> 16) ================= */
+
+        // camera: slow 3% push-in on the scene wrapper (its only transform tween)
+        tl.fromTo(
+          S + ".cam",
+          { scale: 1 },
+          { scale: 1.03, duration: 15.7, ease: "power2.inOut" },
+          0.3
+        );
+
+        // BG grid drifts the whole scene
+        tl.fromTo(
+          S + ".bg-grid",
+          { x: 0, y: 0 },
+          { x: -44, y: -26, duration: 15.65, ease: "sine.inOut" },
+          0.35
+        );
+
+        // glows breathe (finite repeats, different cycles)
+        tl.fromTo(
+          S + ".glow-a",
+          { scale: 0.95 },
+          {
+            scale: 1.08,
+            duration: 3.8,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: rep(3.8, 0.35),
+          },
+          0.35
+        );
+        tl.fromTo(
+          S + ".glow-b",
+          { scale: 1.05 },
+          {
+            scale: 0.94,
+            duration: 5.4,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: rep(5.4, 0.35),
+          },
+          0.35
+        );
+        // warm bleed rises as doubt turns to curiosity (opacity only)
+        tl.fromTo(
+          S + ".glow-b",
+          { opacity: 0.55 },
+          { opacity: 0.95, duration: 2.6, ease: "sine.inOut" },
+          12.0
+        );
+
+        // spray dots: slow up-right drift + soft fade-in (one transform tween each)
+        dots.forEach((d, i) => {
+          const t0 = 0.35 + (i % 4) * 0.05;
+          tl.fromTo(
+            d,
+            { x: 0, y: 0 },
+            {
+              x: 24 + rng() * 70,
+              y: -(34 + rng() * 96),
+              duration: DUR - t0,
+              ease: "none",
+            },
+            t0
+          );
+          tl.fromTo(
+            d,
+            { opacity: 0 },
+            { opacity: 0.14 + rng() * 0.1, duration: 1.6, ease: "sine.out" },
+            t0
+          );
+        });
+
+        // window glides up into place (entrance on wrapper)
+        tl.fromTo(
+          S + ".win-wrap",
+          { y: 90, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.9, ease: "expo.out" },
+          0.5
+        );
+        // gentle ambient float on the window itself (separate element)
+        tl.fromTo(
+          S + ".window",
+          { y: 0 },
+          {
+            y: -7,
+            duration: 2.4,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: rep(2.4, 1.5),
+          },
+          1.5
+        );
+        // window glow intensifies as the waveform overwhelms (box-shadow only)
+        tl.fromTo(
+          S + ".window",
+          { boxShadow: "0 0 40px rgba(143,224,0,0.18)" },
+          {
+            boxShadow: "0 0 86px rgba(143,224,0,0.34)",
+            duration: 1.6,
+            ease: "sine.inOut",
+          },
+          5.0
+        );
+
+        // file chip pops
+        tl.fromTo(
+          S + ".chip",
+          { scale: 0.4, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" },
+          1.6
+        );
+
+        // baseline draws under the waveform
+        tl.fromTo(
+          S + ".baseline",
+          { scaleX: 0 },
+          { scaleX: 1, duration: 1.0, ease: "power2.inOut" },
+          2.0
+        );
+
+        // waveform bars grow staggered from the baseline (entrance on .wbar)
+        tl.fromTo(
+          S + ".wbar",
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            duration: 0.7,
+            ease: "power3.out",
+            stagger: { each: 0.02, from: "start" },
+          },
+          2.2
+        );
+        // overwhelming ambient pulse (on .wbar-pulse — separate layer).
+        // yoyo repeat 7 = 8 passes -> ends back at scaleY 1 around t=12.
+        tl.fromTo(
+          S + ".wbar-pulse",
+          { scaleY: 1 },
+          {
+            scaleY: (i) => 0.72 + amps[i] * 0.62,
+            duration: 1.05,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: 7,
+            stagger: { each: 0.008, from: "center" },
+          },
+          3.6
+        );
+
+        // cursor fades in (opacity on wrapper only)
+        tl.fromTo(
+          S + ".cursor-wrap",
+          { opacity: 0 },
+          { opacity: 1, duration: 0.45, ease: "power1.out" },
+          6.6
+        );
+        // cursor path: sequential absolute moves on the child (no stacked tweens)
+        tl.to(S + ".cursor", { x: 352, y: -522, duration: 2.0, ease: "power2.inOut" }, 7.0);
+        tl.to(S + ".cursor", { x: 369, y: -541, duration: 0.35, ease: "sine.inOut" }, 9.15);
+        tl.to(S + ".cursor", { x: 341, y: -516, duration: 0.28, ease: "power1.out" }, 9.55);
+        tl.to(S + ".cursor", { x: 357, y: -529, duration: 0.3, ease: "sine.inOut" }, 9.95);
+        tl.to(S + ".cursor", { x: 150, y: -150, duration: 1.7, ease: "power2.inOut" }, 10.55);
+        tl.to(S + ".cursor", { x: 158, y: -142, duration: 3.2, ease: "sine.inOut" }, 12.6);
+
+        // close control glows warning-warm while the cursor hovers (no transforms)
+        tl.fromTo(
+          S + ".close-ring",
+          {
+            borderColor: "rgba(234,245,226,0.40)",
+            backgroundColor: "rgba(234,245,226,0.06)",
+            boxShadow: "0 0 10px rgba(143,224,0,0.10)",
+          },
+          {
+            borderColor: "rgba(255,100,115,0.95)",
+            backgroundColor: "rgba(255,100,115,0.16)",
+            boxShadow: "0 0 26px rgba(255,100,115,0.55)",
+            duration: 0.42,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: 5,
+          },
+          7.6
+        );
+        tl.to(
+          S + ".close-ring",
+          {
+            borderColor: "rgba(234,245,226,0.40)",
+            backgroundColor: "rgba(234,245,226,0.06)",
+            boxShadow: "0 0 10px rgba(143,224,0,0.10)",
+            duration: 0.8,
+            ease: "power1.inOut",
+          },
+          10.6
+        );
+
+        /* ---- the morph: chaos exhales into a calm AI video timeline ---- */
+
+        // bars settle + re-tint toward accent-deep (on .wbar-core — its only transform)
+        tl.to(
+          S + ".wbar-core",
+          {
+            scaleY: 0.42,
+            backgroundColor: "#3e8e0e",
+            opacity: 0.6,
+            boxShadow: "0 0 6px rgba(62,142,14,0.25)",
+            duration: 1.3,
+            ease: "power2.inOut",
+            stagger: { each: 0.006, from: "edges" },
+          },
+          12.0
+        );
+        // baseline brightens into the shoreline motif (box-shadow only)
+        tl.to(
+          S + ".baseline",
+          {
+            boxShadow: "0 0 26px rgba(198,255,77,0.55)",
+            backgroundColor: "rgba(198,255,77,0.75)",
+            duration: 0.9,
+            ease: "sine.inOut",
+          },
+          12.0
+        );
+
+        // track structure fades up over the waveform (opacity on wrapper)
+        tl.fromTo(
+          S + ".tracks",
+          { opacity: 0 },
+          { opacity: 1, duration: 0.8, ease: "sine.out" },
+          12.3
+        );
+        // lanes extend (their only transform tween)
+        tl.fromTo(
+          S + ".lane",
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            duration: 0.7,
+            ease: "expo.out",
+            stagger: { each: 0.15, from: "start" },
+          },
+          12.45
+        );
+        // clip blocks lock in
+        tl.fromTo(
+          S + ".tclip",
+          { scale: 0.55, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.32,
+            ease: "back.out(1.6)",
+            stagger: { each: 0.12, from: "start" },
+          },
+          12.9
+        );
+        // calm breathe on the timeline underglow through the final frame
+        tl.fromTo(
+          S + ".underglow",
+          { opacity: 0.4 },
+          {
+            opacity: 0.7,
+            duration: 0.75,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: 1,
+          },
+          14.5
+        );
+
+        window.__timelines["s01"] = tl;
+      })();
+    </script>
+  </div>
+</template>

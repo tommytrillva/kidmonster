@@ -1,0 +1,726 @@
+<template id="s05-template">
+  <div data-composition-id="s05" data-width="1920" data-height="1080">
+    <!-- BG decoratives -->
+    <div class="s05-glow-a" data-layout-ignore></div>
+    <div class="s05-glow-b" data-layout-ignore></div>
+    <div class="s05-ruler" data-layout-ignore></div>
+    <div class="s05-spray" data-layout-ignore data-layout-allow-overflow></div>
+
+    <!-- montage wall (hidden until ~15s, fades up behind the timeline panel) -->
+    <div class="s05-mwall"></div>
+
+    <!-- timeline panel cluster: zoom wrapper > rise wrapper > drift wrapper > content -->
+    <div class="s05-zoom" data-layout-allow-overflow>
+      <div class="s05-rise">
+        <div class="s05-drift">
+
+          <!-- the glass NLE panel -->
+          <div class="s05-panel">
+            <div class="s05-sheen"></div>
+            <div class="s05-header"></div>
+            <div class="s05-rulerstrip"></div>
+            <div class="s05-lanes"></div>
+            <div class="s05-clips" data-layout-allow-overflow></div>
+            <div class="s05-playhead">
+              <div class="s05-ph-cap"></div>
+              <div class="s05-ph-line"></div>
+            </div>
+          </div>
+
+          <!-- floating color wheels (conic rings, palette hues only) -->
+          <div class="s05-wheel s05-w1">
+            <div class="s05-wheel-disc"></div>
+            <div class="s05-wheel-hole"></div>
+            <div class="s05-wheel-rim"></div>
+          </div>
+          <div class="s05-wheel s05-w2">
+            <div class="s05-wheel-disc"></div>
+            <div class="s05-wheel-hole"></div>
+            <div class="s05-wheel-rim"></div>
+          </div>
+          <div class="s05-wheel s05-w3">
+            <div class="s05-wheel-disc"></div>
+            <div class="s05-wheel-hole"></div>
+            <div class="s05-wheel-rim"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <style>
+      [data-composition-id="s05"] {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        background: #050a06;
+        overflow: hidden;
+      }
+
+      /* ---------- BG decoratives ---------- */
+      [data-composition-id="s05"] .s05-glow-a {
+        position: absolute;
+        left: -220px;
+        top: -260px;
+        width: 940px;
+        height: 940px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(143, 224, 0, 0.20) 0%, rgba(143, 224, 0, 0) 70%);
+      }
+      [data-composition-id="s05"] .s05-glow-b {
+        position: absolute;
+        right: -300px;
+        bottom: -320px;
+        width: 1060px;
+        height: 1060px;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(255, 138, 61, 0.17) 0%, rgba(255, 138, 61, 0) 70%);
+      }
+      [data-composition-id="s05"] .s05-ruler {
+        position: absolute;
+        left: 90px;
+        top: 58px;
+        width: 1740px;
+        height: 12px;
+        opacity: 0.22;
+      }
+      [data-composition-id="s05"] .s05-rtick {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        background: rgba(62, 142, 14, 0.9);
+        border-radius: 999px;
+      }
+      [data-composition-id="s05"] .s05-spray {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s05"] .s05-dot {
+        position: absolute;
+        border-radius: 999px;
+      }
+
+      /* ---------- montage wall ---------- */
+      [data-composition-id="s05"] .s05-mwall {
+        position: absolute;
+        left: 90px;
+        top: 90px;
+        width: 1740px;
+        height: 900px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 28px;
+        row-gap: 96px;
+        z-index: 2;
+      }
+      [data-composition-id="s05"] .s05-mcard {
+        position: relative;
+        border-radius: 12px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        overflow: hidden;
+        box-shadow: 0 0 36px rgba(143, 224, 0, 0.14);
+      }
+      [data-composition-id="s05"] .s05-mg0 {
+        background: linear-gradient(180deg, #1a0f14 0%, #5a2233 32%, #b8503a 58%, #ff8a3d 80%, #ffc65c 100%);
+      }
+      [data-composition-id="s05"] .s05-mg1 {
+        background: #04121a;
+        background-image: linear-gradient(180deg, rgba(4, 18, 26, 0.95) 0%, rgba(13, 51, 64, 0.95) 58%, rgba(53, 208, 186, 0.34) 100%);
+      }
+      [data-composition-id="s05"] .s05-mg2 {
+        background: #1a0f14;
+        background-image: linear-gradient(180deg, rgba(26, 15, 20, 0.95) 0%, rgba(255, 100, 115, 0.45) 64%, rgba(255, 198, 92, 0.42) 100%);
+      }
+      [data-composition-id="s05"] .s05-mc-horizon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 62%;
+        height: 2px;
+        background: rgba(234, 245, 226, 0.25);
+      }
+      [data-composition-id="s05"] .s05-mc-glow {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 58%, rgba(255, 198, 92, 0.42) 0%, rgba(255, 198, 92, 0) 68%);
+        opacity: 0;
+      }
+
+      /* ---------- timeline panel cluster ---------- */
+      [data-composition-id="s05"] .s05-zoom {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+      }
+      [data-composition-id="s05"] .s05-rise {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s05"] .s05-drift {
+        position: absolute;
+        inset: 0;
+      }
+      [data-composition-id="s05"] .s05-panel {
+        position: absolute;
+        left: 90px;
+        top: 290px;
+        width: 1740px;
+        height: 496px;
+        border-radius: 24px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.18);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s05"] .s05-sheen {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        top: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.12);
+      }
+
+      /* track header column */
+      [data-composition-id="s05"] .s05-header {
+        position: absolute;
+        left: 24px;
+        top: 64px;
+        width: 200px;
+        height: 408px;
+        border-radius: 18px;
+        background: rgba(10, 20, 11, 0.85);
+        border: 2px solid rgba(143, 224, 0, 0.22);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s05"] .s05-hrow {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        display: flex;
+        align-items: center;
+      }
+      [data-composition-id="s05"] .s05-hicon {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+        margin-right: 12px;
+        position: relative;
+      }
+      [data-composition-id="s05"] .s05-ic-square {
+        position: absolute;
+        inset: 4px;
+        border: 2px solid rgba(143, 224, 0, 0.65);
+        border-radius: 8px;
+      }
+      [data-composition-id="s05"] .s05-ic-circle {
+        position: absolute;
+        inset: 4px;
+        border: 2px solid rgba(255, 198, 92, 0.65);
+        border-radius: 999px;
+      }
+      [data-composition-id="s05"] .s05-ic-diamond {
+        position: absolute;
+        inset: 7px;
+        border: 2px solid rgba(255, 100, 115, 0.60);
+        border-radius: 6px;
+        transform: rotate(45deg);
+      }
+      [data-composition-id="s05"] .s05-ic-bars {
+        position: absolute;
+        inset: 6px;
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+      }
+      [data-composition-id="s05"] .s05-ic-bar {
+        flex: 1;
+        background: rgba(53, 208, 186, 0.70);
+        border-radius: 999px;
+      }
+      [data-composition-id="s05"] .s05-hglyphs {
+        flex: 1;
+      }
+      [data-composition-id="s05"] .s05-gbar {
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.40);
+        margin-bottom: 8px;
+      }
+      [data-composition-id="s05"] .s05-gbar:last-child {
+        margin-bottom: 0;
+        background: rgba(143, 224, 0, 0.45);
+      }
+
+      /* ruler strip + beat ticks (FG accents) */
+      [data-composition-id="s05"] .s05-rulerstrip {
+        position: absolute;
+        left: 240px;
+        top: 24px;
+        width: 1476px;
+        height: 32px;
+        border-radius: 8px;
+        background: rgba(10, 20, 11, 0.7);
+        border: 2px solid rgba(62, 142, 14, 0.35);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s05"] .s05-btick {
+        position: absolute;
+        bottom: 6px;
+        width: 3px;
+        height: 14px;
+        border-radius: 999px;
+        background: rgba(143, 224, 0, 0.85);
+        opacity: 0.18;
+      }
+
+      /* lanes */
+      [data-composition-id="s05"] .s05-lanes {
+        position: absolute;
+        left: 240px;
+        top: 64px;
+        width: 1476px;
+        height: 408px;
+      }
+      [data-composition-id="s05"] .s05-lane {
+        position: absolute;
+        left: 0;
+        width: 1476px;
+        height: 72px;
+        border-radius: 12px;
+        background: rgba(150, 230, 120, 0.05);
+        border: 2px solid rgba(62, 142, 14, 0.30);
+        box-sizing: border-box;
+        transform-origin: left center;
+      }
+      [data-composition-id="s05"] .s05-lane-audio {
+        height: 64px;
+        background: rgba(53, 208, 186, 0.06);
+        border-color: rgba(53, 208, 186, 0.28);
+      }
+      [data-composition-id="s05"] .s05-abar {
+        position: absolute;
+        bottom: 6px;
+        width: 4px;
+        border-radius: 999px;
+        background: rgba(143, 224, 0, 0.55);
+        transform-origin: center bottom;
+      }
+      [data-composition-id="s05"] .s05-abar-t {
+        background: rgba(53, 208, 186, 0.60);
+      }
+
+      /* clip blocks */
+      [data-composition-id="s05"] .s05-clips {
+        position: absolute;
+        left: 240px;
+        top: 64px;
+        width: 1476px;
+        height: 408px;
+      }
+      [data-composition-id="s05"] .s05-clip {
+        position: absolute;
+        height: 56px;
+        border-radius: 8px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-sizing: border-box;
+        overflow: hidden;
+        box-shadow: 0 0 18px rgba(143, 224, 0, 0.12);
+      }
+      [data-composition-id="s05"] .s05-cg0 {
+        background: linear-gradient(180deg, rgba(90, 34, 51, 0.95) 0%, rgba(184, 80, 58, 0.95) 55%, rgba(255, 138, 61, 0.85) 100%);
+      }
+      [data-composition-id="s05"] .s05-cg1 {
+        background: linear-gradient(180deg, rgba(4, 18, 26, 0.95) 0%, rgba(13, 51, 64, 0.95) 55%, rgba(53, 208, 186, 0.55) 100%);
+      }
+      [data-composition-id="s05"] .s05-cg2 {
+        background: linear-gradient(180deg, rgba(26, 15, 20, 0.95) 0%, rgba(255, 100, 115, 0.50) 60%, rgba(255, 198, 92, 0.45) 100%);
+      }
+      [data-composition-id="s05"] .s05-clip-tag {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        width: 44px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(234, 245, 226, 0.50);
+      }
+      [data-composition-id="s05"] .s05-cflash {
+        position: absolute;
+        inset: 0;
+        border-radius: 6px;
+        background: rgba(198, 255, 77, 0.85);
+        box-shadow: 0 0 26px rgba(198, 255, 77, 0.7);
+        opacity: 0;
+      }
+
+      /* playhead */
+      [data-composition-id="s05"] .s05-playhead {
+        position: absolute;
+        left: 240px;
+        top: 28px;
+        width: 3px;
+        height: 444px;
+        z-index: 5;
+      }
+      [data-composition-id="s05"] .s05-ph-line {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        bottom: 0;
+        width: 3px;
+        border-radius: 999px;
+        background: #c6ff4d;
+        box-shadow: 0 0 14px rgba(198, 255, 77, 0.75);
+      }
+      [data-composition-id="s05"] .s05-ph-cap {
+        position: absolute;
+        left: -6px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        background: #8fe000;
+        transform: rotate(45deg);
+        box-shadow: 0 0 12px rgba(143, 224, 0, 0.7);
+      }
+
+      /* color wheels */
+      [data-composition-id="s05"] .s05-wheel {
+        position: absolute;
+      }
+      [data-composition-id="s05"] .s05-w1 { left: 1310px; top: 118px; width: 124px; height: 124px; }
+      [data-composition-id="s05"] .s05-w2 { left: 1490px; top: 152px; width: 96px;  height: 96px;  }
+      [data-composition-id="s05"] .s05-w3 { left: 1632px; top: 104px; width: 84px;  height: 84px;  }
+      [data-composition-id="s05"] .s05-wheel-disc {
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        background: conic-gradient(
+          from 0deg,
+          rgba(255, 138, 61, 0.70) 0%,
+          rgba(255, 198, 92, 0.70) 22%,
+          rgba(255, 100, 115, 0.60) 45%,
+          rgba(53, 208, 186, 0.60) 68%,
+          rgba(143, 224, 0, 0.65) 86%,
+          rgba(255, 138, 61, 0.70) 100%
+        );
+      }
+      [data-composition-id="s05"] .s05-wheel-hole {
+        position: absolute;
+        inset: 26%;
+        border-radius: 999px;
+        background: #0a140b;
+        border: 2px solid rgba(143, 224, 0, 0.25);
+        box-sizing: border-box;
+      }
+      [data-composition-id="s05"] .s05-wheel-rim {
+        position: absolute;
+        inset: -2px;
+        border-radius: 999px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 22px rgba(143, 224, 0, 0.16);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const S = '[data-composition-id="s05"] ';
+        const DUR = 22;
+        const rep = (t0, d) => Math.max(0, Math.ceil((DUR - t0) / d) - 1);
+
+        // deterministic PRNG (mulberry32, seed 42)
+        const mulberry32 = (a) => () => {
+          a |= 0; a = (a + 0x6D2B79F5) | 0;
+          let t = Math.imul(a ^ (a >>> 15), 1 | a);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+        const rng = mulberry32(42);
+
+        const root = document.querySelector('[data-composition-id="s05"]');
+
+        // ---------- build: BG ruler ticks ----------
+        const ruler = root.querySelector(".s05-ruler");
+        for (let i = 0; i < 59; i++) {
+          const t = document.createElement("div");
+          t.className = "s05-rtick";
+          t.style.left = (i * 30) + "px";
+          t.style.height = (i % 4 === 0 ? 12 : 7) + "px";
+          ruler.appendChild(t);
+        }
+
+        // ---------- build: sea-spray dots ----------
+        const spray = root.querySelector(".s05-spray");
+        const dots = [];
+        for (let i = 0; i < 14; i++) {
+          const d = document.createElement("div");
+          d.className = "s05-dot";
+          const sz = 2 + Math.round(rng() * 1);
+          d.style.width = sz + "px";
+          d.style.height = sz + "px";
+          d.style.left = Math.round(60 + rng() * 1800) + "px";
+          d.style.top = Math.round(60 + rng() * 960) + "px";
+          d.style.background = i % 3 === 0
+            ? "rgba(53, 208, 186, 0.50)"
+            : "rgba(143, 224, 0, 0.45)";
+          spray.appendChild(d);
+          dots.push(d);
+        }
+
+        // ---------- build: track header rows ----------
+        const header = root.querySelector(".s05-header");
+        const laneTops = [0, 86, 172, 258, 344]; // 4 video lanes + 1 audio lane (within .s05-lanes)
+        const laneHts = [72, 72, 72, 72, 64];
+        const iconKinds = ["square", "circle", "diamond", "square", "bars"];
+        for (let i = 0; i < 5; i++) {
+          const row = document.createElement("div");
+          row.className = "s05-hrow";
+          row.style.top = laneTops[i] + "px";
+          row.style.height = laneHts[i] + "px";
+          const icon = document.createElement("div");
+          icon.className = "s05-hicon";
+          if (iconKinds[i] === "bars") {
+            const wrap = document.createElement("div");
+            wrap.className = "s05-ic-bars";
+            for (let b = 0; b < 4; b++) {
+              const ib = document.createElement("div");
+              ib.className = "s05-ic-bar";
+              ib.style.height = [40, 80, 55, 95][b] + "%";
+              wrap.appendChild(ib);
+            }
+            icon.appendChild(wrap);
+          } else {
+            const sh = document.createElement("div");
+            sh.className = "s05-ic-" + iconKinds[i];
+            icon.appendChild(sh);
+          }
+          const gl = document.createElement("div");
+          gl.className = "s05-hglyphs";
+          for (let g = 0; g < 2; g++) {
+            const bar = document.createElement("div");
+            bar.className = "s05-gbar";
+            bar.style.width = Math.round(60 + rng() * 60) + "px";
+            gl.appendChild(bar);
+          }
+          row.appendChild(icon);
+          row.appendChild(gl);
+          header.appendChild(row);
+        }
+
+        // ---------- build: lane strips ----------
+        const lanes = root.querySelector(".s05-lanes");
+        const laneEls = [];
+        for (let i = 0; i < 5; i++) {
+          const ln = document.createElement("div");
+          ln.className = "s05-lane" + (i === 4 ? " s05-lane-audio" : "");
+          ln.style.top = laneTops[i] + "px";
+          lanes.appendChild(ln);
+          laneEls.push(ln);
+        }
+
+        // ---------- build: audio bars in lane 5 ----------
+        const audioLane = laneEls[4];
+        const abars = [];
+        const nBars = 122;
+        for (let i = 0; i < nBars; i++) {
+          const b = document.createElement("div");
+          b.className = "s05-abar" + (i % 5 === 0 ? " s05-abar-t" : "");
+          b.style.left = (10 + i * 12) + "px";
+          b.style.height = Math.round(8 + rng() * 42) + "px";
+          audioLane.appendChild(b);
+          abars.push(b);
+        }
+
+        // ---------- build: clip blocks + beat ticks on a 0.75s grid ----------
+        const clipsLayer = root.querySelector(".s05-clips");
+        const rulerStrip = root.querySelector(".s05-rulerstrip");
+        const BEAT0 = 2.5;
+        const BEAT = 0.75;
+        const laneOrder = [0, 2, 1, 3, 1, 0, 3, 2, 0, 1, 2, 3, 1]; // 13 clips
+        const cursors = [0, 26, 64, 12];
+        const clips = [];
+        for (let i = 0; i < laneOrder.length; i++) {
+          const lane = laneOrder[i];
+          const w = 150 + Math.round(rng() * 26) * 7;
+          const c = document.createElement("div");
+          c.className = "s05-clip s05-cg" + (i % 3);
+          c.style.left = cursors[lane] + "px";
+          c.style.top = (laneTops[lane] + 8) + "px";
+          c.style.width = w + "px";
+          const tag = document.createElement("div");
+          tag.className = "s05-clip-tag";
+          tag.style.width = Math.round(28 + rng() * 30) + "px";
+          c.appendChild(tag);
+          const fl = document.createElement("div");
+          fl.className = "s05-cflash";
+          c.appendChild(fl);
+          clipsLayer.appendChild(c);
+
+          const bt = document.createElement("div");
+          bt.className = "s05-btick";
+          bt.style.left = Math.round(cursors[lane] + w / 2) + "px";
+          rulerStrip.appendChild(bt);
+
+          clips.push({ el: c, flash: fl, tick: bt, beat: BEAT0 + i * BEAT });
+          cursors[lane] += w + 14;
+        }
+
+        // ---------- build: montage wall cards ----------
+        const wall = root.querySelector(".s05-mwall");
+        const mcards = [];
+        const mglows = [];
+        for (let i = 0; i < 12; i++) {
+          const card = document.createElement("div");
+          card.className = "s05-mcard s05-mg" + (i % 3);
+          const hz = document.createElement("div");
+          hz.className = "s05-mc-horizon";
+          hz.style.top = Math.round(52 + rng() * 18) + "%";
+          card.appendChild(hz);
+          const gw = document.createElement("div");
+          gw.className = "s05-mc-glow";
+          card.appendChild(gw);
+          wall.appendChild(card);
+          mcards.push(card);
+          mglows.push(gw);
+        }
+
+        // ================= timeline (all motion on tl, fromTo entrances) =================
+
+        // --- BG ambient (elements visible from t=0 via CSS; these are ambient, not entrances) ---
+        tl.fromTo(S + ".s05-glow-a",
+          { scale: 1, opacity: 1 },
+          { scale: 1.12, opacity: 0.8, duration: 2.7, ease: "sine.inOut", yoyo: true, repeat: rep(0.3, 2.7) },
+          0.3);
+        tl.fromTo(S + ".s05-glow-b",
+          { scale: 1.08, opacity: 0.85 },
+          { scale: 1, opacity: 1, duration: 3.3, ease: "sine.inOut", yoyo: true, repeat: rep(0.3, 3.3) },
+          0.3);
+        tl.fromTo(S + ".s05-ruler",
+          { x: -16 },
+          { x: 16, duration: 5, ease: "sine.inOut", yoyo: true, repeat: rep(0.3, 5) },
+          0.3);
+        for (let i = 0; i < dots.length; i++) {
+          const dx = 26 + rng() * 40;
+          const dy = 20 + rng() * 36;
+          const dd = 4 + rng() * 3;
+          tl.fromTo(dots[i],
+            { x: 0, y: 0 },
+            { x: dx, y: -dy, duration: dd, ease: "sine.inOut", yoyo: true, repeat: rep(0.4, dd) },
+            0.4);
+        }
+
+        // --- panel rises (power3.out), then drifts gently ---
+        tl.fromTo(S + ".s05-rise",
+          { y: 120, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.9, ease: "power3.out" },
+          0.5);
+        tl.fromTo(S + ".s05-drift",
+          { y: -5 },
+          { y: 5, duration: 2.9, ease: "sine.inOut", yoyo: true, repeat: rep(1.5, 2.9) },
+          1.5);
+
+        // --- header column slides in (expo.out) ---
+        tl.fromTo(S + ".s05-header",
+          { x: -46, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.7, ease: "expo.out" },
+          0.85);
+
+        // --- ruler strip pops ---
+        tl.fromTo(S + ".s05-rulerstrip",
+          { opacity: 0, y: -14 },
+          { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" },
+          0.95);
+
+        // --- lanes extend (scaleX staggered, expo.out) ---
+        for (let i = 0; i < laneEls.length; i++) {
+          tl.fromTo(laneEls[i],
+            { scaleX: 0, opacity: 0 },
+            { scaleX: 1, opacity: 1, duration: 0.75, ease: "expo.out" },
+            1.0 + i * 0.12);
+        }
+
+        // --- audio bars grow in, then shimmer (opacity-only ambient, no 2nd transform) ---
+        tl.fromTo(abars,
+          { scaleY: 0.12, opacity: 0 },
+          { scaleY: 1, opacity: 0.9, duration: 0.45, ease: "power3.out", stagger: 0.008 },
+          1.9);
+        tl.to(abars,
+          { opacity: 0.42, duration: 0.42, ease: "sine.inOut", yoyo: true,
+            repeat: rep(6.4, 0.42), stagger: { each: 0.022 } },
+          3.7);
+
+        // --- playhead sweeps continuously (linear, finite repeats, lane length 1473px) ---
+        tl.fromTo(S + ".s05-playhead",
+          { x: 0 },
+          { x: 1473, duration: 5.5, ease: "none", repeat: rep(1.5, 5.5) },
+          1.5);
+
+        // --- color wheels pop (back.out), discs spin slowly (linear, finite) ---
+        const wheels = [".s05-w1", ".s05-w2", ".s05-w3"];
+        const spinDur = [9, 12, 7.5];
+        for (let i = 0; i < 3; i++) {
+          tl.fromTo(S + wheels[i],
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(2)" },
+            1.5 + i * 0.18);
+          tl.fromTo(S + wheels[i] + " .s05-wheel-disc",
+            { rotation: 0 },
+            { rotation: 360, duration: spinDur[i], ease: "none", repeat: rep(2.1, spinDur[i]) },
+            2.1);
+        }
+
+        // --- clips fly in from right and SNAP on the 0.75s beat grid ---
+        for (let i = 0; i < clips.length; i++) {
+          const c = clips[i];
+          // fly + overshoot snap (single transform tween per clip)
+          tl.fromTo(c.el,
+            { x: 920, opacity: 0, rotation: i % 2 === 0 ? 1.6 : -1.6 },
+            { x: 0, opacity: 1, rotation: 0, duration: 0.55, ease: "back.out(2)" },
+            c.beat - 0.55);
+          // landing flash 0.12s (opacity-only on overlay child), then hard-kill
+          tl.fromTo(c.flash,
+            { opacity: 0 },
+            { opacity: 0.9, duration: 0.05, ease: "power1.in" },
+            c.beat - 0.05);
+          tl.to(c.flash, { opacity: 0, duration: 0.12, ease: "power3.out" }, c.beat);
+          tl.set(c.flash, { opacity: 0, visibility: "hidden" }, c.beat + 0.13);
+          // beat tick blink (yoyo back to idle state)
+          tl.fromTo(c.tick,
+            { opacity: 0.18, scaleY: 1 },
+            { opacity: 1, scaleY: 1.5, duration: 0.09, ease: "power3.out", yoyo: true, repeat: 1 },
+            c.beat - 0.04);
+        }
+
+        // --- t=15: panel cluster zooms out to 0.62 and settles bottom-center ---
+        tl.fromTo(S + ".s05-zoom",
+          { scale: 1, y: 0 },
+          { scale: 0.62, y: 295, duration: 2, ease: "power2.inOut" },
+          15);
+
+        // --- montage wall fades up behind, staggered, with breathing glows ---
+        for (let i = 0; i < mcards.length; i++) {
+          tl.fromTo(mcards[i],
+            { opacity: 0, y: 30, scale: 0.94 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power2.out" },
+            15.2 + i * 0.11);
+          tl.fromTo(mglows[i],
+            { opacity: 0 },
+            { opacity: 0.55, duration: 0.6, ease: "sine.out" },
+            15.5 + i * 0.11);
+          tl.to(mglows[i],
+            { opacity: 0.25, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: rep(17.6, 1.1) },
+            17.6 + i * 0.07);
+        }
+
+        window.__timelines["s05"] = tl;
+      })();
+    </script>
+  </div>
+</template>
