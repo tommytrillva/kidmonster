@@ -1,5 +1,5 @@
 <template id="s02-template">
-  <div data-composition-id="s02" data-width="1920" data-height="1080">
+  <div id="s02" data-composition-id="s02" data-width="1920" data-height="1080">
     <!-- BG decoratives -->
     <div class="s02-glow-sunset" data-layout-ignore></div>
     <div class="s02-glow-rose" data-layout-ignore></div>
@@ -34,7 +34,7 @@
     <div class="s02-hairline s02-hair-b"></div>
 
     <style>
-      [data-composition-id="s02"] {
+      #s02 {
         position: absolute;
         inset: 0;
         width: 1920px;
@@ -44,7 +44,7 @@
       }
 
       /* ---------- BG decoratives ---------- */
-      [data-composition-id="s02"] .s02-glow-sunset {
+      #s02 .s02-glow-sunset {
         position: absolute;
         left: 260px;
         top: 760px;
@@ -58,7 +58,7 @@
           rgba(255, 138, 61, 0) 70%
         );
       }
-      [data-composition-id="s02"] .s02-glow-rose {
+      #s02 .s02-glow-rose {
         position: absolute;
         left: 240px;
         top: 420px;
@@ -72,7 +72,7 @@
           rgba(255, 100, 115, 0) 72%
         );
       }
-      [data-composition-id="s02"] .s02-wash {
+      #s02 .s02-wash {
         position: absolute;
         left: 0;
         top: 0;
@@ -86,25 +86,25 @@
           rgba(255, 138, 61, 0) 76%
         );
       }
-      [data-composition-id="s02"] .s02-particles {
+      #s02 .s02-particles {
         position: absolute;
         inset: 0;
         opacity: 0;
       }
-      [data-composition-id="s02"] .s02-particle {
+      #s02 .s02-particle {
         position: absolute;
         border-radius: 999px;
       }
 
       /* ---------- Sun ---------- */
-      [data-composition-id="s02"] .s02-sun-rise {
+      #s02 .s02-sun-rise {
         position: absolute;
         left: 1040px;
         top: 300px;
         width: 400px;
         height: 400px;
       }
-      [data-composition-id="s02"] .s02-sun {
+      #s02 .s02-sun {
         position: absolute;
         inset: 0;
         opacity: 0;
@@ -117,7 +117,7 @@
         );
         border-radius: 50%;
       }
-      [data-composition-id="s02"] .s02-sun-halo {
+      #s02 .s02-sun-halo {
         position: absolute;
         left: 60px;
         top: 60px;
@@ -132,7 +132,7 @@
           rgba(255, 198, 92, 0) 72%
         );
       }
-      [data-composition-id="s02"] .s02-sun-core {
+      #s02 .s02-sun-core {
         position: absolute;
         left: 172px;
         top: 172px;
@@ -148,7 +148,7 @@
       }
 
       /* ---------- Horizon ---------- */
-      [data-composition-id="s02"] .s02-horizon-wrap {
+      #s02 .s02-horizon-wrap {
         position: absolute;
         left: 0;
         top: 624px;
@@ -156,7 +156,7 @@
         height: 32px;
         transform-origin: 50% 50%;
       }
-      [data-composition-id="s02"] .s02-horizon-glow {
+      #s02 .s02-horizon-glow {
         position: absolute;
         left: 0;
         top: 0;
@@ -171,7 +171,7 @@
           rgba(143, 224, 0, 0) 78%
         );
       }
-      [data-composition-id="s02"] .s02-horizon-core {
+      #s02 .s02-horizon-core {
         position: absolute;
         left: 0;
         top: 14px;
@@ -186,7 +186,7 @@
       }
 
       /* ---------- Water shimmer band ---------- */
-      [data-composition-id="s02"] .s02-water {
+      #s02 .s02-water {
         position: absolute;
         left: 0;
         top: 640px;
@@ -194,21 +194,21 @@
         height: 440px;
         opacity: 0;
       }
-      [data-composition-id="s02"] .s02-shimmer {
+      #s02 .s02-shimmer {
         position: absolute;
         height: 2px;
         border-radius: 999px;
         left: 50%;
       }
-      [data-composition-id="s02"] .s02-shim-a { top: 28px;  width: 1680px; margin-left: -840px; background: rgba(53, 208, 186, 0.9); }
-      [data-composition-id="s02"] .s02-shim-b { top: 62px;  width: 1460px; margin-left: -730px; background: rgba(234, 245, 226, 0.8); }
-      [data-composition-id="s02"] .s02-shim-c { top: 104px; width: 1240px; margin-left: -620px; background: rgba(53, 208, 186, 0.9); }
-      [data-composition-id="s02"] .s02-shim-d { top: 156px; width: 1520px; margin-left: -760px; background: rgba(62, 142, 14, 0.9); }
-      [data-composition-id="s02"] .s02-shim-e { top: 220px; width: 1100px; margin-left: -550px; background: rgba(53, 208, 186, 0.85); }
-      [data-composition-id="s02"] .s02-shim-f { top: 300px; width: 1340px; margin-left: -670px; background: rgba(234, 245, 226, 0.7); }
+      #s02 .s02-shim-a { top: 28px;  width: 1680px; margin-left: -840px; background: rgba(53, 208, 186, 0.9); }
+      #s02 .s02-shim-b { top: 62px;  width: 1460px; margin-left: -730px; background: rgba(234, 245, 226, 0.8); }
+      #s02 .s02-shim-c { top: 104px; width: 1240px; margin-left: -620px; background: rgba(53, 208, 186, 0.9); }
+      #s02 .s02-shim-d { top: 156px; width: 1520px; margin-left: -760px; background: rgba(62, 142, 14, 0.9); }
+      #s02 .s02-shim-e { top: 220px; width: 1100px; margin-left: -550px; background: rgba(53, 208, 186, 0.85); }
+      #s02 .s02-shim-f { top: 300px; width: 1340px; margin-left: -670px; background: rgba(234, 245, 226, 0.7); }
 
       /* ---------- FG ---------- */
-      [data-composition-id="s02"] .s02-wave-remnant {
+      #s02 .s02-wave-remnant {
         position: absolute;
         left: 130px;
         top: 568px;
@@ -217,7 +217,7 @@
         align-items: flex-end;
         gap: 5px;
       }
-      [data-composition-id="s02"] .s02-wave-bar {
+      #s02 .s02-wave-bar {
         width: 5px;
         border-radius: 999px;
         background: #8fe000;
@@ -225,23 +225,23 @@
         transform-origin: 50% 100%;
         opacity: 0.7;
       }
-      [data-composition-id="s02"] .s02-hairline {
+      #s02 .s02-hairline {
         position: absolute;
         height: 2px;
         border-radius: 999px;
         background: #3e8e0e;
         transform-origin: 0% 50%;
       }
-      [data-composition-id="s02"] .s02-hair-a { left: 240px; top: 432px; width: 1080px; opacity: 0.18; }
-      [data-composition-id="s02"] .s02-hair-b { left: 560px; top: 512px; width: 760px;  opacity: 0.14; }
+      #s02 .s02-hair-a { left: 240px; top: 432px; width: 1080px; opacity: 0.18; }
+      #s02 .s02-hair-b { left: 560px; top: 512px; width: 760px;  opacity: 0.14; }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="../vendor/gsap.min.js"></script>
     <script>
       (() => {
         window.__timelines = window.__timelines || {};
         const tl = gsap.timeline({ paused: true });
-        const S = '[data-composition-id="s02"] ';
+        const S = '#s02 ';
         const DUR = 15;
 
         // finite-repeat helper: covers (DUR - start) with half-cycles of length `half`

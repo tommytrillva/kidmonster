@@ -1,5 +1,5 @@
 <template id="s04-template">
-  <div data-composition-id="s04" data-width="1920" data-height="1080">
+  <div id="s04" data-composition-id="s04" data-width="1920" data-height="1080">
     <!-- BG decoratives (all ambient-animated on tl) -->
     <div class="dotgrid" data-layout-allow-overflow data-layout-ignore></div>
     <div class="glow-main" data-layout-ignore></div>
@@ -145,7 +145,7 @@
     </div>
 
     <style>
-      [data-composition-id="s04"] {
+      #s04 {
         position: absolute;
         inset: 0;
         width: 1920px;
@@ -155,7 +155,7 @@
       }
 
       /* ---------- BG ---------- */
-      [data-composition-id="s04"] .dotgrid {
+      #s04 .dotgrid {
         position: absolute;
         left: -60px;
         top: -40px;
@@ -165,7 +165,7 @@
         background-size: 46px 46px;
         opacity: 0.42;
       }
-      [data-composition-id="s04"] .glow-main {
+      #s04 .glow-main {
         position: absolute;
         left: 310px;
         top: 330px;
@@ -175,7 +175,7 @@
         background: radial-gradient(ellipse at center, rgba(143, 224, 0, 0.3) 0%, rgba(143, 224, 0, 0) 68%);
         opacity: 0.18;
       }
-      [data-composition-id="s04"] .glow-warm {
+      #s04 .glow-warm {
         position: absolute;
         right: -200px;
         top: -180px;
@@ -185,48 +185,48 @@
         background: radial-gradient(ellipse at center, rgba(255, 138, 61, 0.3) 0%, rgba(255, 138, 61, 0) 70%);
         opacity: 0.1;
       }
-      [data-composition-id="s04"] .spray {
+      #s04 .spray {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s04"] .p-dot {
+      #s04 .p-dot {
         position: absolute;
         border-radius: 50%;
         background: #8fe000;
       }
 
       /* ---------- Camera / canvas ---------- */
-      [data-composition-id="s04"] .cam {
+      #s04 .cam {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s04"] .canvas {
+      #s04 .canvas {
         position: absolute;
         left: -40px;
         top: 0;
         width: 2000px;
         height: 1080px;
       }
-      [data-composition-id="s04"] .cables {
+      #s04 .cables {
         position: absolute;
         left: 0;
         top: 0;
       }
-      [data-composition-id="s04"] .cable {
+      #s04 .cable {
         fill: rgba(62, 142, 14, 0);
         stroke: #3e8e0e;
         stroke-width: 3;
         stroke-linecap: round;
         opacity: 0.85;
       }
-      [data-composition-id="s04"] .pulse-glow {
+      #s04 .pulse-glow {
         fill: rgba(198, 255, 77, 0);
         stroke: rgba(198, 255, 77, 0.28);
         stroke-width: 13;
         stroke-linecap: round;
         opacity: 0;
       }
-      [data-composition-id="s04"] .pulse-core {
+      #s04 .pulse-core {
         fill: rgba(198, 255, 77, 0);
         stroke: #c6ff4d;
         stroke-width: 5;
@@ -235,12 +235,12 @@
       }
 
       /* ---------- Nodes ---------- */
-      [data-composition-id="s04"] .node {
+      #s04 .node {
         position: absolute;
         width: 150px;
         height: 120px;
       }
-      [data-composition-id="s04"] .tick {
+      #s04 .tick {
         position: absolute;
         left: 73px;
         top: -28px;
@@ -251,13 +251,13 @@
         opacity: 0.7;
         transform-origin: center bottom;
       }
-      [data-composition-id="s04"] .drop,
-      [data-composition-id="s04"] .lift-a,
-      [data-composition-id="s04"] .lift-b {
+      #s04 .drop,
+      #s04 .lift-a,
+      #s04 .lift-b {
         width: 100%;
         height: 100%;
       }
-      [data-composition-id="s04"] .glass {
+      #s04 .glass {
         position: relative;
         width: 150px;
         height: 120px;
@@ -272,7 +272,7 @@
         gap: 11px;
         box-sizing: border-box;
       }
-      [data-composition-id="s04"] .sheen {
+      #s04 .sheen {
         position: absolute;
         top: 3px;
         left: 16px;
@@ -281,14 +281,14 @@
         border-radius: 2px;
         background: rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s04"] .flare {
+      #s04 .flare {
         position: absolute;
         inset: -16px;
         border-radius: 28px;
         background: radial-gradient(ellipse at center, rgba(198, 255, 77, 0.32) 0%, rgba(198, 255, 77, 0) 70%);
         opacity: 0;
       }
-      [data-composition-id="s04"] .icon {
+      #s04 .icon {
         position: relative;
         width: 56px;
         height: 56px;
@@ -296,27 +296,27 @@
         align-items: center;
         justify-content: center;
       }
-      [data-composition-id="s04"] .glyph {
+      #s04 .glyph {
         height: 10px;
         border-radius: 999px;
         background: rgba(143, 224, 0, 0.45);
         transform-origin: left center;
       }
-      [data-composition-id="s04"] .n1 .glyph { width: 70px; }
-      [data-composition-id="s04"] .n2 .glyph { width: 86px; }
-      [data-composition-id="s04"] .n3 .glyph { width: 60px; background: rgba(234, 245, 226, 0.38); }
-      [data-composition-id="s04"] .n4 .glyph { width: 78px; }
-      [data-composition-id="s04"] .n5 .glyph { width: 54px; }
-      [data-composition-id="s04"] .n6 .glyph { width: 88px; background: rgba(234, 245, 226, 0.38); }
-      [data-composition-id="s04"] .n7 .glyph { width: 66px; }
+      #s04 .n1 .glyph { width: 70px; }
+      #s04 .n2 .glyph { width: 86px; }
+      #s04 .n3 .glyph { width: 60px; background: rgba(234, 245, 226, 0.38); }
+      #s04 .n4 .glyph { width: 78px; }
+      #s04 .n5 .glyph { width: 54px; }
+      #s04 .n6 .glyph { width: 88px; background: rgba(234, 245, 226, 0.38); }
+      #s04 .n7 .glyph { width: 66px; }
 
       /* Icon 1: grid of squares */
-      [data-composition-id="s04"] .ic-grid {
+      #s04 .ic-grid {
         display: grid;
         grid-template-columns: 18px 18px;
         gap: 6px;
       }
-      [data-composition-id="s04"] .sq {
+      #s04 .sq {
         width: 18px;
         height: 18px;
         border: 2.5px solid rgba(143, 224, 0, 0.85);
@@ -326,22 +326,22 @@
       }
 
       /* Icon 3: twin circles */
-      [data-composition-id="s04"] .cir {
+      #s04 .cir {
         width: 28px;
         height: 28px;
         border-radius: 50%;
         box-sizing: border-box;
       }
-      [data-composition-id="s04"] .cir-a {
+      #s04 .cir-a {
         border: 2.5px solid rgba(234, 245, 226, 0.8);
       }
-      [data-composition-id="s04"] .cir-b {
+      #s04 .cir-b {
         border: 2.5px solid rgba(53, 208, 186, 0.9);
         margin-left: -9px;
       }
 
       /* Icon 4: play triangle in rings */
-      [data-composition-id="s04"] .ring-o {
+      #s04 .ring-o {
         position: absolute;
         left: 3px;
         top: 3px;
@@ -351,7 +351,7 @@
         border-radius: 50%;
         box-sizing: border-box;
       }
-      [data-composition-id="s04"] .ring-i {
+      #s04 .ring-i {
         position: absolute;
         left: 10px;
         top: 10px;
@@ -361,7 +361,7 @@
         border-radius: 50%;
         box-sizing: border-box;
       }
-      [data-composition-id="s04"] .tri {
+      #s04 .tri {
         position: absolute;
         left: 23px;
         top: 19px;
@@ -373,19 +373,19 @@
       }
 
       /* Icon 5: stacked up-chevrons */
-      [data-composition-id="s04"] .ic-chevs {
+      #s04 .ic-chevs {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2px;
       }
-      [data-composition-id="s04"] .chev-w {
+      #s04 .chev-w {
         width: 20px;
         height: 14px;
         display: flex;
         justify-content: center;
       }
-      [data-composition-id="s04"] .chev {
+      #s04 .chev {
         width: 16px;
         height: 16px;
         border-left: 3.5px solid #c6ff4d;
@@ -394,18 +394,18 @@
         border-radius: 2px;
         box-sizing: border-box;
       }
-      [data-composition-id="s04"] .chev-b {
+      #s04 .chev-b {
         border-left-color: rgba(143, 224, 0, 0.65);
         border-top-color: rgba(143, 224, 0, 0.65);
       }
 
       /* Icon 6: folder */
-      [data-composition-id="s04"] .ic-folder {
+      #s04 .ic-folder {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
       }
-      [data-composition-id="s04"] .fold-tab {
+      #s04 .fold-tab {
         width: 20px;
         height: 9px;
         border: 2.5px solid rgba(143, 224, 0, 0.85);
@@ -415,7 +415,7 @@
         margin-left: 2px;
         box-sizing: border-box;
       }
-      [data-composition-id="s04"] .fold-body {
+      #s04 .fold-body {
         width: 42px;
         height: 26px;
         border: 2.5px solid rgba(143, 224, 0, 0.85);
@@ -425,19 +425,19 @@
       }
 
       /* Icon 7: razor-split bar */
-      [data-composition-id="s04"] .ic-razor {
+      #s04 .ic-razor {
         position: relative;
         display: flex;
         align-items: center;
         gap: 8px;
       }
-      [data-composition-id="s04"] .half {
+      #s04 .half {
         width: 18px;
         height: 12px;
         border-radius: 6px;
         background: rgba(143, 224, 0, 0.6);
       }
-      [data-composition-id="s04"] .blade {
+      #s04 .blade {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -451,13 +451,13 @@
       }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="../vendor/gsap.min.js"></script>
     <script>
       (() => {
         window.__timelines = window.__timelines || {};
         const tl = gsap.timeline({ paused: true });
-        const S = '[data-composition-id="s04"] ';
-        const root = document.querySelector('[data-composition-id="s04"]');
+        const S = '#s04 ';
+        const root = document.querySelector('#s04');
         const DUR = 16;
         // finite repeat count covering the remaining scene time
         const reps = (start, cycle) => Math.max(1, Math.ceil((DUR - start) / cycle)) - 1;

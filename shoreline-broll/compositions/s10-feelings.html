@@ -1,5 +1,5 @@
 <template id="s10-template">
-  <div data-composition-id="s10" data-width="1920" data-height="1080">
+  <div id="s10" data-composition-id="s10" data-width="1920" data-height="1080">
 
     <!-- ===================== BG DECORATIVES ===================== -->
     <div class="glow-warm-wrap" data-layout-ignore>
@@ -155,7 +155,7 @@
     <div class="cursor" data-layout-ignore></div>
 
     <style>
-      [data-composition-id="s10"] {
+      #s10 {
         position: absolute;
         inset: 0;
         width: 1920px;
@@ -165,10 +165,10 @@
       }
 
       /* ---------- BG ---------- */
-      [data-composition-id="s10"] .glow-warm-wrap {
+      #s10 .glow-warm-wrap {
         position: absolute; inset: 0;
       }
-      [data-composition-id="s10"] .glow-warm {
+      #s10 .glow-warm {
         position: absolute; right: -340px; top: -360px;
         width: 1400px; height: 1200px; border-radius: 50%;
         background: radial-gradient(circle at 55% 45%,
@@ -176,10 +176,10 @@
           rgba(255, 198, 92, 0.10) 38%,
           rgba(255, 138, 61, 0) 72%);
       }
-      [data-composition-id="s10"] .glow-green-wrap {
+      #s10 .glow-green-wrap {
         position: absolute; inset: 0;
       }
-      [data-composition-id="s10"] .glow-green {
+      #s10 .glow-green {
         position: absolute; left: -380px; bottom: -420px;
         width: 1200px; height: 1100px; border-radius: 50%;
         background: radial-gradient(circle at 45% 55%,
@@ -187,13 +187,13 @@
           rgba(62, 142, 14, 0.05) 45%,
           rgba(143, 224, 0, 0) 72%);
       }
-      [data-composition-id="s10"] .particles {
+      #s10 .particles {
         position: absolute; inset: 0;
       }
-      [data-composition-id="s10"] .pdot {
+      #s10 .pdot {
         position: absolute; border-radius: 50%;
       }
-      [data-composition-id="s10"] .horizon {
+      #s10 .horizon {
         position: absolute; left: 120px; top: 1002px;
         width: 1680px; height: 2px;
         background: #3e8e0e;
@@ -202,16 +202,16 @@
       }
 
       /* ---------- STAGE / TILT ---------- */
-      [data-composition-id="s10"] .stage {
+      #s10 .stage {
         position: absolute; inset: 0;
         perspective: 1400px;
       }
-      [data-composition-id="s10"] .tilt {
+      #s10 .tilt {
         position: absolute; inset: 0;
       }
 
       /* ---------- BOARD ---------- */
-      [data-composition-id="s10"] .board {
+      #s10 .board {
         position: absolute; left: 120px; top: 130px;
         width: 1300px; height: 820px;
         border-radius: 24px;
@@ -220,12 +220,12 @@
         box-shadow: 0 0 40px rgba(143, 224, 0, 0.14),
                     0 0 80px rgba(255, 138, 61, 0.10);
       }
-      [data-composition-id="s10"] .board-sheen {
+      #s10 .board-sheen {
         position: absolute; left: 28px; right: 28px; top: 0;
         height: 2px; border-radius: 999px;
         background: rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s10"] .board-glow {
+      #s10 .board-glow {
         position: absolute; inset: -22px;
         border-radius: 36px;
         background: radial-gradient(circle at 50% 50%,
@@ -235,42 +235,42 @@
         opacity: 0.25;
       }
 
-      [data-composition-id="s10"] .tick {
+      #s10 .tick {
         position: absolute; width: 26px; height: 26px;
         opacity: 0.55;
       }
-      [data-composition-id="s10"] .tick-tl { left: 102px; top: 112px;
+      #s10 .tick-tl { left: 102px; top: 112px;
         border-left: 3px solid #8fe000; border-top: 3px solid #8fe000; border-top-left-radius: 6px; }
-      [data-composition-id="s10"] .tick-tr { left: 1412px; top: 112px;
+      #s10 .tick-tr { left: 1412px; top: 112px;
         border-right: 3px solid #8fe000; border-top: 3px solid #8fe000; border-top-right-radius: 6px; }
-      [data-composition-id="s10"] .tick-bl { left: 102px; top: 942px;
+      #s10 .tick-bl { left: 102px; top: 942px;
         border-left: 3px solid #8fe000; border-bottom: 3px solid #8fe000; border-bottom-left-radius: 6px; }
-      [data-composition-id="s10"] .tick-br { left: 1412px; top: 942px;
+      #s10 .tick-br { left: 1412px; top: 942px;
         border-right: 3px solid #8fe000; border-bottom: 3px solid #8fe000; border-bottom-right-radius: 6px; }
 
-      [data-composition-id="s10"] .board-tag {
+      #s10 .board-tag {
         position: absolute; left: 162px; top: 88px;
         display: flex; gap: 10px; align-items: center;
       }
-      [data-composition-id="s10"] .gbar {
+      #s10 .gbar {
         height: 9px; border-radius: 999px; opacity: 0.65;
       }
-      [data-composition-id="s10"] .gbar-a { width: 96px; background: #ffc65c; }
-      [data-composition-id="s10"] .gbar-b { width: 52px; background: #eaf5e2; opacity: 0.4; }
+      #s10 .gbar-a { width: 96px; background: #ffc65c; }
+      #s10 .gbar-b { width: 52px; background: #eaf5e2; opacity: 0.4; }
 
       /* ---------- CARDS (scene coords) ---------- */
-      [data-composition-id="s10"] .cards { position: absolute; inset: 0; }
-      [data-composition-id="s10"] .card-in { position: absolute; }
-      [data-composition-id="s10"] .c-vhs    { left: 160px;  top: 170px; width: 284px; height: 356px; }
-      [data-composition-id="s10"] .c-film   { left: 472px;  top: 170px; width: 596px; height: 356px; }
-      [data-composition-id="s10"] .c-sunset { left: 1096px; top: 170px; width: 284px; height: 356px; }
-      [data-composition-id="s10"] .c-night  { left: 160px;  top: 554px; width: 284px; height: 356px; }
-      [data-composition-id="s10"] .c-head   { left: 472px;  top: 554px; width: 284px; height: 356px; }
-      [data-composition-id="s10"] .c-sil    { left: 784px;  top: 554px; width: 284px; height: 356px; }
-      [data-composition-id="s10"] .c-grain  { left: 1096px; top: 554px; width: 284px; height: 356px; }
+      #s10 .cards { position: absolute; inset: 0; }
+      #s10 .card-in { position: absolute; }
+      #s10 .c-vhs    { left: 160px;  top: 170px; width: 284px; height: 356px; }
+      #s10 .c-film   { left: 472px;  top: 170px; width: 596px; height: 356px; }
+      #s10 .c-sunset { left: 1096px; top: 170px; width: 284px; height: 356px; }
+      #s10 .c-night  { left: 160px;  top: 554px; width: 284px; height: 356px; }
+      #s10 .c-head   { left: 472px;  top: 554px; width: 284px; height: 356px; }
+      #s10 .c-sil    { left: 784px;  top: 554px; width: 284px; height: 356px; }
+      #s10 .c-grain  { left: 1096px; top: 554px; width: 284px; height: 356px; }
 
-      [data-composition-id="s10"] .card-float { position: absolute; inset: 0; }
-      [data-composition-id="s10"] .card-visual {
+      #s10 .card-float { position: absolute; inset: 0; }
+      #s10 .card-visual {
         position: absolute; inset: 0;
         border-radius: 12px;
         border: 2px solid rgba(143, 224, 0, 0.30);
@@ -278,7 +278,7 @@
         box-shadow: 0 14px 36px rgba(5, 10, 6, 0.6),
                     0 0 28px rgba(255, 138, 61, 0.08);
       }
-      [data-composition-id="s10"] .ring {
+      #s10 .ring {
         position: absolute; inset: -7px;
         border-radius: 17px;
         border: 2px solid rgba(255, 198, 92, 0.85);
@@ -288,29 +288,29 @@
       }
 
       /* VHS swatch */
-      [data-composition-id="s10"] .vhs-visual { background: #0a140b; transform: rotate(-1deg); }
-      [data-composition-id="s10"] .vhs-lines {
+      #s10 .vhs-visual { background: #0a140b; transform: rotate(-1deg); }
+      #s10 .vhs-lines {
         position: absolute; inset: 0;
         background: repeating-linear-gradient(180deg,
           rgba(143, 224, 0, 0.16) 0px, rgba(143, 224, 0, 0.16) 2px,
           rgba(5, 10, 6, 0) 2px, rgba(5, 10, 6, 0) 7px);
       }
-      [data-composition-id="s10"] .vhs-band {
+      #s10 .vhs-band {
         position: absolute; left: 0; right: 0; top: 38%; height: 34px;
         background: linear-gradient(180deg,
           rgba(234, 245, 226, 0) 0%,
           rgba(234, 245, 226, 0.10) 50%,
           rgba(234, 245, 226, 0) 100%);
       }
-      [data-composition-id="s10"] .vhs-chroma-l {
+      #s10 .vhs-chroma-l {
         position: absolute; left: 0; top: 0; bottom: 0; width: 7px;
         background: rgba(53, 208, 186, 0.30);
       }
-      [data-composition-id="s10"] .vhs-chroma-r {
+      #s10 .vhs-chroma-r {
         position: absolute; right: 0; top: 0; bottom: 0; width: 7px;
         background: rgba(255, 100, 115, 0.30);
       }
-      [data-composition-id="s10"] .vhs-shimmer {
+      #s10 .vhs-shimmer {
         position: absolute; inset: 0;
         background: radial-gradient(circle at 50% 35%,
           rgba(198, 255, 77, 0.18) 0%, rgba(198, 255, 77, 0) 65%);
@@ -318,8 +318,8 @@
       }
 
       /* Film strip */
-      [data-composition-id="s10"] .film-visual { background: #0a140b; transform: rotate(0.8deg); }
-      [data-composition-id="s10"] .strip {
+      #s10 .film-visual { background: #0a140b; transform: rotate(0.8deg); }
+      #s10 .strip {
         position: absolute; left: 36px; right: 36px; top: 50%;
         height: 176px; margin-top: -88px;
         background: rgba(5, 10, 6, 0.9);
@@ -328,31 +328,31 @@
         display: flex; flex-direction: column; justify-content: space-between;
         padding: 8px 12px; box-sizing: border-box;
       }
-      [data-composition-id="s10"] .sprockets {
+      #s10 .sprockets {
         display: flex; justify-content: space-between; height: 12px;
       }
-      [data-composition-id="s10"] .hole {
+      #s10 .hole {
         width: 16px; height: 12px; border-radius: 3px;
         background: #050a06;
         border: 2px solid rgba(62, 142, 14, 0.45);
         box-sizing: border-box;
       }
-      [data-composition-id="s10"] .cells {
+      #s10 .cells {
         display: flex; gap: 14px; justify-content: center; height: 108px;
         padding: 6px 0;
       }
-      [data-composition-id="s10"] .cell {
+      #s10 .cell {
         width: 158px; height: 96px; border-radius: 6px;
         border: 2px solid rgba(143, 224, 0, 0.22);
         box-sizing: border-box;
       }
-      [data-composition-id="s10"] .cell-sunset {
+      #s10 .cell-sunset {
         background: linear-gradient(180deg, #5a2233 0%, #b8503a 45%, #ff8a3d 75%, #ffc65c 100%);
       }
-      [data-composition-id="s10"] .cell-ocean {
+      #s10 .cell-ocean {
         background: linear-gradient(180deg, #04121a 0%, #0d3340 60%, rgba(53, 208, 186, 0.45) 100%);
       }
-      [data-composition-id="s10"] .cell-dusk {
+      #s10 .cell-dusk {
         background:
           radial-gradient(circle at 30% 70%, rgba(255, 100, 115, 0.55) 0%, rgba(255, 100, 115, 0) 60%),
           radial-gradient(circle at 75% 30%, rgba(53, 208, 186, 0.45) 0%, rgba(53, 208, 186, 0) 60%),
@@ -360,12 +360,12 @@
       }
 
       /* Sunset-sky card */
-      [data-composition-id="s10"] .sunset-visual {
+      #s10 .sunset-visual {
         transform: rotate(1.1deg);
         background: linear-gradient(180deg,
           #1a0f14 0%, #5a2233 30%, #b8503a 58%, #ff8a3d 80%, #ffc65c 100%);
       }
-      [data-composition-id="s10"] .sun-glow {
+      #s10 .sun-glow {
         position: absolute; left: 50%; top: 62%;
         width: 220px; height: 220px; margin: -110px 0 0 -110px;
         border-radius: 50%;
@@ -375,97 +375,97 @@
       }
 
       /* Beach-night card */
-      [data-composition-id="s10"] .night-visual {
+      #s10 .night-visual {
         transform: rotate(-0.9deg);
         background: linear-gradient(180deg, #04121a 0%, #0d3340 62%, rgba(53, 208, 186, 0.30) 100%);
       }
-      [data-composition-id="s10"] .moon-glow {
+      #s10 .moon-glow {
         position: absolute; left: 66%; top: 22%;
         width: 110px; height: 110px; margin: -55px 0 0 -55px;
         border-radius: 50%;
         background: radial-gradient(circle at 50% 50%,
           rgba(234, 245, 226, 0.55) 0%, rgba(234, 245, 226, 0.12) 45%, rgba(234, 245, 226, 0) 70%);
       }
-      [data-composition-id="s10"] .night-horizon {
+      #s10 .night-horizon {
         position: absolute; left: 0; right: 0; top: 64%; height: 2px;
         background: rgba(234, 245, 226, 0.25);
       }
-      [data-composition-id="s10"] .night-veil {
+      #s10 .night-veil {
         position: absolute; inset: 0;
         background: rgba(5, 10, 6, 0.92);
       }
 
       /* Headlight-streak card */
-      [data-composition-id="s10"] .head-visual { background: #0a140b; transform: rotate(0.7deg); }
-      [data-composition-id="s10"] .road-glow {
+      #s10 .head-visual { background: #0a140b; transform: rotate(0.7deg); }
+      #s10 .road-glow {
         position: absolute; left: 0; right: 0; bottom: 0; height: 50%;
         background: radial-gradient(ellipse at 50% 100%,
           rgba(255, 138, 61, 0.30) 0%, rgba(255, 138, 61, 0) 70%);
       }
-      [data-composition-id="s10"] .beam {
+      #s10 .beam {
         position: absolute; height: 26px; border-radius: 999px;
         background: radial-gradient(ellipse at 35% 50%,
           rgba(255, 198, 92, 0.95) 0%, rgba(255, 138, 61, 0.35) 55%, rgba(255, 138, 61, 0) 80%);
         filter: blur(5px);
       }
-      [data-composition-id="s10"] .beam-a {
+      #s10 .beam-a {
         left: 24px; top: 44%; width: 210px;
         transform: rotate(-5deg); opacity: 0.95;
       }
-      [data-composition-id="s10"] .beam-b {
+      #s10 .beam-b {
         left: 44px; top: 58%; width: 196px;
         transform: rotate(-3deg); opacity: 0.85;
       }
 
       /* Silhouette card */
-      [data-composition-id="s10"] .sil-visual {
+      #s10 .sil-visual {
         transform: rotate(-1.2deg);
         background: linear-gradient(180deg, #1a0f14 0%, #5a2233 52%, #b8503a 84%, #ff8a3d 100%);
       }
-      [data-composition-id="s10"] .fig { position: absolute; bottom: 0; }
-      [data-composition-id="s10"] .fig-head {
+      #s10 .fig { position: absolute; bottom: 0; }
+      #s10 .fig-head {
         width: 34px; height: 34px; border-radius: 50%;
         background: rgba(5, 10, 6, 0.92); margin: 0 auto 4px auto;
       }
-      [data-composition-id="s10"] .fig-body {
+      #s10 .fig-body {
         border-radius: 22px 22px 8px 8px;
         background: rgba(5, 10, 6, 0.92);
       }
-      [data-composition-id="s10"] .fig-1 { left: 48px; }
-      [data-composition-id="s10"] .fig-1 .fig-body { width: 58px; height: 96px; }
-      [data-composition-id="s10"] .fig-2 { left: 122px; }
-      [data-composition-id="s10"] .fig-2 .fig-body { width: 64px; height: 118px; }
-      [data-composition-id="s10"] .fig-3 { left: 200px; }
-      [data-composition-id="s10"] .fig-3 .fig-body { width: 52px; height: 84px; }
+      #s10 .fig-1 { left: 48px; }
+      #s10 .fig-1 .fig-body { width: 58px; height: 96px; }
+      #s10 .fig-2 { left: 122px; }
+      #s10 .fig-2 .fig-body { width: 64px; height: 118px; }
+      #s10 .fig-3 { left: 200px; }
+      #s10 .fig-3 .fig-body { width: 52px; height: 84px; }
 
       /* Warm-grain swatch */
-      [data-composition-id="s10"] .grain-visual {
+      #s10 .grain-visual {
         transform: rotate(0.9deg);
         background:
           radial-gradient(circle at 35% 30%, rgba(255, 198, 92, 0.45) 0%, rgba(255, 198, 92, 0) 65%),
           radial-gradient(circle at 70% 75%, rgba(255, 138, 61, 0.30) 0%, rgba(255, 138, 61, 0) 60%),
           #1a0f14;
       }
-      [data-composition-id="s10"] .grain-speck { position: absolute; inset: 0; }
-      [data-composition-id="s10"] .speck { position: absolute; border-radius: 50%; }
+      #s10 .grain-speck { position: absolute; inset: 0; }
+      #s10 .speck { position: absolute; border-radius: 50%; }
 
       /* ---------- THREADS ---------- */
-      [data-composition-id="s10"] .threads {
+      #s10 .threads {
         position: absolute; left: 0; top: 0;
         pointer-events: none;
       }
-      [data-composition-id="s10"] .thread {
+      #s10 .thread {
         fill: none; stroke-width: 2.5px; stroke-linecap: round;
         opacity: 0.55;
       }
-      [data-composition-id="s10"] .thread-gold   { stroke: #ffc65c; }
-      [data-composition-id="s10"] .thread-orange { stroke: #ff8a3d; }
-      [data-composition-id="s10"] .thread-rose   { stroke: #ff6473; }
-      [data-composition-id="s10"] .thread-teal   { stroke: #35d0ba; }
-      [data-composition-id="s10"] .thread-green  { stroke: #8fe000; opacity: 0.45; }
+      #s10 .thread-gold   { stroke: #ffc65c; }
+      #s10 .thread-orange { stroke: #ff8a3d; }
+      #s10 .thread-rose   { stroke: #ff6473; }
+      #s10 .thread-teal   { stroke: #35d0ba; }
+      #s10 .thread-green  { stroke: #8fe000; opacity: 0.45; }
 
       /* ---------- PALETTE COLUMN ---------- */
-      [data-composition-id="s10"] .palette {
+      #s10 .palette {
         position: absolute; left: 1530px; top: 200px;
         width: 300px; height: 680px;
         border-radius: 24px;
@@ -473,47 +473,47 @@
         border: 2px solid rgba(143, 224, 0, 0.30);
         box-shadow: 0 0 40px rgba(143, 224, 0, 0.16);
       }
-      [data-composition-id="s10"] .palette-sheen {
+      #s10 .palette-sheen {
         position: absolute; left: 24px; right: 24px; top: 0;
         height: 2px; border-radius: 999px;
         background: rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s10"] .palette-glow {
+      #s10 .palette-glow {
         position: absolute; inset: -18px;
         border-radius: 36px;
         background: radial-gradient(circle at 50% 50%,
           rgba(255, 198, 92, 0.10) 0%, rgba(255, 138, 61, 0.05) 55%, rgba(255, 138, 61, 0) 78%);
         opacity: 0.2;
       }
-      [data-composition-id="s10"] .pbar {
+      #s10 .pbar {
         position: absolute; height: 8px; border-radius: 999px; opacity: 0.55;
       }
-      [data-composition-id="s10"] .pbar-a { left: 40px; top: 36px; width: 118px; background: #eaf5e2; opacity: 0.4; }
-      [data-composition-id="s10"] .pbar-b { left: 168px; top: 36px; width: 56px; background: #ffc65c; }
-      [data-composition-id="s10"] .pill {
+      #s10 .pbar-a { left: 40px; top: 36px; width: 118px; background: #eaf5e2; opacity: 0.4; }
+      #s10 .pbar-b { left: 168px; top: 36px; width: 56px; background: #ffc65c; }
+      #s10 .pill {
         position: absolute; left: 40px; width: 220px; height: 64px;
         border-radius: 999px;
         border: 2px solid rgba(143, 224, 0, 0.30);
         background: rgba(234, 245, 226, 0.04);
         box-sizing: border-box;
       }
-      [data-composition-id="s10"] .pill-1 { top: 88px; }
-      [data-composition-id="s10"] .pill-2 { top: 222px; }
-      [data-composition-id="s10"] .pill-3 { top: 356px; }
-      [data-composition-id="s10"] .pill-4 { top: 490px; }
-      [data-composition-id="s10"] .pill-5 { top: 624px; }
-      [data-composition-id="s10"] .pill-fill {
+      #s10 .pill-1 { top: 88px; }
+      #s10 .pill-2 { top: 222px; }
+      #s10 .pill-3 { top: 356px; }
+      #s10 .pill-4 { top: 490px; }
+      #s10 .pill-5 { top: 624px; }
+      #s10 .pill-fill {
         position: absolute; left: 7px; top: 7px;
         width: 202px; height: 46px; border-radius: 999px;
       }
-      [data-composition-id="s10"] .fill-gold   { background: #ffc65c; box-shadow: 0 0 22px rgba(255, 198, 92, 0.40); }
-      [data-composition-id="s10"] .fill-orange { background: #ff8a3d; box-shadow: 0 0 22px rgba(255, 138, 61, 0.40); }
-      [data-composition-id="s10"] .fill-rose   { background: #ff6473; box-shadow: 0 0 22px rgba(255, 100, 115, 0.40); }
-      [data-composition-id="s10"] .fill-teal   { background: #35d0ba; box-shadow: 0 0 22px rgba(53, 208, 186, 0.40); }
-      [data-composition-id="s10"] .fill-green  { background: #3e8e0e; box-shadow: 0 0 22px rgba(143, 224, 0, 0.35); }
+      #s10 .fill-gold   { background: #ffc65c; box-shadow: 0 0 22px rgba(255, 198, 92, 0.40); }
+      #s10 .fill-orange { background: #ff8a3d; box-shadow: 0 0 22px rgba(255, 138, 61, 0.40); }
+      #s10 .fill-rose   { background: #ff6473; box-shadow: 0 0 22px rgba(255, 100, 115, 0.40); }
+      #s10 .fill-teal   { background: #35d0ba; box-shadow: 0 0 22px rgba(53, 208, 186, 0.40); }
+      #s10 .fill-green  { background: #3e8e0e; box-shadow: 0 0 22px rgba(143, 224, 0, 0.35); }
 
       /* ---------- CURSOR ---------- */
-      [data-composition-id="s10"] .cursor {
+      #s10 .cursor {
         position: absolute; left: 520px; top: 940px;
         width: 22px; height: 26px;
         background: #eaf5e2;
@@ -523,14 +523,14 @@
       }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="../vendor/gsap.min.js"></script>
     <script>
       (() => {
         window.__timelines = window.__timelines || {};
         const tl = gsap.timeline({ paused: true });
-        const S = '[data-composition-id="s10"] ';
+        const S = '#s10 ';
         const DUR = 34;
-        const root = document.querySelector('[data-composition-id="s10"]');
+        const root = document.querySelector('#s10');
         const rng = (seed => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296))(42);
         const reps = (start, cycle) => Math.max(0, Math.ceil((DUR - start) / cycle) - 1);
 

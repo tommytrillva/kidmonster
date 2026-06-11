@@ -1,5 +1,5 @@
 <template id="s03-template">
-  <div data-composition-id="s03" data-width="1920" data-height="1080">
+  <div id="s03" data-composition-id="s03" data-width="1920" data-height="1080">
     <!-- ============ BG DECORATIVES ============ -->
     <div class="bg-grid" data-layout-ignore></div>
     <div class="bg-glow glow-a" data-layout-ignore></div>
@@ -184,7 +184,7 @@
     <div class="fx-particles" data-layout-ignore></div>
 
     <style>
-      [data-composition-id="s03"] {
+      #s03 {
         position: absolute;
         inset: 0;
         width: 1920px;
@@ -194,7 +194,7 @@
       }
 
       /* ---------- BG ---------- */
-      [data-composition-id="s03"] .bg-grid {
+      #s03 .bg-grid {
         position: absolute;
         inset: -140px;
         background-image:
@@ -213,11 +213,11 @@
             rgba(62, 142, 14, 0) 96px
           );
       }
-      [data-composition-id="s03"] .bg-glow {
+      #s03 .bg-glow {
         position: absolute;
         border-radius: 50%;
       }
-      [data-composition-id="s03"] .glow-a {
+      #s03 .glow-a {
         left: 160px;
         top: 240px;
         width: 920px;
@@ -230,7 +230,7 @@
           rgba(143, 224, 0, 0) 70%
         );
       }
-      [data-composition-id="s03"] .glow-b {
+      #s03 .glow-b {
         left: 1130px;
         top: -220px;
         width: 780px;
@@ -243,7 +243,7 @@
           rgba(53, 208, 186, 0) 72%
         );
       }
-      [data-composition-id="s03"] .glow-warm {
+      #s03 .glow-warm {
         left: 1240px;
         top: 600px;
         width: 860px;
@@ -258,34 +258,34 @@
       }
 
       /* ---------- FG ticks ---------- */
-      [data-composition-id="s03"] .tick {
+      #s03 .tick {
         position: absolute;
         width: 26px;
         height: 26px;
         opacity: 0;
       }
-      [data-composition-id="s03"] .tick-tl { left: 64px; top: 64px; border-left: 2px solid rgba(234, 245, 226, 0.5); border-top: 2px solid rgba(234, 245, 226, 0.5); }
-      [data-composition-id="s03"] .tick-tr { right: 64px; top: 64px; border-right: 2px solid rgba(234, 245, 226, 0.5); border-top: 2px solid rgba(234, 245, 226, 0.5); }
-      [data-composition-id="s03"] .tick-bl { left: 64px; bottom: 64px; border-left: 2px solid rgba(234, 245, 226, 0.5); border-bottom: 2px solid rgba(234, 245, 226, 0.5); }
-      [data-composition-id="s03"] .tick-br { right: 64px; bottom: 64px; border-right: 2px solid rgba(234, 245, 226, 0.5); border-bottom: 2px solid rgba(234, 245, 226, 0.5); }
+      #s03 .tick-tl { left: 64px; top: 64px; border-left: 2px solid rgba(234, 245, 226, 0.5); border-top: 2px solid rgba(234, 245, 226, 0.5); }
+      #s03 .tick-tr { right: 64px; top: 64px; border-right: 2px solid rgba(234, 245, 226, 0.5); border-top: 2px solid rgba(234, 245, 226, 0.5); }
+      #s03 .tick-bl { left: 64px; bottom: 64px; border-left: 2px solid rgba(234, 245, 226, 0.5); border-bottom: 2px solid rgba(234, 245, 226, 0.5); }
+      #s03 .tick-br { right: 64px; bottom: 64px; border-right: 2px solid rgba(234, 245, 226, 0.5); border-bottom: 2px solid rgba(234, 245, 226, 0.5); }
 
       /* ---------- ghost plates ---------- */
-      [data-composition-id="s03"] .plate-w {
+      #s03 .plate-w {
         position: absolute;
         width: 168px;
         height: 140px;
       }
-      [data-composition-id="s03"] .p-camera  { left: 210px;  top: 250px; }
-      [data-composition-id="s03"] .p-drone   { left: 545px;  top: 140px; }
-      [data-composition-id="s03"] .p-clapper { left: 920px;  top: 110px; }
-      [data-composition-id="s03"] .p-pin     { left: 1290px; top: 175px; }
-      [data-composition-id="s03"] .p-permit  { left: 1545px; top: 360px; }
-      [data-composition-id="s03"] .p-chair   { left: 180px;  top: 560px; }
-      [data-composition-id="s03"] .plate-h {
+      #s03 .p-camera  { left: 210px;  top: 250px; }
+      #s03 .p-drone   { left: 545px;  top: 140px; }
+      #s03 .p-clapper { left: 920px;  top: 110px; }
+      #s03 .p-pin     { left: 1290px; top: 175px; }
+      #s03 .p-permit  { left: 1545px; top: 360px; }
+      #s03 .p-chair   { left: 180px;  top: 560px; }
+      #s03 .plate-h {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s03"] .plate {
+      #s03 .plate {
         position: absolute;
         inset: 0;
         border-radius: 18px;
@@ -296,7 +296,7 @@
         align-items: center;
         justify-content: center;
       }
-      [data-composition-id="s03"] .sheen {
+      #s03 .sheen {
         position: absolute;
         left: 16px;
         right: 16px;
@@ -305,7 +305,7 @@
         border-radius: 999px;
         background: rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s03"] .plate-burst {
+      #s03 .plate-burst {
         position: absolute;
         left: 24px;
         top: 10px;
@@ -322,7 +322,7 @@
       }
 
       /* camera icon */
-      [data-composition-id="s03"] .ic-cam-body {
+      #s03 .ic-cam-body {
         position: absolute;
         left: 44px;
         top: 50px;
@@ -332,7 +332,7 @@
         border: 2px solid rgba(234, 245, 226, 0.42);
         background: rgba(234, 245, 226, 0.06);
       }
-      [data-composition-id="s03"] .ic-cam-lens {
+      #s03 .ic-cam-lens {
         position: absolute;
         right: -22px;
         top: 8px;
@@ -342,7 +342,7 @@
         border: 2px solid rgba(234, 245, 226, 0.42);
         background: rgba(234, 245, 226, 0.05);
       }
-      [data-composition-id="s03"] .ic-cam-iris {
+      #s03 .ic-cam-iris {
         position: absolute;
         left: 8px;
         top: 8px;
@@ -351,7 +351,7 @@
         border-radius: 50%;
         background: rgba(234, 245, 226, 0.40);
       }
-      [data-composition-id="s03"] .ic-cam-vf {
+      #s03 .ic-cam-vf {
         position: absolute;
         left: 56px;
         top: 36px;
@@ -363,7 +363,7 @@
       }
 
       /* clapper icon */
-      [data-composition-id="s03"] .ic-clap-top {
+      #s03 .ic-clap-top {
         position: absolute;
         left: 50px;
         top: 36px;
@@ -380,7 +380,7 @@
           rgba(234, 245, 226, 0.06) 14px
         );
       }
-      [data-composition-id="s03"] .ic-clap-body {
+      #s03 .ic-clap-body {
         position: absolute;
         left: 50px;
         top: 58px;
@@ -392,7 +392,7 @@
       }
 
       /* location pin icon */
-      [data-composition-id="s03"] .ic-pin {
+      #s03 .ic-pin {
         position: absolute;
         left: 64px;
         top: 36px;
@@ -403,7 +403,7 @@
         border: 2px solid rgba(234, 245, 226, 0.42);
         background: rgba(234, 245, 226, 0.06);
       }
-      [data-composition-id="s03"] .ic-pin-dot {
+      #s03 .ic-pin-dot {
         position: absolute;
         left: 13px;
         top: 13px;
@@ -412,7 +412,7 @@
         border-radius: 50%;
         background: rgba(234, 245, 226, 0.40);
       }
-      [data-composition-id="s03"] .ic-pin-shadow {
+      #s03 .ic-pin-shadow {
         position: absolute;
         left: 70px;
         top: 96px;
@@ -423,7 +423,7 @@
       }
 
       /* permit sheet icon */
-      [data-composition-id="s03"] .ic-sheet {
+      #s03 .ic-sheet {
         position: absolute;
         left: 54px;
         top: 28px;
@@ -433,17 +433,17 @@
         border: 2px solid rgba(234, 245, 226, 0.42);
         background: rgba(234, 245, 226, 0.05);
       }
-      [data-composition-id="s03"] .gbar {
+      #s03 .gbar {
         position: absolute;
         left: 9px;
         height: 7px;
         border-radius: 999px;
         background: rgba(234, 245, 226, 0.38);
       }
-      [data-composition-id="s03"] .gb-1 { top: 12px; width: 40px; }
-      [data-composition-id="s03"] .gb-2 { top: 27px; width: 30px; }
-      [data-composition-id="s03"] .gb-3 { top: 42px; width: 36px; }
-      [data-composition-id="s03"] .ic-stamp {
+      #s03 .gb-1 { top: 12px; width: 40px; }
+      #s03 .gb-2 { top: 27px; width: 30px; }
+      #s03 .gb-3 { top: 42px; width: 36px; }
+      #s03 .ic-stamp {
         position: absolute;
         right: 7px;
         bottom: 7px;
@@ -454,16 +454,16 @@
       }
 
       /* svg icons */
-      [data-composition-id="s03"] .ic-drone { display: block; }
-      [data-composition-id="s03"] .ic-chair { display: block; }
+      #s03 .ic-drone { display: block; }
+      #s03 .ic-chair { display: block; }
 
       /* ---------- cables ---------- */
-      [data-composition-id="s03"] .cables {
+      #s03 .cables {
         position: absolute;
         left: 0px;
         top: 0px;
       }
-      [data-composition-id="s03"] .cb {
+      #s03 .cb {
         fill: none;
         stroke: #3e8e0e;
         stroke-width: 3;
@@ -472,7 +472,7 @@
         stroke-dasharray: 100;
         stroke-dashoffset: 100;
       }
-      [data-composition-id="s03"] .pu {
+      #s03 .pu {
         fill: none;
         stroke: #c6ff4d;
         stroke-width: 4;
@@ -483,17 +483,17 @@
       }
 
       /* ---------- nodes ---------- */
-      [data-composition-id="s03"] .node-w {
+      #s03 .node-w {
         position: absolute;
         opacity: 0;
       }
-      [data-composition-id="s03"] .n-hub { left: 602px; top: 552px; width: 96px; height: 96px; }
-      [data-composition-id="s03"] .n-a { left: 448px;  top: 423px; width: 64px; height: 64px; }
-      [data-composition-id="s03"] .n-b { left: 809px;  top: 434px; width: 72px; height: 72px; }
-      [data-composition-id="s03"] .n-c { left: 418px;  top: 698px; width: 64px; height: 64px; }
-      [data-composition-id="s03"] .n-d { left: 801px;  top: 711px; width: 68px; height: 68px; }
-      [data-composition-id="s03"] .n-e { left: 980px;  top: 570px; width: 60px; height: 60px; }
-      [data-composition-id="s03"] .node-disc {
+      #s03 .n-hub { left: 602px; top: 552px; width: 96px; height: 96px; }
+      #s03 .n-a { left: 448px;  top: 423px; width: 64px; height: 64px; }
+      #s03 .n-b { left: 809px;  top: 434px; width: 72px; height: 72px; }
+      #s03 .n-c { left: 418px;  top: 698px; width: 64px; height: 64px; }
+      #s03 .n-d { left: 801px;  top: 711px; width: 68px; height: 68px; }
+      #s03 .n-e { left: 980px;  top: 570px; width: 60px; height: 60px; }
+      #s03 .node-disc {
         position: absolute;
         inset: 0;
         border-radius: 50%;
@@ -503,7 +503,7 @@
           0 0 40px rgba(143, 224, 0, 0.18),
           inset 0 2px 0 rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s03"] .node-glow {
+      #s03 .node-glow {
         position: absolute;
         inset: -18px;
         border-radius: 50%;
@@ -515,7 +515,7 @@
           rgba(143, 224, 0, 0) 74%
         );
       }
-      [data-composition-id="s03"] .node-core {
+      #s03 .node-core {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -527,7 +527,7 @@
         background: #c6ff4d;
         box-shadow: 0 0 14px rgba(198, 255, 77, 0.85);
       }
-      [data-composition-id="s03"] .hub-ring {
+      #s03 .hub-ring {
         position: absolute;
         inset: -16px;
         border-radius: 50%;
@@ -535,7 +535,7 @@
       }
 
       /* ---------- frame cards ---------- */
-      [data-composition-id="s03"] .card-w {
+      #s03 .card-w {
         position: absolute;
         width: 340px;
         height: 192px;
@@ -545,18 +545,18 @@
         overflow: hidden;
         opacity: 0;
       }
-      [data-composition-id="s03"] .card-1 { left: 1320px; top: 235px; }
-      [data-composition-id="s03"] .card-2 { left: 1500px; top: 458px; }
-      [data-composition-id="s03"] .card-3 { left: 1310px; top: 642px; }
-      [data-composition-id="s03"] .card-4 { left: 1492px; top: 838px; }
-      [data-composition-id="s03"] .kb {
+      #s03 .card-1 { left: 1320px; top: 235px; }
+      #s03 .card-2 { left: 1500px; top: 458px; }
+      #s03 .card-3 { left: 1310px; top: 642px; }
+      #s03 .card-4 { left: 1492px; top: 838px; }
+      #s03 .kb {
         position: absolute;
         left: -22px;
         top: -14px;
         width: 384px;
         height: 220px;
       }
-      [data-composition-id="s03"] .kb-sunset {
+      #s03 .kb-sunset {
         background: linear-gradient(
           180deg,
           #1a0f14 0%,
@@ -566,7 +566,7 @@
           #ffc65c 100%
         );
       }
-      [data-composition-id="s03"] .sun-glow {
+      #s03 .sun-glow {
         position: absolute;
         left: 122px;
         top: 96px;
@@ -580,7 +580,7 @@
           rgba(255, 198, 92, 0) 70%
         );
       }
-      [data-composition-id="s03"] .kb-ocean {
+      #s03 .kb-ocean {
         background: linear-gradient(
           180deg,
           #04121a 0%,
@@ -588,7 +588,7 @@
           rgba(53, 208, 186, 0.30) 100%
         );
       }
-      [data-composition-id="s03"] .horizon-line {
+      #s03 .horizon-line {
         position: absolute;
         left: 0px;
         right: 0px;
@@ -596,14 +596,14 @@
         height: 2px;
         background: rgba(234, 245, 226, 0.25);
       }
-      [data-composition-id="s03"] .kb-neon {
+      #s03 .kb-neon {
         background: linear-gradient(180deg, #0a0612 0%, #2a1140 100%);
       }
-      [data-composition-id="s03"] .neon-pool {
+      #s03 .neon-pool {
         position: absolute;
         border-radius: 50%;
       }
-      [data-composition-id="s03"] .pool-rose {
+      #s03 .pool-rose {
         left: 30px;
         top: 80px;
         width: 180px;
@@ -615,7 +615,7 @@
           rgba(255, 100, 115, 0) 72%
         );
       }
-      [data-composition-id="s03"] .pool-teal {
+      #s03 .pool-teal {
         left: 200px;
         top: 40px;
         width: 170px;
@@ -627,10 +627,10 @@
           rgba(53, 208, 186, 0) 72%
         );
       }
-      [data-composition-id="s03"] .kb-drive {
+      #s03 .kb-drive {
         background: linear-gradient(180deg, #1a0f14 0%, #5a2233 55%, #b8503a 100%);
       }
-      [data-composition-id="s03"] .streak {
+      #s03 .streak {
         position: absolute;
         height: 10px;
         border-radius: 999px;
@@ -641,9 +641,9 @@
           rgba(255, 198, 92, 0) 75%
         );
       }
-      [data-composition-id="s03"] .streak-1 { left: 50px; top: 138px; width: 220px; }
-      [data-composition-id="s03"] .streak-2 { left: 120px; top: 162px; width: 200px; }
-      [data-composition-id="s03"] .halation {
+      #s03 .streak-1 { left: 50px; top: 138px; width: 220px; }
+      #s03 .streak-2 { left: 120px; top: 162px; width: 200px; }
+      #s03 .halation {
         position: absolute;
         left: 200px;
         top: -30px;
@@ -657,7 +657,7 @@
           rgba(255, 100, 115, 0) 74%
         );
       }
-      [data-composition-id="s03"] .card-flash {
+      #s03 .card-flash {
         position: absolute;
         inset: 0;
         border-radius: 10px;
@@ -671,16 +671,16 @@
       }
 
       /* ---------- particles ---------- */
-      [data-composition-id="s03"] .fx-particles {
+      #s03 .fx-particles {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s03"] .pw {
+      #s03 .pw {
         position: absolute;
         width: 0px;
         height: 0px;
       }
-      [data-composition-id="s03"] .pd {
+      #s03 .pd {
         position: absolute;
         left: -4px;
         top: -4px;
@@ -688,13 +688,13 @@
         opacity: 0;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="../vendor/gsap.min.js"></script>
     <script>
       (() => {
         window.__timelines = window.__timelines || {};
         const tl = gsap.timeline({ paused: true });
-        const S = '[data-composition-id="s03"] ';
-        const root = document.querySelector('[data-composition-id="s03"]');
+        const S = '#s03 ';
+        const root = document.querySelector('#s03');
         const DUR = 25;
 
         // deterministic PRNG (mulberry32, seed 42)

@@ -1,5 +1,5 @@
 <template id="s12-template">
-  <div data-composition-id="s12" data-width="1920" data-height="1080">
+  <div id="s12" data-composition-id="s12" data-width="1920" data-height="1080">
     <!-- Scene 12 — "Build one shot" finale. Full pipeline in one continuous L->R motion, resolve + fade. -->
 
     <!-- The shoreline motif lives OUTSIDE the fade group: it is the last thing visible. -->
@@ -117,7 +117,7 @@
     </div>
 
     <style>
-      [data-composition-id="s12"] {
+      #s12 {
         position: absolute;
         inset: 0;
         width: 1920px;
@@ -125,19 +125,19 @@
         background: #050a06;
         overflow: hidden;
       }
-      [data-composition-id="s12"] .fade-all { position: absolute; inset: 0; }
+      #s12 .fade-all { position: absolute; inset: 0; }
 
       /* ---------- shoreline motif ---------- */
-      [data-composition-id="s12"] .horizon {
+      #s12 .horizon {
         position: absolute; left: 0; top: 928px; width: 1920px; height: 4px;
         opacity: 0.55;
       }
-      [data-composition-id="s12"] .horizon-core {
+      #s12 .horizon-core {
         position: absolute; left: 0; top: 0; width: 100%; height: 3px;
         border-radius: 999px;
         background: rgba(198, 255, 77, 0.75);
       }
-      [data-composition-id="s12"] .horizon-glow {
+      #s12 .horizon-glow {
         position: absolute; left: 0; top: -16px; width: 100%; height: 34px;
         border-radius: 999px;
         background: radial-gradient(closest-side, rgba(143, 224, 0, 0.40), rgba(143, 224, 0, 0));
@@ -145,70 +145,70 @@
       }
 
       /* ---------- BG decoratives ---------- */
-      [data-composition-id="s12"] .dotgrid {
+      #s12 .dotgrid {
         position: absolute; inset: -60px;
         background-image: radial-gradient(rgba(62, 142, 14, 0.35) 1.6px, rgba(62, 142, 14, 0) 1.6px);
         background-size: 52px 52px;
         opacity: 0.42;
       }
-      [data-composition-id="s12"] .glow {
+      #s12 .glow {
         position: absolute; border-radius: 50%;
       }
-      [data-composition-id="s12"] .glow-a {
+      #s12 .glow-a {
         left: 120px; top: 60px; width: 760px; height: 620px;
         background: radial-gradient(closest-side, rgba(143, 224, 0, 0.20), rgba(143, 224, 0, 0));
         opacity: 0.85;
       }
-      [data-composition-id="s12"] .glow-b {
+      #s12 .glow-b {
         left: 1180px; top: 560px; width: 820px; height: 640px;
         background: radial-gradient(closest-side, rgba(255, 138, 61, 0.17), rgba(255, 138, 61, 0));
         opacity: 0.85;
       }
-      [data-composition-id="s12"] .station-glow {
+      #s12 .station-glow {
         position: absolute; left: 160px; top: 280px; width: 1640px; height: 460px;
         border-radius: 50%;
         background: radial-gradient(closest-side, rgba(143, 224, 0, 0.16), rgba(143, 224, 0, 0));
         opacity: 0.2;
       }
-      [data-composition-id="s12"] .dust { position: absolute; inset: 0; }
-      [data-composition-id="s12"] .dust-dot {
+      #s12 .dust { position: absolute; inset: 0; }
+      #s12 .dust-dot {
         position: absolute; border-radius: 50%;
       }
 
       /* ---------- camera ---------- */
-      [data-composition-id="s12"] .cam-zoom { position: absolute; inset: 0; transform-origin: 50% 52%; }
-      [data-composition-id="s12"] .cam-pan { position: absolute; inset: 0; }
-      [data-composition-id="s12"] .row-float { position: absolute; inset: 0; }
-      [data-composition-id="s12"] .cables { position: absolute; left: 0; top: 0; }
+      #s12 .cam-zoom { position: absolute; inset: 0; transform-origin: 50% 52%; }
+      #s12 .cam-pan { position: absolute; inset: 0; }
+      #s12 .row-float { position: absolute; inset: 0; }
+      #s12 .cables { position: absolute; left: 0; top: 0; }
 
       /* ---------- station pads ---------- */
-      [data-composition-id="s12"] .pad-refs {
+      #s12 .pad-refs {
         position: absolute; left: 128px; top: 418px; width: 204px; height: 144px;
         border-radius: 18px;
         background: rgba(150, 230, 120, 0.07);
         border: 2px solid rgba(143, 224, 0, 0.30);
         box-shadow: 0 0 26px rgba(143, 224, 0, 0.10);
       }
-      [data-composition-id="s12"] .pad { position: absolute; }
+      #s12 .pad { position: absolute; }
 
       /* reference thumbnails: 150x84, stacked fan */
-      [data-composition-id="s12"] .thumb-in { position: absolute; width: 150px; height: 84px; }
-      [data-composition-id="s12"] .thumb-in-1 { left: 141px; top: 416px; }
-      [data-composition-id="s12"] .thumb-in-2 { left: 155px; top: 428px; }
-      [data-composition-id="s12"] .thumb-in-3 { left: 167px; top: 440px; }
-      [data-composition-id="s12"] .thumb-fly { position: absolute; inset: 0; }
-      [data-composition-id="s12"] .thumb {
+      #s12 .thumb-in { position: absolute; width: 150px; height: 84px; }
+      #s12 .thumb-in-1 { left: 141px; top: 416px; }
+      #s12 .thumb-in-2 { left: 155px; top: 428px; }
+      #s12 .thumb-in-3 { left: 167px; top: 440px; }
+      #s12 .thumb-fly { position: absolute; inset: 0; }
+      #s12 .thumb {
         position: absolute; inset: 0; border-radius: 12px;
         border: 2px solid rgba(143, 224, 0, 0.30);
         box-shadow: 0 0 22px rgba(143, 224, 0, 0.16);
       }
-      [data-composition-id="s12"] .thumb-sunset {
+      #s12 .thumb-sunset {
         background: linear-gradient(180deg, #1a0f14 0%, #5a2233 34%, #b8503a 62%, #ff8a3d 82%, #ffc65c 100%);
       }
-      [data-composition-id="s12"] .thumb-ocean {
+      #s12 .thumb-ocean {
         background: linear-gradient(180deg, #04121a 0%, #0d3340 58%, rgba(53, 208, 186, 0.30) 100%);
       }
-      [data-composition-id="s12"] .thumb-neon {
+      #s12 .thumb-neon {
         background:
           radial-gradient(closest-side at 26% 70%, rgba(255, 100, 115, 0.45), rgba(255, 100, 115, 0)),
           radial-gradient(closest-side at 76% 36%, rgba(53, 208, 186, 0.40), rgba(53, 208, 186, 0)),
@@ -216,7 +216,7 @@
       }
 
       /* ---------- prompt card ---------- */
-      [data-composition-id="s12"] .prompt-card {
+      #s12 .prompt-card {
         position: absolute; left: 450px; top: 385px; width: 280px; height: 190px;
         border-radius: 24px;
         background: rgba(150, 230, 120, 0.07);
@@ -224,30 +224,30 @@
         box-shadow: 0 0 40px rgba(143, 224, 0, 0.18), inset 0 1px 0 rgba(234, 245, 226, 0.12);
         overflow: hidden;
       }
-      [data-composition-id="s12"] .prompt-icon {
+      #s12 .prompt-icon {
         position: absolute; left: 26px; top: 24px; width: 26px; height: 26px;
         background: rgba(143, 224, 0, 0.85);
         border-radius: 6px;
         transform: rotate(45deg);
         box-shadow: 0 0 18px rgba(198, 255, 77, 0.45);
       }
-      [data-composition-id="s12"] .gbar {
+      #s12 .gbar {
         position: absolute; left: 26px; height: 10px; border-radius: 999px;
         background: rgba(234, 245, 226, 0.55);
         transform-origin: left center;
       }
-      [data-composition-id="s12"] .gbar-1 { top: 74px;  width: 196px; }
-      [data-composition-id="s12"] .gbar-2 { top: 98px;  width: 224px; background: rgba(234, 245, 226, 0.42); }
-      [data-composition-id="s12"] .gbar-3 { top: 122px; width: 158px; background: rgba(143, 224, 0, 0.62); }
-      [data-composition-id="s12"] .gbar-4 { top: 146px; width: 118px; background: rgba(234, 245, 226, 0.35); }
-      [data-composition-id="s12"] .prompt-flash {
+      #s12 .gbar-1 { top: 74px;  width: 196px; }
+      #s12 .gbar-2 { top: 98px;  width: 224px; background: rgba(234, 245, 226, 0.42); }
+      #s12 .gbar-3 { top: 122px; width: 158px; background: rgba(143, 224, 0, 0.62); }
+      #s12 .gbar-4 { top: 146px; width: 118px; background: rgba(234, 245, 226, 0.35); }
+      #s12 .prompt-flash {
         position: absolute; inset: 0; border-radius: 24px;
         background: rgba(198, 255, 77, 0.55);
         opacity: 0;
       }
 
       /* ---------- develop slot ---------- */
-      [data-composition-id="s12"] .dev-slot {
+      #s12 .dev-slot {
         position: absolute; left: 782px; top: 387px; width: 316px; height: 186px;
         border-radius: 14px;
         border: 2px dashed rgba(143, 224, 0, 0.30);
@@ -256,38 +256,38 @@
       }
 
       /* ---------- animation node ring ---------- */
-      [data-composition-id="s12"] .ring-wrap {
+      #s12 .ring-wrap {
         position: absolute; left: 1100px; top: 310px; width: 340px; height: 340px;
       }
-      [data-composition-id="s12"] .ring-glow {
+      #s12 .ring-glow {
         position: absolute; inset: 18px; border-radius: 50%;
         background: radial-gradient(closest-side, rgba(143, 224, 0, 0.0), rgba(143, 224, 0, 0.0) 62%, rgba(143, 224, 0, 0.28) 88%, rgba(143, 224, 0, 0));
         opacity: 0.12;
       }
-      [data-composition-id="s12"] .ring-spin {
+      #s12 .ring-spin {
         position: absolute; inset: 0; transform-origin: 50% 50%;
       }
 
       /* ---------- enhance node ---------- */
-      [data-composition-id="s12"] .enhance-node {
+      #s12 .enhance-node {
         position: absolute; left: 1470px; top: 405px; width: 150px; height: 150px;
         border-radius: 18px;
         background: rgba(150, 230, 120, 0.07);
         border: 2px solid rgba(143, 224, 0, 0.30);
         box-shadow: 0 0 26px rgba(143, 224, 0, 0.12), inset 0 1px 0 rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s12"] .chev {
+      #s12 .chev {
         position: absolute; left: 53px; width: 44px; height: 44px;
         border-top: 4px solid rgba(143, 224, 0, 0.85);
         border-left: 4px solid rgba(143, 224, 0, 0.85);
         border-radius: 4px;
         transform: rotate(45deg);
       }
-      [data-composition-id="s12"] .chev-1 { top: 34px; }
-      [data-composition-id="s12"] .chev-2 { top: 66px; border-color: rgba(198, 255, 77, 0.55); }
+      #s12 .chev-1 { top: 34px; }
+      #s12 .chev-2 { top: 66px; border-color: rgba(198, 255, 77, 0.55); }
 
       /* ---------- mini timeline ---------- */
-      [data-composition-id="s12"] .mini-tl {
+      #s12 .mini-tl {
         position: absolute; left: 1330px; top: 690px; width: 460px; height: 160px;
         border-radius: 18px;
         background: rgba(150, 230, 120, 0.07);
@@ -295,36 +295,36 @@
         box-shadow: 0 0 30px rgba(143, 224, 0, 0.12), inset 0 1px 0 rgba(234, 245, 226, 0.12);
         overflow: hidden;
       }
-      [data-composition-id="s12"] .lane {
+      #s12 .lane {
         position: absolute; left: 16px; width: 428px; height: 40px; border-radius: 8px;
         background: rgba(62, 142, 14, 0.20);
       }
-      [data-composition-id="s12"] .lane-1 { top: 26px; }
-      [data-composition-id="s12"] .lane-2 { top: 96px; }
-      [data-composition-id="s12"] .tl-clip {
+      #s12 .lane-1 { top: 26px; }
+      #s12 .lane-2 { top: 96px; }
+      #s12 .tl-clip {
         position: absolute; height: 32px; border-radius: 6px;
         border: 2px solid rgba(143, 224, 0, 0.30);
       }
-      [data-composition-id="s12"] .tl-clip-a {
+      #s12 .tl-clip-a {
         left: 28px; top: 100px; width: 110px;
         background: linear-gradient(180deg, #5a2233 0%, #ff8a3d 100%);
       }
-      [data-composition-id="s12"] .tl-clip-b {
+      #s12 .tl-clip-b {
         left: 150px; top: 100px; width: 88px;
         background: linear-gradient(180deg, #0d3340 0%, rgba(53, 208, 186, 0.55) 100%);
       }
-      [data-composition-id="s12"] .tl-slot {
+      #s12 .tl-slot {
         position: absolute; left: 230px; top: 22px; width: 150px; height: 48px;
         border-radius: 8px;
         border: 2px dashed rgba(143, 224, 0, 0.35);
       }
-      [data-composition-id="s12"] .playhead {
+      #s12 .playhead {
         position: absolute; left: 16px; top: 14px; width: 2px; height: 132px;
         border-radius: 999px;
         background: rgba(198, 255, 77, 0.65);
         box-shadow: 0 0 10px rgba(198, 255, 77, 0.45);
       }
-      [data-composition-id="s12"] .snap-flash {
+      #s12 .snap-flash {
         position: absolute; left: 1552px; top: 704px; width: 166px; height: 64px;
         border-radius: 10px;
         background: rgba(198, 255, 77, 0.6);
@@ -333,57 +333,57 @@
       }
 
       /* ---------- hero shot card ---------- */
-      [data-composition-id="s12"] .hero-a {
+      #s12 .hero-a {
         position: absolute; left: 790px; top: 395px; width: 300px; height: 170px;
       }
-      [data-composition-id="s12"] .hero-b { position: absolute; inset: 0; }
-      [data-composition-id="s12"] .hero-c { position: absolute; inset: 0; }
-      [data-composition-id="s12"] .hero-card {
+      #s12 .hero-b { position: absolute; inset: 0; }
+      #s12 .hero-c { position: absolute; inset: 0; }
+      #s12 .hero-card {
         position: absolute; inset: 0; border-radius: 12px;
         border: 2px solid rgba(143, 224, 0, 0.30);
         box-shadow: 0 0 36px rgba(143, 224, 0, 0.20);
         overflow: hidden;
       }
-      [data-composition-id="s12"] .hero-scene {
+      #s12 .hero-scene {
         position: absolute; inset: -14px;
         background:
           radial-gradient(closest-side at 50% 64%, rgba(255, 198, 92, 0.55), rgba(255, 198, 92, 0)),
           linear-gradient(180deg, #1a0f14 0%, #5a2233 30%, #b8503a 56%, #ff8a3d 78%, #ffc65c 100%);
       }
-      [data-composition-id="s12"] .streak {
+      #s12 .streak {
         position: absolute; left: 0; width: 220px; height: 4px; border-radius: 999px;
         background: linear-gradient(90deg, rgba(198, 255, 77, 0) 0%, rgba(198, 255, 77, 0.85) 55%, rgba(198, 255, 77, 0) 100%);
       }
-      [data-composition-id="s12"] .streak-1 { top: 48px; }
-      [data-composition-id="s12"] .streak-2 { top: 84px; width: 260px; }
-      [data-composition-id="s12"] .streak-3 { top: 120px; width: 180px; }
-      [data-composition-id="s12"] .hero-flare {
+      #s12 .streak-1 { top: 48px; }
+      #s12 .streak-2 { top: 84px; width: 260px; }
+      #s12 .streak-3 { top: 120px; width: 180px; }
+      #s12 .hero-flare {
         position: absolute; inset: 0; border-radius: 12px;
         background: rgba(234, 245, 226, 0.55);
         opacity: 0;
       }
 
       /* ---------- flares ---------- */
-      [data-composition-id="s12"] .flare {
+      #s12 .flare {
         position: absolute; width: 130px; height: 130px; border-radius: 50%;
         border: 3px solid rgba(198, 255, 77, 0.9);
         box-shadow: 0 0 24px rgba(198, 255, 77, 0.45);
         opacity: 0;
       }
-      [data-composition-id="s12"] .flare-1 { left: 165px;  top: 425px; }
-      [data-composition-id="s12"] .flare-2 { left: 525px;  top: 415px; }
-      [data-composition-id="s12"] .flare-3 { left: 875px;  top: 415px; }
-      [data-composition-id="s12"] .flare-4 { left: 1205px; top: 415px; }
-      [data-composition-id="s12"] .flare-5 { left: 1480px; top: 415px; }
-      [data-composition-id="s12"] .flare-6 { left: 1570px; top: 671px; }
+      #s12 .flare-1 { left: 165px;  top: 425px; }
+      #s12 .flare-2 { left: 525px;  top: 415px; }
+      #s12 .flare-3 { left: 875px;  top: 415px; }
+      #s12 .flare-4 { left: 1205px; top: 415px; }
+      #s12 .flare-5 { left: 1480px; top: 415px; }
+      #s12 .flare-6 { left: 1570px; top: 671px; }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="../vendor/gsap.min.js"></script>
     <script>
       (() => {
         window.__timelines = window.__timelines || {};
         const tl = gsap.timeline({ paused: true });
-        const S = '[data-composition-id="s12"] ';
+        const S = '#s12 ';
         const DUR = 26;
 
         // deterministic PRNG (seeded LCG per contract)

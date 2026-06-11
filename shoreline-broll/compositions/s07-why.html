@@ -1,5 +1,5 @@
 <template id="s07-template">
-  <div data-composition-id="s07" data-width="1920" data-height="1080">
+  <div id="s07" data-composition-id="s07" data-width="1920" data-height="1080">
     <!-- ===== BG decoratives ===== -->
     <div class="s07-grid" data-layout-ignore><div class="s07-grid-inner"></div></div>
     <div class="s07-glow-green" data-layout-ignore></div>
@@ -61,7 +61,7 @@
     </div>
 
     <style>
-      [data-composition-id="s07"] {
+      #s07 {
         position: absolute;
         inset: 0;
         width: 1920px;
@@ -70,20 +70,20 @@
         overflow: hidden;
       }
       /* ---- BG ---- */
-      [data-composition-id="s07"] .s07-grid {
+      #s07 .s07-grid {
         position: absolute;
         inset: 0;
         opacity: 0;
       }
-      [data-composition-id="s07"] .s07-grid-inner {
+      #s07 .s07-grid-inner {
         position: absolute;
         inset: -40px;
       }
-      [data-composition-id="s07"] .s07-grid-line {
+      #s07 .s07-grid-line {
         position: absolute;
         background: rgba(62, 142, 14, 0.55);
       }
-      [data-composition-id="s07"] .s07-glow-green {
+      #s07 .s07-glow-green {
         position: absolute;
         left: 410px;
         top: 30px;
@@ -93,7 +93,7 @@
         background: radial-gradient(circle, rgba(143, 224, 0, 0.30) 0%, rgba(143, 224, 0, 0.10) 42%, rgba(143, 224, 0, 0) 70%);
         opacity: 0;
       }
-      [data-composition-id="s07"] .s07-glow-rose {
+      #s07 .s07-glow-rose {
         position: absolute;
         left: 1180px;
         top: -180px;
@@ -103,33 +103,33 @@
         background: radial-gradient(circle, rgba(255, 100, 115, 0.34) 0%, rgba(255, 100, 115, 0.12) 45%, rgba(255, 100, 115, 0) 72%);
         opacity: 0;
       }
-      [data-composition-id="s07"] .s07-bleed {
+      #s07 .s07-bleed {
         position: absolute;
         left: 0;
         bottom: -60px;
         width: 1920px;
         height: 520px;
       }
-      [data-composition-id="s07"] .s07-bleed-inner {
+      #s07 .s07-bleed-inner {
         position: absolute;
         inset: 0;
         background: radial-gradient(ellipse 130% 100% at 50% 100%, rgba(255, 138, 61, 0.30) 0%, rgba(255, 198, 92, 0.14) 38%, rgba(255, 100, 115, 0.06) 62%, rgba(255, 138, 61, 0) 80%);
       }
       /* ---- Chaos board ---- */
-      [data-composition-id="s07"] .s07-chaos-drain,
-      [data-composition-id="s07"] .s07-chaos-scale,
-      [data-composition-id="s07"] .s07-chaos-jitter,
-      [data-composition-id="s07"] .s07-bubbles,
-      [data-composition-id="s07"] .s07-arrows,
-      [data-composition-id="s07"] .s07-dots,
-      [data-composition-id="s07"] .s07-slices {
+      #s07 .s07-chaos-drain,
+      #s07 .s07-chaos-scale,
+      #s07 .s07-chaos-jitter,
+      #s07 .s07-bubbles,
+      #s07 .s07-arrows,
+      #s07 .s07-dots,
+      #s07 .s07-slices {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s07"] .s07-bub-wrap {
+      #s07 .s07-bub-wrap {
         position: absolute;
       }
-      [data-composition-id="s07"] .s07-bub {
+      #s07 .s07-bub {
         position: absolute;
         inset: 0;
         border-radius: 10px;
@@ -143,18 +143,18 @@
         justify-content: center;
         gap: 9px;
       }
-      [data-composition-id="s07"] .s07-bub-rose {
+      #s07 .s07-bub-rose {
         border-color: rgba(255, 100, 115, 0.40);
         box-shadow: 0 0 22px rgba(255, 100, 115, 0.12);
       }
-      [data-composition-id="s07"] .s07-bar {
+      #s07 .s07-bar {
         height: 7px;
         border-radius: 999px;
         background: rgba(234, 245, 226, 0.38);
       }
-      [data-composition-id="s07"] .s07-bar-acc { background: rgba(143, 224, 0, 0.45); }
-      [data-composition-id="s07"] .s07-bar-rose { background: rgba(255, 100, 115, 0.60); }
-      [data-composition-id="s07"] .s07-pin {
+      #s07 .s07-bar-acc { background: rgba(143, 224, 0, 0.45); }
+      #s07 .s07-bar-rose { background: rgba(255, 100, 115, 0.60); }
+      #s07 .s07-pin {
         position: absolute;
         left: -5px;
         top: -5px;
@@ -164,12 +164,12 @@
         background: rgba(62, 142, 14, 0.9);
         border: 2px solid rgba(143, 224, 0, 0.30);
       }
-      [data-composition-id="s07"] .s07-arrow {
+      #s07 .s07-arrow {
         position: absolute;
         height: 3px;
         border-radius: 999px;
       }
-      [data-composition-id="s07"] .s07-arrow-head {
+      #s07 .s07-arrow-head {
         position: absolute;
         right: -2px;
         top: -4px;
@@ -178,7 +178,7 @@
         border-top: 5px solid rgba(143, 224, 0, 0);
         border-bottom: 5px solid rgba(143, 224, 0, 0);
       }
-      [data-composition-id="s07"] .s07-alert {
+      #s07 .s07-alert {
         position: absolute;
         width: 14px;
         height: 14px;
@@ -186,7 +186,7 @@
         background: #ff6473;
         box-shadow: 0 0 18px rgba(255, 100, 115, 0.65);
       }
-      [data-composition-id="s07"] .s07-slice {
+      #s07 .s07-slice {
         position: absolute;
         left: 0;
         width: 1920px;
@@ -195,7 +195,7 @@
         opacity: 0;
       }
       /* ---- Calm phase ---- */
-      [data-composition-id="s07"] .s07-scene-content {
+      #s07 .s07-scene-content {
         position: absolute;
         inset: 0;
         padding: 90px;
@@ -205,16 +205,16 @@
         align-items: center;
         justify-content: center;
       }
-      [data-composition-id="s07"] .s07-node-wrap {
+      #s07 .s07-node-wrap {
         position: relative;
         width: 180px;
         height: 180px;
       }
-      [data-composition-id="s07"] .s07-ripples {
+      #s07 .s07-ripples {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s07"] .s07-ring {
+      #s07 .s07-ring {
         position: absolute;
         left: -90px;
         top: -90px;
@@ -223,42 +223,42 @@
         border-radius: 999px;
         border: 2px solid rgba(143, 224, 0, 0.45);
       }
-      [data-composition-id="s07"] .s07-ring-b { border-color: rgba(198, 255, 77, 0.40); }
-      [data-composition-id="s07"] .s07-ring-c { border-color: rgba(53, 208, 186, 0.35); }
-      [data-composition-id="s07"] .s07-cables {
+      #s07 .s07-ring-b { border-color: rgba(198, 255, 77, 0.40); }
+      #s07 .s07-ring-c { border-color: rgba(53, 208, 186, 0.35); }
+      #s07 .s07-cables {
         position: absolute;
         left: -410px;
         top: -230px;
       }
-      [data-composition-id="s07"] .s07-cable {
+      #s07 .s07-cable {
         fill: rgba(143, 224, 0, 0);
         stroke: #3e8e0e;
         stroke-width: 3;
         stroke-linecap: round;
         stroke-dasharray: 320;
       }
-      [data-composition-id="s07"] .s07-cap {
+      #s07 .s07-cap {
         fill: #c6ff4d;
       }
-      [data-composition-id="s07"] .s07-orbit {
+      #s07 .s07-orbit {
         position: absolute;
         border-radius: 999px;
         border: 2px solid rgba(143, 224, 0, 0.22);
       }
-      [data-composition-id="s07"] .s07-orbit-a {
+      #s07 .s07-orbit-a {
         left: -70px;
         top: -70px;
         width: 320px;
         height: 320px;
       }
-      [data-composition-id="s07"] .s07-orbit-b {
+      #s07 .s07-orbit-b {
         left: -132px;
         top: -132px;
         width: 444px;
         height: 444px;
         border-color: rgba(53, 208, 186, 0.18);
       }
-      [data-composition-id="s07"] .s07-sat {
+      #s07 .s07-sat {
         position: absolute;
         left: 50%;
         top: -6px;
@@ -269,11 +269,11 @@
         background: #c6ff4d;
         box-shadow: 0 0 14px rgba(198, 255, 77, 0.6);
       }
-      [data-composition-id="s07"] .s07-sat-b {
+      #s07 .s07-sat-b {
         background: #35d0ba;
         box-shadow: 0 0 14px rgba(53, 208, 186, 0.55);
       }
-      [data-composition-id="s07"] .s07-halo {
+      #s07 .s07-halo {
         position: absolute;
         left: -120px;
         top: -120px;
@@ -282,11 +282,11 @@
         border-radius: 999px;
         background: radial-gradient(circle, rgba(143, 224, 0, 0.38) 0%, rgba(143, 224, 0, 0.12) 48%, rgba(143, 224, 0, 0) 72%);
       }
-      [data-composition-id="s07"] .s07-node-bloom {
+      #s07 .s07-node-bloom {
         position: absolute;
         inset: 0;
       }
-      [data-composition-id="s07"] .s07-node-core {
+      #s07 .s07-node-core {
         position: absolute;
         inset: 0;
         border-radius: 18px;
@@ -297,7 +297,7 @@
         align-items: center;
         justify-content: center;
       }
-      [data-composition-id="s07"] .s07-sheen {
+      #s07 .s07-sheen {
         position: absolute;
         left: 14px;
         right: 14px;
@@ -306,32 +306,32 @@
         border-radius: 999px;
         background: rgba(234, 245, 226, 0.12);
       }
-      [data-composition-id="s07"] .s07-rays line {
+      #s07 .s07-rays line {
         stroke: #ffc65c;
         stroke-width: 3;
         stroke-linecap: round;
       }
-      [data-composition-id="s07"] .s07-sun {
+      #s07 .s07-sun {
         fill: rgba(255, 198, 92, 0.22);
         stroke: #ffc65c;
         stroke-width: 3;
       }
-      [data-composition-id="s07"] .s07-wave {
+      #s07 .s07-wave {
         fill: rgba(53, 208, 186, 0);
         stroke: #35d0ba;
         stroke-width: 3;
         stroke-linecap: round;
       }
-      [data-composition-id="s07"] .s07-wave-a { stroke-dasharray: 40 14; }
-      [data-composition-id="s07"] .s07-wave-b { stroke-dasharray: 26 12; stroke: rgba(53, 208, 186, 0.6); }
+      #s07 .s07-wave-a { stroke-dasharray: 40 14; }
+      #s07 .s07-wave-b { stroke-dasharray: 26 12; stroke: rgba(53, 208, 186, 0.6); }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="../vendor/gsap.min.js"></script>
     <script>
       (() => {
         window.__timelines = window.__timelines || {};
         const tl = gsap.timeline({ paused: true });
-        const S = '[data-composition-id="s07"] ';
-        const root = document.querySelector('[data-composition-id="s07"]');
+        const S = '#s07 ';
+        const root = document.querySelector('#s07');
         const rng = (seed => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296))(42);
         const SCENE_END = 25;
         const reps = (start, cycle) => Math.max(0, Math.ceil((SCENE_END - start) / cycle) - 1);
@@ -537,7 +537,7 @@
         tl.to(S + ".s07-grid", { opacity: 0, duration: 0.9, ease: "sine.in" }, 9.4);
         tl.to(S + ".s07-glow-rose", { opacity: 0, duration: 0.9, ease: "sine.in" }, 9.4);
         // hard-kill after the mid-scene fade-out (contract rule 16)
-        tl.set([S + ".s07-chaos-drain", S + ".s07-grid", S + ".s07-glow-rose"], { opacity: 0, visibility: "hidden" }, 10.7);
+        tl.set(S + ".s07-chaos-drain, " + S + ".s07-grid, " + S + ".s07-glow-rose", { opacity: 0, visibility: "hidden" }, 10.7);
 
         // ---- t=10.7..12: black beat — only the green glow breathes, then swells ----
         tl.to(S + ".s07-glow-green", { opacity: 0.9, duration: 2.2, ease: "sine.inOut" }, 11.2);
