@@ -94,7 +94,7 @@
         top: -120px;
         width: 2240px;
         height: 1340px;
-        opacity: 0.08;
+        opacity: 0.12;
         background-image:
           repeating-linear-gradient(
             0deg,
@@ -639,13 +639,26 @@
           { opacity: 1, duration: 0.45, ease: "power1.out" },
           6.6
         );
-        // cursor path: sequential absolute moves on the child (no stacked tweens)
-        tl.to(S + ".cursor", { x: 352, y: -522, duration: 2.0, ease: "power2.inOut" }, 7.0);
-        tl.to(S + ".cursor", { x: 369, y: -541, duration: 0.35, ease: "sine.inOut" }, 9.15);
-        tl.to(S + ".cursor", { x: 341, y: -516, duration: 0.28, ease: "power1.out" }, 9.55);
-        tl.to(S + ".cursor", { x: 357, y: -529, duration: 0.3, ease: "sine.inOut" }, 9.95);
-        tl.to(S + ".cursor", { x: 150, y: -150, duration: 1.7, ease: "power2.inOut" }, 10.55);
-        tl.to(S + ".cursor", { x: 158, y: -142, duration: 3.2, ease: "sine.inOut" }, 12.6);
+        // cursor path: ONE keyframes tween on the child (single transform tween).
+        // approach -> creep onto the close ring -> flinch -> hesitate -> pull back -> idle
+        tl.to(
+          S + ".cursor",
+          {
+            keyframes: [
+              { x: 352, y: -522, duration: 2.0, ease: "power2.inOut" },
+              { x: 352, y: -522, duration: 0.15, ease: "none" },
+              { x: 369, y: -541, duration: 0.35, ease: "sine.inOut" },
+              { x: 341, y: -516, duration: 0.28, ease: "power1.out" },
+              { x: 341, y: -516, duration: 0.17, ease: "none" },
+              { x: 357, y: -529, duration: 0.3, ease: "sine.inOut" },
+              { x: 357, y: -529, duration: 0.3, ease: "none" },
+              { x: 150, y: -150, duration: 1.7, ease: "power2.inOut" },
+              { x: 150, y: -150, duration: 0.35, ease: "none" },
+              { x: 158, y: -142, duration: 3.2, ease: "sine.inOut" },
+            ],
+          },
+          7.0
+        );
 
         // close control glows warning-warm while the cursor hovers (no transforms)
         tl.fromTo(
@@ -662,7 +675,7 @@
             duration: 0.42,
             ease: "sine.inOut",
             yoyo: true,
-            repeat: 5,
+            repeat: 6,
           },
           7.6
         );
