@@ -1,0 +1,609 @@
+<template id="s12-template">
+  <div data-composition-id="s12" data-width="1920" data-height="1080">
+    <!-- Scene 12 — "Build one shot" finale. Full pipeline in one continuous L->R motion, resolve + fade. -->
+
+    <!-- The shoreline motif lives OUTSIDE the fade group: it is the last thing visible. -->
+    <div class="horizon" data-layout-ignore>
+      <div class="horizon-glow"></div>
+      <div class="horizon-core"></div>
+    </div>
+
+    <div class="fade-all">
+      <!-- BG decoratives -->
+      <div class="dotgrid" data-layout-ignore></div>
+      <div class="glow glow-a" data-layout-ignore></div>
+      <div class="glow glow-b" data-layout-ignore></div>
+      <div class="station-glow" data-layout-ignore></div>
+      <div class="dust" data-layout-ignore></div>
+
+      <!-- camera -->
+      <div class="cam-zoom" data-layout-allow-overflow>
+        <div class="cam-pan">
+          <div class="row-float">
+
+            <!-- cables + traveling grand pulse -->
+            <svg class="cables" width="1920" height="1080" viewBox="0 0 1920 1080" data-layout-ignore>
+              <path class="cable-base"
+                d="M 230 565 C 350 620, 470 622, 590 582 C 710 545, 820 548, 940 582 C 1055 615, 1160 660, 1270 656 C 1380 652, 1465 585, 1545 562 C 1645 535, 1645 640, 1628 696"
+                fill="none" stroke="#3e8e0e" stroke-width="3" stroke-linecap="round"
+                stroke-dasharray="2300" stroke-dashoffset="2300"></path>
+              <path class="cable-pulse"
+                d="M 230 565 C 350 620, 470 622, 590 582 C 710 545, 820 548, 940 582 C 1055 615, 1160 660, 1270 656 C 1380 652, 1465 585, 1545 562 C 1645 535, 1645 640, 1628 696"
+                fill="none" stroke="#c6ff4d" stroke-width="4" stroke-linecap="round"
+                stroke-dasharray="80 2300" stroke-dashoffset="80"></path>
+            </svg>
+
+            <!-- STATION 1: reference cluster pad + 3 drifting thumbnails -->
+            <div class="pad pad-refs"></div>
+            <div class="thumb-in thumb-in-1" data-layout-allow-overflow>
+              <div class="thumb-fly"><div class="thumb thumb-sunset"></div></div>
+            </div>
+            <div class="thumb-in thumb-in-2" data-layout-allow-overflow>
+              <div class="thumb-fly"><div class="thumb thumb-ocean"></div></div>
+            </div>
+            <div class="thumb-in thumb-in-3" data-layout-allow-overflow>
+              <div class="thumb-fly"><div class="thumb thumb-neon"></div></div>
+            </div>
+
+            <!-- STATION 2: glass prompt card (glyph bars only, no text) -->
+            <div class="prompt-card">
+              <div class="prompt-icon"></div>
+              <div class="gbar gbar-1"></div>
+              <div class="gbar gbar-2"></div>
+              <div class="gbar gbar-3"></div>
+              <div class="gbar gbar-4"></div>
+              <div class="prompt-flash"></div>
+            </div>
+
+            <!-- STATION 3: develop slot -->
+            <div class="dev-slot"></div>
+
+            <!-- STATION 4: animation node ring -->
+            <div class="ring-wrap">
+              <div class="ring-glow"></div>
+              <div class="ring-spin">
+                <svg width="340" height="340" viewBox="0 0 340 340">
+                  <circle cx="170" cy="170" r="152" fill="none" stroke="#3e8e0e"
+                    stroke-width="3" stroke-dasharray="14 18" stroke-linecap="round"></circle>
+                  <circle cx="170" cy="170" r="122" fill="none" stroke="rgba(143,224,0,0.30)"
+                    stroke-width="2" stroke-dasharray="46 30" stroke-linecap="round"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <!-- STATION 5: enhance node (up-chevrons icon) -->
+            <div class="enhance-node">
+              <div class="chev chev-1"></div>
+              <div class="chev chev-2"></div>
+            </div>
+
+            <!-- mini timeline -->
+            <div class="mini-tl">
+              <div class="lane lane-1"></div>
+              <div class="lane lane-2"></div>
+              <div class="tl-clip tl-clip-a"></div>
+              <div class="tl-clip tl-clip-b"></div>
+              <div class="tl-slot"></div>
+              <div class="playhead"></div>
+            </div>
+            <div class="snap-flash"></div>
+
+            <!-- the hero shot: nested wrappers, ONE transform tween each -->
+            <div class="hero-a" data-layout-allow-overflow>
+              <div class="hero-b">
+                <div class="hero-c">
+                  <div class="hero-card">
+                    <div class="hero-scene"></div>
+                    <div class="streak streak-1"></div>
+                    <div class="streak streak-2"></div>
+                    <div class="streak streak-3"></div>
+                    <div class="hero-flare"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- grand-pulse station flares -->
+            <div class="flare flare-1"></div>
+            <div class="flare flare-2"></div>
+            <div class="flare flare-3"></div>
+            <div class="flare flare-4"></div>
+            <div class="flare flare-5"></div>
+            <div class="flare flare-6"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      [data-composition-id="s12"] {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        background: #050a06;
+        overflow: hidden;
+      }
+      [data-composition-id="s12"] .fade-all { position: absolute; inset: 0; }
+
+      /* ---------- shoreline motif ---------- */
+      [data-composition-id="s12"] .horizon {
+        position: absolute; left: 0; top: 928px; width: 1920px; height: 4px;
+        opacity: 0.55;
+      }
+      [data-composition-id="s12"] .horizon-core {
+        position: absolute; left: 0; top: 0; width: 100%; height: 3px;
+        border-radius: 999px;
+        background: rgba(198, 255, 77, 0.75);
+      }
+      [data-composition-id="s12"] .horizon-glow {
+        position: absolute; left: 0; top: -16px; width: 100%; height: 34px;
+        border-radius: 999px;
+        background: radial-gradient(closest-side, rgba(143, 224, 0, 0.40), rgba(143, 224, 0, 0));
+        opacity: 0.4;
+      }
+
+      /* ---------- BG decoratives ---------- */
+      [data-composition-id="s12"] .dotgrid {
+        position: absolute; inset: -60px;
+        background-image: radial-gradient(rgba(62, 142, 14, 0.35) 1.6px, rgba(62, 142, 14, 0) 1.6px);
+        background-size: 52px 52px;
+        opacity: 0.42;
+      }
+      [data-composition-id="s12"] .glow {
+        position: absolute; border-radius: 50%;
+      }
+      [data-composition-id="s12"] .glow-a {
+        left: 120px; top: 60px; width: 760px; height: 620px;
+        background: radial-gradient(closest-side, rgba(143, 224, 0, 0.20), rgba(143, 224, 0, 0));
+        opacity: 0.85;
+      }
+      [data-composition-id="s12"] .glow-b {
+        left: 1180px; top: 560px; width: 820px; height: 640px;
+        background: radial-gradient(closest-side, rgba(255, 138, 61, 0.17), rgba(255, 138, 61, 0));
+        opacity: 0.85;
+      }
+      [data-composition-id="s12"] .station-glow {
+        position: absolute; left: 160px; top: 280px; width: 1640px; height: 460px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(143, 224, 0, 0.16), rgba(143, 224, 0, 0));
+        opacity: 0.2;
+      }
+      [data-composition-id="s12"] .dust { position: absolute; inset: 0; }
+      [data-composition-id="s12"] .dust-dot {
+        position: absolute; border-radius: 50%;
+      }
+
+      /* ---------- camera ---------- */
+      [data-composition-id="s12"] .cam-zoom { position: absolute; inset: 0; transform-origin: 50% 52%; }
+      [data-composition-id="s12"] .cam-pan { position: absolute; inset: 0; }
+      [data-composition-id="s12"] .row-float { position: absolute; inset: 0; }
+      [data-composition-id="s12"] .cables { position: absolute; left: 0; top: 0; }
+
+      /* ---------- station pads ---------- */
+      [data-composition-id="s12"] .pad-refs {
+        position: absolute; left: 128px; top: 418px; width: 204px; height: 144px;
+        border-radius: 18px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 26px rgba(143, 224, 0, 0.10);
+      }
+      [data-composition-id="s12"] .pad { position: absolute; }
+
+      /* reference thumbnails: 150x84, stacked fan */
+      [data-composition-id="s12"] .thumb-in { position: absolute; width: 150px; height: 84px; }
+      [data-composition-id="s12"] .thumb-in-1 { left: 141px; top: 416px; }
+      [data-composition-id="s12"] .thumb-in-2 { left: 155px; top: 428px; }
+      [data-composition-id="s12"] .thumb-in-3 { left: 167px; top: 440px; }
+      [data-composition-id="s12"] .thumb-fly { position: absolute; inset: 0; }
+      [data-composition-id="s12"] .thumb {
+        position: absolute; inset: 0; border-radius: 12px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 22px rgba(143, 224, 0, 0.16);
+      }
+      [data-composition-id="s12"] .thumb-sunset {
+        background: linear-gradient(180deg, #1a0f14 0%, #5a2233 34%, #b8503a 62%, #ff8a3d 82%, #ffc65c 100%);
+      }
+      [data-composition-id="s12"] .thumb-ocean {
+        background: linear-gradient(180deg, #04121a 0%, #0d3340 58%, rgba(53, 208, 186, 0.30) 100%);
+      }
+      [data-composition-id="s12"] .thumb-neon {
+        background:
+          radial-gradient(closest-side at 26% 70%, rgba(255, 100, 115, 0.45), rgba(255, 100, 115, 0)),
+          radial-gradient(closest-side at 76% 36%, rgba(53, 208, 186, 0.40), rgba(53, 208, 186, 0)),
+          linear-gradient(180deg, #0a0612 0%, #2a1140 100%);
+      }
+
+      /* ---------- prompt card ---------- */
+      [data-composition-id="s12"] .prompt-card {
+        position: absolute; left: 450px; top: 385px; width: 280px; height: 190px;
+        border-radius: 24px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 40px rgba(143, 224, 0, 0.18), inset 0 1px 0 rgba(234, 245, 226, 0.12);
+        overflow: hidden;
+      }
+      [data-composition-id="s12"] .prompt-icon {
+        position: absolute; left: 26px; top: 24px; width: 26px; height: 26px;
+        background: rgba(143, 224, 0, 0.85);
+        border-radius: 6px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 18px rgba(198, 255, 77, 0.45);
+      }
+      [data-composition-id="s12"] .gbar {
+        position: absolute; left: 26px; height: 10px; border-radius: 999px;
+        background: rgba(234, 245, 226, 0.55);
+        transform-origin: left center;
+      }
+      [data-composition-id="s12"] .gbar-1 { top: 74px;  width: 196px; }
+      [data-composition-id="s12"] .gbar-2 { top: 98px;  width: 224px; background: rgba(234, 245, 226, 0.42); }
+      [data-composition-id="s12"] .gbar-3 { top: 122px; width: 158px; background: rgba(143, 224, 0, 0.62); }
+      [data-composition-id="s12"] .gbar-4 { top: 146px; width: 118px; background: rgba(234, 245, 226, 0.35); }
+      [data-composition-id="s12"] .prompt-flash {
+        position: absolute; inset: 0; border-radius: 24px;
+        background: rgba(198, 255, 77, 0.55);
+        opacity: 0;
+      }
+
+      /* ---------- develop slot ---------- */
+      [data-composition-id="s12"] .dev-slot {
+        position: absolute; left: 782px; top: 387px; width: 316px; height: 186px;
+        border-radius: 14px;
+        border: 2px dashed rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 18px rgba(143, 224, 0, 0.08);
+        opacity: 0.7;
+      }
+
+      /* ---------- animation node ring ---------- */
+      [data-composition-id="s12"] .ring-wrap {
+        position: absolute; left: 1100px; top: 310px; width: 340px; height: 340px;
+      }
+      [data-composition-id="s12"] .ring-glow {
+        position: absolute; inset: 18px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(143, 224, 0, 0.0), rgba(143, 224, 0, 0.0) 62%, rgba(143, 224, 0, 0.28) 88%, rgba(143, 224, 0, 0));
+        opacity: 0.12;
+      }
+      [data-composition-id="s12"] .ring-spin {
+        position: absolute; inset: 0; transform-origin: 50% 50%;
+      }
+
+      /* ---------- enhance node ---------- */
+      [data-composition-id="s12"] .enhance-node {
+        position: absolute; left: 1470px; top: 405px; width: 150px; height: 150px;
+        border-radius: 18px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 26px rgba(143, 224, 0, 0.12), inset 0 1px 0 rgba(234, 245, 226, 0.12);
+      }
+      [data-composition-id="s12"] .chev {
+        position: absolute; left: 53px; width: 44px; height: 44px;
+        border-top: 4px solid rgba(143, 224, 0, 0.85);
+        border-left: 4px solid rgba(143, 224, 0, 0.85);
+        border-radius: 4px;
+        transform: rotate(45deg);
+      }
+      [data-composition-id="s12"] .chev-1 { top: 34px; }
+      [data-composition-id="s12"] .chev-2 { top: 66px; border-color: rgba(198, 255, 77, 0.55); }
+
+      /* ---------- mini timeline ---------- */
+      [data-composition-id="s12"] .mini-tl {
+        position: absolute; left: 1330px; top: 690px; width: 460px; height: 160px;
+        border-radius: 18px;
+        background: rgba(150, 230, 120, 0.07);
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 30px rgba(143, 224, 0, 0.12), inset 0 1px 0 rgba(234, 245, 226, 0.12);
+        overflow: hidden;
+      }
+      [data-composition-id="s12"] .lane {
+        position: absolute; left: 16px; width: 428px; height: 40px; border-radius: 8px;
+        background: rgba(62, 142, 14, 0.20);
+      }
+      [data-composition-id="s12"] .lane-1 { top: 26px; }
+      [data-composition-id="s12"] .lane-2 { top: 96px; }
+      [data-composition-id="s12"] .tl-clip {
+        position: absolute; height: 32px; border-radius: 6px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+      }
+      [data-composition-id="s12"] .tl-clip-a {
+        left: 28px; top: 100px; width: 110px;
+        background: linear-gradient(180deg, #5a2233 0%, #ff8a3d 100%);
+      }
+      [data-composition-id="s12"] .tl-clip-b {
+        left: 150px; top: 100px; width: 88px;
+        background: linear-gradient(180deg, #0d3340 0%, rgba(53, 208, 186, 0.55) 100%);
+      }
+      [data-composition-id="s12"] .tl-slot {
+        position: absolute; left: 230px; top: 22px; width: 150px; height: 48px;
+        border-radius: 8px;
+        border: 2px dashed rgba(143, 224, 0, 0.35);
+      }
+      [data-composition-id="s12"] .playhead {
+        position: absolute; left: 16px; top: 14px; width: 2px; height: 132px;
+        border-radius: 999px;
+        background: rgba(198, 255, 77, 0.65);
+        box-shadow: 0 0 10px rgba(198, 255, 77, 0.45);
+      }
+      [data-composition-id="s12"] .snap-flash {
+        position: absolute; left: 1552px; top: 704px; width: 166px; height: 64px;
+        border-radius: 10px;
+        background: rgba(198, 255, 77, 0.6);
+        box-shadow: 0 0 30px rgba(198, 255, 77, 0.5);
+        opacity: 0;
+      }
+
+      /* ---------- hero shot card ---------- */
+      [data-composition-id="s12"] .hero-a {
+        position: absolute; left: 790px; top: 395px; width: 300px; height: 170px;
+      }
+      [data-composition-id="s12"] .hero-b { position: absolute; inset: 0; }
+      [data-composition-id="s12"] .hero-c { position: absolute; inset: 0; }
+      [data-composition-id="s12"] .hero-card {
+        position: absolute; inset: 0; border-radius: 12px;
+        border: 2px solid rgba(143, 224, 0, 0.30);
+        box-shadow: 0 0 36px rgba(143, 224, 0, 0.20);
+        overflow: hidden;
+      }
+      [data-composition-id="s12"] .hero-scene {
+        position: absolute; inset: -14px;
+        background:
+          radial-gradient(closest-side at 50% 64%, rgba(255, 198, 92, 0.55), rgba(255, 198, 92, 0)),
+          linear-gradient(180deg, #1a0f14 0%, #5a2233 30%, #b8503a 56%, #ff8a3d 78%, #ffc65c 100%);
+      }
+      [data-composition-id="s12"] .streak {
+        position: absolute; left: 0; width: 220px; height: 4px; border-radius: 999px;
+        background: linear-gradient(90deg, rgba(198, 255, 77, 0) 0%, rgba(198, 255, 77, 0.85) 55%, rgba(198, 255, 77, 0) 100%);
+      }
+      [data-composition-id="s12"] .streak-1 { top: 48px; }
+      [data-composition-id="s12"] .streak-2 { top: 84px; width: 260px; }
+      [data-composition-id="s12"] .streak-3 { top: 120px; width: 180px; }
+      [data-composition-id="s12"] .hero-flare {
+        position: absolute; inset: 0; border-radius: 12px;
+        background: rgba(234, 245, 226, 0.55);
+        opacity: 0;
+      }
+
+      /* ---------- flares ---------- */
+      [data-composition-id="s12"] .flare {
+        position: absolute; width: 130px; height: 130px; border-radius: 50%;
+        border: 3px solid rgba(198, 255, 77, 0.9);
+        box-shadow: 0 0 24px rgba(198, 255, 77, 0.45);
+        opacity: 0;
+      }
+      [data-composition-id="s12"] .flare-1 { left: 165px;  top: 425px; }
+      [data-composition-id="s12"] .flare-2 { left: 525px;  top: 415px; }
+      [data-composition-id="s12"] .flare-3 { left: 875px;  top: 415px; }
+      [data-composition-id="s12"] .flare-4 { left: 1205px; top: 415px; }
+      [data-composition-id="s12"] .flare-5 { left: 1480px; top: 415px; }
+      [data-composition-id="s12"] .flare-6 { left: 1570px; top: 671px; }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const S = '[data-composition-id="s12"] ';
+        const DUR = 26;
+
+        // deterministic PRNG (seeded LCG per contract)
+        const rng = (seed => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296))(42);
+
+        // --- build dust field synchronously before any tween references it ---
+        const dustHost = document.querySelector(S + ".dust");
+        const dustDots = [];
+        for (let i = 0; i < 16; i++) {
+          const d = document.createElement("div");
+          d.className = "dust-dot";
+          const sz = 2 + Math.round(rng() * 1.4);
+          d.style.width = sz + "px";
+          d.style.height = sz + "px";
+          d.style.left = Math.round(60 + rng() * 1780) + "px";
+          d.style.top = Math.round(120 + rng() * 860) + "px";
+          d.style.opacity = (0.12 + rng() * 0.13).toFixed(2);
+          d.style.background = i % 3 === 0 ? "rgba(53,208,186,0.9)" : "rgba(143,224,0,0.9)";
+          dustHost.appendChild(d);
+          dustDots.push(d);
+        }
+
+        const finiteRepeat = (start, cycle, end) => Math.max(0, Math.ceil((end - start) / cycle) - 1);
+
+        /* ================= BG ambient (all on tl, all finite) ================= */
+        tl.fromTo(S + ".dotgrid",
+          { backgroundPosition: "0px 0px" },
+          { backgroundPosition: "34px -18px", duration: 24, ease: "sine.inOut" }, 0.3);
+
+        tl.fromTo(S + ".glow-a", { scale: 1 },
+          { scale: 1.12, duration: 2.7, ease: "sine.inOut", yoyo: true,
+            repeat: finiteRepeat(0.4, 2.7, 23.4) }, 0.4);
+
+        tl.fromTo(S + ".glow-b", { scale: 1 },
+          { scale: 1.09, duration: 3.4, ease: "sine.inOut", yoyo: true,
+            repeat: finiteRepeat(0.7, 3.4, 23.4) }, 0.7);
+
+        tl.fromTo(S + ".station-glow", { scale: 1 },
+          { scale: 1.06, duration: 2.9, ease: "sine.inOut", yoyo: true,
+            repeat: finiteRepeat(1.0, 2.9, 22.0) }, 1.0);
+
+        dustDots.forEach((d, i) => {
+          tl.fromTo(d, { x: 0, y: 0 },
+            { x: 40 + rng() * 90, y: -(50 + rng() * 110), duration: 24.5, ease: "none" }, 0.4);
+        });
+
+        // horizon: draws in once, then breathes through the whole scene
+        tl.fromTo(S + ".horizon",
+          { opacity: 0, scaleX: 0.6 },
+          { opacity: 0.55, scaleX: 1, duration: 1.6, ease: "power2.inOut" }, 0.5);
+        tl.fromTo(S + ".horizon-glow", { opacity: 0.32 },
+          { opacity: 0.55, duration: 2.45, ease: "sine.inOut", yoyo: true, repeat: 7 }, 2.2);
+
+        /* ================= camera ================= */
+        tl.fromTo(S + ".cam-pan", { x: 36 }, { x: -36, duration: 17, ease: "sine.inOut" }, 0.5);
+        tl.fromTo(S + ".row-float", { y: -5 },
+          { y: 5, duration: 3.1, ease: "sine.inOut", yoyo: true,
+            repeat: finiteRepeat(0.5, 3.1, 25.0) }, 0.5);
+
+        /* ================= station entrances (varied eases) ================= */
+        tl.fromTo(S + ".pad-refs", { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.5);
+        tl.fromTo(S + ".dev-slot", { opacity: 0, scale: 0.94 },
+          { opacity: 0.7, scale: 1, duration: 0.55, ease: "expo.out" }, 1.0);
+        tl.fromTo(S + ".ring-wrap", { opacity: 0, y: 18 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 1.4);
+        tl.fromTo(S + ".enhance-node", { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.7)" }, 1.8);
+        tl.fromTo(S + ".mini-tl", { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, 2.0);
+        tl.fromTo(S + ".prompt-card", { opacity: 0, scale: 0.85 },
+          { opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.6)" }, 2.3);
+
+        // mini-timeline playhead sweep (ambient, finite)
+        tl.fromTo(S + ".playhead", { x: 0 },
+          { x: 396, duration: 5.0, ease: "none", repeat: finiteRepeat(4.5, 5.0, 23.0) }, 4.5);
+
+        /* ============ phase A: 3 reference thumbs drift in + stack (t0.7-2.6) ============ */
+        tl.fromTo(S + ".thumb-in-1",
+          { x: -560, y: -160, rotation: -18, opacity: 0 },
+          { x: 0, y: 0, rotation: -6, opacity: 1, duration: 0.95, ease: "expo.out" }, 0.7);
+        tl.fromTo(S + ".thumb-in-2",
+          { x: -620, y: 60, rotation: 10, opacity: 0 },
+          { x: 0, y: 0, rotation: 3, opacity: 1, duration: 0.85, ease: "power3.out" }, 1.15);
+        tl.fromTo(S + ".thumb-in-3",
+          { x: -520, y: 200, rotation: -8, opacity: 0 },
+          { x: 0, y: 0, rotation: 8, opacity: 1, duration: 0.8, ease: "back.out(1.4)" }, 1.6);
+
+        /* ============ phase B: thumbs STREAM into prompt card (t3-4.4), bars assemble ============ */
+        tl.fromTo(S + ".thumb-in-1 .thumb-fly", { x: 0, y: 0, scale: 1, opacity: 1 },
+          { x: 350, y: 8, scale: 0.18, opacity: 0, duration: 0.85, ease: "power2.in" }, 3.0);
+        tl.fromTo(S + ".thumb-in-2 .thumb-fly", { x: 0, y: 0, scale: 1, opacity: 1 },
+          { x: 340, y: -2, scale: 0.18, opacity: 0, duration: 0.85, ease: "power2.in" }, 3.25);
+        tl.fromTo(S + ".thumb-in-3 .thumb-fly", { x: 0, y: 0, scale: 1, opacity: 1 },
+          { x: 330, y: -12, scale: 0.18, opacity: 0, duration: 0.85, ease: "power2.in" }, 3.5);
+        tl.set(S + ".thumb-in-1", { opacity: 0, visibility: "hidden" }, 4.6);
+        tl.set(S + ".thumb-in-2", { opacity: 0, visibility: "hidden" }, 4.6);
+        tl.set(S + ".thumb-in-3", { opacity: 0, visibility: "hidden" }, 4.6);
+
+        tl.fromTo(S + ".prompt-icon", { scale: 0, rotation: 45 },
+          { scale: 1, rotation: 45, duration: 0.5, ease: "back.out(2)" }, 3.5);
+        tl.fromTo(S + ".gbar-1", { scaleX: 0 }, { scaleX: 1, duration: 0.5,  ease: "expo.out" }, 3.7);
+        tl.fromTo(S + ".gbar-2", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "expo.out" }, 3.95);
+        tl.fromTo(S + ".gbar-3", { scaleX: 0 }, { scaleX: 1, duration: 0.5,  ease: "expo.out" }, 4.2);
+        tl.fromTo(S + ".gbar-4", { scaleX: 0 }, { scaleX: 1, duration: 0.4,  ease: "expo.out" }, 4.45);
+
+        // card flash beat
+        tl.fromTo(S + ".prompt-flash", { opacity: 0 },
+          { opacity: 0.9, duration: 0.2, ease: "power1.inOut", yoyo: true, repeat: 1 }, 6.0);
+        tl.set(S + ".prompt-flash", { opacity: 0, visibility: "hidden" }, 6.45);
+
+        /* ============ phase C: still DEVELOPS in the slot (blur 12 -> 0) ============ */
+        tl.fromTo(S + ".hero-card",
+          { opacity: 0, filter: "blur(12px) brightness(1.9)" },
+          { opacity: 1, filter: "blur(0px) brightness(1)", duration: 2.3, ease: "power2.out" }, 6.5);
+        tl.fromTo(S + ".hero-scene", { scale: 1 },
+          { scale: 1.07, duration: 14, ease: "sine.inOut" }, 7.0);
+        tl.fromTo(S + ".dev-slot",
+          { boxShadow: "0 0 18px rgba(143,224,0,0.08)" },
+          { boxShadow: "0 0 34px rgba(143,224,0,0.30)", duration: 0.8, ease: "power2.out",
+            immediateRender: false }, 6.6);
+
+        /* ============ phase D: glide into the animation node ring ============ */
+        tl.fromTo(S + ".hero-a", { x: 0 },
+          { x: 330, duration: 1.9, ease: "power2.inOut" }, 10.0);
+        tl.fromTo(S + ".ring-spin", { rotation: 0 },
+          { rotation: 640, duration: 10.4, ease: "power1.inOut" }, 11.4);
+        tl.fromTo(S + ".ring-glow", { opacity: 0.12 },
+          { opacity: 0.55, duration: 0.8, ease: "power2.out", immediateRender: false }, 11.6);
+
+        // motion streak lines sweep the still
+        tl.fromTo(S + ".streak-1", { x: -340 },
+          { x: 360, duration: 1.05, ease: "power2.inOut", repeat: 1 }, 12.1);
+        tl.fromTo(S + ".streak-2", { x: -360 },
+          { x: 360, duration: 1.05, ease: "power2.inOut", repeat: 1 }, 12.65);
+        tl.fromTo(S + ".streak-3", { x: -320 },
+          { x: 360, duration: 1.05, ease: "power2.inOut", repeat: 1 }, 13.2);
+        tl.set(S + ".streak-1", { opacity: 0, visibility: "hidden" }, 15.5);
+        tl.set(S + ".streak-2", { opacity: 0, visibility: "hidden" }, 15.5);
+        tl.set(S + ".streak-3", { opacity: 0, visibility: "hidden" }, 15.5);
+
+        /* ============ phase E: enhance — move on, +12% scale, crisp flare ============ */
+        tl.fromTo(S + ".hero-b", { x: 0, scale: 1 },
+          { x: 275, scale: 1.12, duration: 1.4, ease: "power3.out" }, 15.2);
+        tl.fromTo(S + ".enhance-node",
+          { boxShadow: "0 0 26px rgba(143,224,0,0.12), inset 0 1px 0 rgba(234,245,226,0.12)" },
+          { boxShadow: "0 0 44px rgba(198,255,77,0.35), inset 0 1px 0 rgba(234,245,226,0.12)",
+            duration: 0.7, ease: "power2.out", immediateRender: false }, 15.8);
+        // crisp flare: one transform tween + one opacity ping (no transform stacking)
+        tl.fromTo(S + ".flare-5", { scale: 0.4 },
+          { scale: 1.7, duration: 0.6, ease: "power2.out" }, 16.2);
+        tl.fromTo(S + ".flare-5", { opacity: 0 },
+          { opacity: 0.9, duration: 0.2, ease: "power1.inOut", yoyo: true, repeat: 1 }, 16.2);
+        tl.fromTo(S + ".hero-flare", { opacity: 0 },
+          { opacity: 0.85, duration: 0.18, ease: "power1.inOut", yoyo: true, repeat: 1 }, 16.3);
+        tl.set(S + ".hero-flare", { opacity: 0, visibility: "hidden" }, 16.8);
+        tl.set(S + ".flare-5", { opacity: 0 }, 17.0);
+
+        /* ============ phase F: drop onto the mini timeline, snap flash ============ */
+        tl.fromTo(S + ".hero-c", { x: 0, y: 0, scale: 1 },
+          { x: 80, y: 229, scale: 0.4, duration: 0.5, ease: "power2.in" }, 17.2);
+        tl.fromTo(S + ".snap-flash", { opacity: 0 },
+          { opacity: 0.9, duration: 0.15, ease: "power1.inOut", yoyo: true, repeat: 1 }, 17.65);
+        tl.set(S + ".snap-flash", { opacity: 0, visibility: "hidden" }, 18.0);
+        tl.fromTo(S + ".mini-tl",
+          { boxShadow: "0 0 30px rgba(143,224,0,0.12), inset 0 1px 0 rgba(234,245,226,0.12)" },
+          { boxShadow: "0 0 46px rgba(143,224,0,0.30), inset 0 1px 0 rgba(234,245,226,0.12)",
+            duration: 0.6, ease: "power2.out", immediateRender: false }, 17.7);
+
+        /* ============ phase G: ZOOM OUT, cables draw, grand pulse, station flares ============ */
+        tl.fromTo(S + ".cam-zoom", { scale: 1 },
+          { scale: 0.8, duration: 2.5, ease: "power2.inOut" }, 18.0);
+
+        tl.fromTo(S + ".cable-base",
+          { attr: { "stroke-dashoffset": 2300 } },
+          { attr: { "stroke-dashoffset": 0 }, duration: 1.9, ease: "power2.inOut" }, 18.3);
+
+        // grand pulse travels the whole pipeline (dash sits off-path before/after)
+        tl.fromTo(S + ".cable-pulse",
+          { attr: { "stroke-dashoffset": 80 } },
+          { attr: { "stroke-dashoffset": -2300 }, duration: 2.2, ease: "none" }, 20.2);
+        tl.set(S + ".cable-pulse", { opacity: 0, visibility: "hidden" }, 22.5);
+
+        const flareTimes = [20.35, 20.7, 21.05, 21.4, 21.75, 22.1];
+        flareTimes.forEach((t, i) => {
+          const f = S + ".flare-" + (i + 1);
+          if (i === 4) {
+            // flare-5 already used its transform tween at the enhance beat; opacity ping only
+            tl.fromTo(f, { opacity: 0 },
+              { opacity: 0.9, duration: 0.22, ease: "power1.inOut", yoyo: true, repeat: 1,
+                immediateRender: false }, t);
+          } else {
+            tl.fromTo(f, { scale: 0.4 }, { scale: 1.7, duration: 0.55, ease: "power2.out" }, t);
+            tl.fromTo(f, { opacity: 0 },
+              { opacity: 0.9, duration: 0.22, ease: "power1.inOut", yoyo: true, repeat: 1 }, t);
+          }
+          tl.set(f, { opacity: 0, visibility: "hidden" }, t + 0.75);
+        });
+
+        /* ============ phase H: FINAL RESOLVE — soften, heartbeat, gentle fade ============ */
+        tl.fromTo(S + ".station-glow", { opacity: 0.2 },
+          { opacity: 0.08, duration: 1.6, ease: "power1.inOut", immediateRender: false }, 22.0);
+
+        // one last shoreline heartbeat
+        tl.fromTo(S + ".horizon-glow", { opacity: 0.4 },
+          { opacity: 0.95, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 1,
+            immediateRender: false }, 22.3);
+
+        // the ONLY allowed scene exit: everything fades to the dark bg, horizon remains faint
+        tl.fromTo(S + ".fade-all", { opacity: 1 },
+          { opacity: 0, duration: 2.1, ease: "power1.inOut" }, 23.4);
+        tl.set(S + ".fade-all", { opacity: 0, visibility: "hidden" }, 25.6);
+        tl.fromTo(S + ".horizon",
+          { opacity: 0.55 },
+          { opacity: 0.3, duration: 2.3, ease: "power1.inOut", immediateRender: false }, 23.5);
+        tl.fromTo(S + ".horizon-glow", { opacity: 0.4 },
+          { opacity: 0.2, duration: 2.3, ease: "power1.inOut", immediateRender: false }, 23.5);
+
+        window.__timelines["s12"] = tl;
+      })();
+    </script>
+  </div>
+</template>
